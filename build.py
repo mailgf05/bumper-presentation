@@ -16,7 +16,7 @@ IMG1 = b64("img/magasin_interieur.jpg")
 IMG2 = b64("img/mannequin_smartphones.jpg")
 IMG3 = b64("img/magasin_rayons.jpg")
 IMG4 = b64("img/mur_coques.jpg")
-IMG5 = b64("img/plan_espace.jpg")
+IMG5 = b64("img/plan_espace_new.jpg")
 IMG6 = b64("img/magazines_bumper.jpg")
 IMG7 = b64("img/bumper_lab_photo.jpg")
 IMG8 = b64("img/post_insta.jpg")
@@ -44,10 +44,10 @@ html,body{{width:100%;height:100%;overflow:hidden;font-family:'Poppins',sans-ser
 .slide.active{{display:flex}}
 
 /* TYPOGRAPHY */
-.stitle{{font-family:'Cherry Bomb One',cursive;font-size:2.6rem;margin-bottom:24px;text-align:center;line-height:1.2}}
+.stitle{{font-family:'Cherry Bomb One',cursive;font-size:2.6rem;margin-bottom:24px;text-align:center;line-height:1.2;text-shadow:2px 2px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000}}
 body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
-.kpi{{font-family:'Cherry Bomb One',cursive;font-size:2.6rem}}
-.kpi-sm{{font-family:'Cherry Bomb One',cursive;font-size:1.4rem}}
+.kpi{{font-family:'Cherry Bomb One',cursive;font-size:2.6rem;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+.kpi-sm{{font-family:'Cherry Bomb One',cursive;font-size:1.4rem;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 
 /* NAVIGATION */
 .nbtn{{position:fixed;z-index:900;width:46px;height:46px;background:var(--navy);color:var(--teal);border:2px solid var(--teal);font-size:1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s}}
@@ -92,11 +92,11 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 /* ===== SLIDE 1 COVER ===== */
 #s1{{color:var(--white);text-align:center;position:relative;overflow:hidden}}
 #s1 .content{{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center}}
-#s1 .logo-txt{{font-family:'Cherry Bomb One',cursive;font-size:5.5rem;color:var(--white);letter-spacing:6px}}
+#s1 .logo-txt{{font-family:'Cherry Bomb One',cursive;font-size:5.5rem;color:var(--white);letter-spacing:6px;text-shadow:2px 2px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000}}
 #s1 .loc{{font-size:1.5rem;color:var(--teal);margin-top:2px}}
-#s1 .tagline{{font-size:1.1rem;color:var(--white);margin-top:10px;letter-spacing:1px}}
+#s1 .tagline{{font-size:1.1rem;color:var(--white);margin-top:10px;letter-spacing:1px;text-shadow:2px 2px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000}}
 #s1 .sep{{width:80px;height:4px;background:var(--teal);margin:18px auto}}
-#s1 .sub2{{font-size:1rem;color:var(--white);opacity:.85}}
+#s1 .sub2{{font-size:1rem;color:var(--white);opacity:.85;text-shadow:2px 2px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000}}
 #s1 .foot{{position:absolute;bottom:20px;font-size:.8rem;color:rgba(255,255,255,.5);z-index:2}}
 #s1 .g1{{top:-40px;left:-40px;width:180px;height:180px;background:var(--teal);border-radius:50%;opacity:.12}}
 #s1 .g2{{bottom:-50px;right:-50px;width:200px;height:200px;background:var(--yellow);border-radius:50%;opacity:.10}}
@@ -104,30 +104,30 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s1 .g4{{bottom:15%;left:8%;width:120px;height:120px;background:var(--blue);border-radius:50%;opacity:.08}}
 
 /* ===== SLIDE 2 CONTEXTE ===== */
-#s2 .stitle{{color:var(--navy)}}
+#s2 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s2 .grid{{display:flex;gap:30px;width:100%;max-width:1200px}}
 #s2 .left{{flex:1;display:flex;flex-direction:column;gap:14px}}
 #s2 .right{{flex:1;display:flex;flex-direction:column;gap:14px}}
 #s2 .txt{{font-size:.88rem;line-height:1.6;color:var(--navy)}}
 #s2 .srow{{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}}
 #s2 .sc{{flex:1;min-width:120px;text-align:center;padding:20px 14px;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s2 .sc .kpi{{display:block;margin-bottom:4px}}
+#s2 .sc .kpi{{display:block;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s2 .sc .slbl{{font-size:.72rem;color:var(--navy);font-weight:600}}
 
 /* ===== SLIDE 3 SWOT ===== */
-#s3 .stitle{{color:var(--navy)}}
+#s3 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s3 .swot{{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;max-width:1100px}}
 #s3 .sw{{background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5);padding:22px}}
-#s3 .sw h3{{font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:8px}}
+#s3 .sw h3{{font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:8px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s3 .sw ul{{list-style:none;padding:0}}
 #s3 .sw li{{font-size:.82rem;padding:3px 0 3px 16px;position:relative;line-height:1.4;color:var(--navy)}}
 #s3 .sw li::before{{content:'';position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%}}
 
 /* ===== SLIDE 4 PERSONAS ===== */
-#s4 .stitle{{color:var(--navy)}}
+#s4 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s4 .prow{{display:flex;gap:24px;width:100%;max-width:1200px}}
 #s4 .pc{{flex:1;padding:24px;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s4 .pc h3{{font-family:'Cherry Bomb One',cursive;font-size:1.3rem;margin-bottom:4px}}
+#s4 .pc h3{{font-family:'Cherry Bomb One',cursive;font-size:1.3rem;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s4 .pc .meta{{font-size:.75rem;font-weight:600;color:#555;margin-bottom:10px}}
 #s4 .pc ul{{list-style:none;padding:0}}
 #s4 .pc li{{font-size:.8rem;padding:3px 0 3px 14px;position:relative;line-height:1.4;color:var(--navy)}}
@@ -137,38 +137,38 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s4 .pc .ptag{{font-size:.7rem;padding:3px 10px;border:2px solid var(--black);border-radius:20px;font-weight:600}}
 
 /* ===== SLIDE 5 ESPACE ===== */
-#s5 .stitle{{color:var(--navy)}}
+#s5 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s5 .imgs{{display:flex;gap:20px;justify-content:center;width:100%;max-width:1200px;margin-bottom:18px}}
 #s5 .imgs .imgframe{{flex:1;max-height:35vh;display:flex;align-items:center;justify-content:center;background:var(--gray)}}
 #s5 .imgs img{{max-width:100%;max-height:35vh;object-fit:contain}}
 #s5 .zones{{display:flex;gap:12px;width:100%;max-width:1200px;justify-content:center}}
 #s5 .zone{{flex:1;padding:14px;text-align:center;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s5 .zone .zn{{display:inline-block;width:28px;height:28px;line-height:28px;background:var(--teal);color:var(--black);font-family:'Cherry Bomb One',cursive;font-size:.9rem;border-radius:50%;margin-bottom:4px}}
-#s5 .zone h4{{font-family:'Cherry Bomb One',cursive;font-size:.9rem;margin-bottom:2px}}
+#s5 .zone .zn{{display:inline-block;width:28px;height:28px;line-height:28px;background:var(--teal);color:var(--black);font-family:'Cherry Bomb One',cursive;font-size:.9rem;border-radius:50%;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s5 .zone h4{{font-family:'Cherry Bomb One',cursive;font-size:.9rem;margin-bottom:2px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s5 .zone p{{font-size:.68rem;color:var(--navy);line-height:1.3}}
 #s5 .flux{{font-size:.78rem;color:var(--navy);margin-top:14px;font-weight:600;text-align:center}}
 
 /* ===== SLIDE 6 BUMPER LAB ===== */
 #s6{{color:var(--white);text-align:center}}
-#s6 .stitle{{font-size:3.2rem;color:var(--white);margin-bottom:4px}}
-#s6 .sub6{{color:var(--teal);font-size:1rem;margin-bottom:16px}}
+#s6 .stitle{{font-size:3.2rem;color:var(--white);margin-bottom:4px;text-shadow:2px 2px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000}}
+#s6 .sub6{{color:var(--teal);font-size:1rem;margin-bottom:16px;text-shadow:2px 2px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000}}
 #s6 .labimg{{margin:0 auto 18px;display:block;max-width:100%;max-height:40vh;object-fit:contain}}
 #s6 .steps{{display:flex;gap:12px;width:100%;max-width:1100px;justify-content:center;margin-bottom:14px}}
 #s6 .stp{{flex:1;padding:14px;text-align:center;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
-#s6 .stp h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:4px}}
+#s6 .stp h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s6 .stp p{{font-size:.72rem;color:var(--navy);line-height:1.3}}
 #s6 .kpirow{{display:flex;gap:12px;width:100%;max-width:1100px;justify-content:center;margin-bottom:10px}}
 #s6 .kb{{padding:12px 16px;text-align:center;flex:1;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
-#s6 .kb .kpi{{display:block;margin-bottom:2px}}
+#s6 .kb .kpi{{display:block;margin-bottom:2px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s6 .kb .klbl{{font-size:.7rem;color:var(--navy)}}
 #s6 .invest{{font-size:.82rem;color:var(--teal);margin-top:6px}}
 
 /* ===== SLIDE 7 DIFF ===== */
-#s7 .stitle{{color:var(--navy)}}
+#s7 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s7 .quote{{color:var(--navy);border-left:5px solid var(--teal);padding:18px 24px;font-size:1.05rem;font-style:italic;max-width:1100px;width:100%;text-align:center;margin-bottom:18px;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s7 .pills{{display:flex;gap:14px;width:100%;max-width:1100px;margin-bottom:18px}}
 #s7 .pill{{flex:1;padding:16px;text-align:center;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s7 .pill h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px}}
+#s7 .pill h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s7 .pill p{{font-size:.78rem;color:#555;line-height:1.35}}
 #s7 .tbl{{width:100%;max-width:1100px;border-collapse:collapse;font-size:.82rem}}
 #s7 .tbl th{{background:rgba(255,255,255,0.8);color:var(--navy);padding:10px 14px;text-align:left;font-weight:600;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
@@ -176,38 +176,38 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s7 .tbl tr:nth-child(even) td{{background:var(--gray)}}
 
 /* ===== SLIDE 8 RS ===== */
-#s8 .stitle{{color:var(--navy)}}
+#s8 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s8 .rsimg{{max-height:30vh;object-fit:contain;display:block;margin:0 auto 14px}}
 #s8 .rule80{{text-align:center;margin-bottom:14px}}
 #s8 .pcards{{display:flex;gap:12px;width:100%;max-width:1200px;margin-bottom:16px}}
 #s8 .pc2{{flex:1;color:var(--navy);padding:16px;border-top:4px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s8 .pc2 h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px}}
+#s8 .pc2 h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s8 .pc2 p{{font-size:.72rem;color:var(--navy);line-height:1.35}}
 
 /* ===== SLIDE 9 COMMUNITY ===== */
-#s9 .stitle{{color:var(--navy)}}
+#s9 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 
 /* ===== SLIDE 10 STORY ===== */
-#s10 .stitle{{color:var(--navy)}}
+#s10 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s10 .arc{{display:flex;gap:14px;width:100%;max-width:1200px;margin-bottom:16px}}
 #s10 .ab{{flex:1;color:var(--navy);padding:18px;border-left:5px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s10 .ab h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:6px}}
+#s10 .ab h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:6px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s10 .ab p{{font-size:.78rem;color:var(--navy);line-height:1.4}}
 
 /* ===== SLIDE 11 BILAN ===== */
-#s11 .stitle{{color:var(--navy)}}
+#s11 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s11 .krow{{display:flex;gap:12px;width:100%;max-width:1200px;margin-bottom:16px}}
 #s11 .kc{{flex:1;color:var(--navy);padding:16px;text-align:center;border-top:4px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s11 .kc .kpi{{display:block;margin-bottom:2px}}
+#s11 .kc .kpi{{display:block;margin-bottom:2px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s11 .kc .klbl{{font-size:.7rem;color:var(--navy)}}
 #s11 .brow{{display:flex;gap:16px;width:100%;max-width:1200px;margin-bottom:14px}}
 #s11 .brow .c{{flex:1}}
-#s11 .brow h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:8px;color:var(--teal)}}
+#s11 .brow h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:8px;color:var(--teal);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s11 .brow p{{font-size:.8rem;margin-bottom:3px;color:var(--navy)}}
 #s11 .rtbl{{width:100%;border-collapse:collapse;font-size:.8rem}}
 #s11 .rtbl th{{background:rgba(255,255,255,0.8);color:var(--navy);padding:8px 12px;text-align:left;font-weight:600;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s11 .rtbl td{{padding:7px 12px;border-bottom:1px solid rgba(0,0,0,0.06);background:rgba(255,255,255,0.7)}}
-#s11 .closing{{font-family:'Cherry Bomb One',cursive;font-size:1.6rem;color:var(--navy);margin-top:14px;text-align:center}}
+#s11 .closing{{font-family:'Cherry Bomb One',cursive;font-size:1.6rem;color:var(--navy);margin-top:14px;text-align:center;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 #s11 .foot10{{font-size:.8rem;color:#555;margin-top:8px}}
 </style>
 </head>
@@ -262,7 +262,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
           <div class="slbl">Taux de transformation</div>
         </div>
         <div class="sc ct-purple">
-          <span class="kpi" style="color:var(--purple)">4.6&thinsp;★</span>
+          <span class="kpi" style="color:var(--purple)">4,8&thinsp;★</span>
           <div class="slbl">Note Google</div>
         </div>
       </div>
@@ -279,10 +279,10 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
       <h3 style="color:var(--teal)">FORCES</h3>
       <ul>
         <li style="color:var(--navy)">R&eacute;paration express garantie 30 min</li>
-        <li style="color:var(--navy)">Coques exclusives non disponibles en ligne</li>
-        <li style="color:var(--navy)">Note Google 4.6&thinsp;★ &mdash; bonne r&eacute;putation</li>
+        <li style="color:var(--navy)">Coques exclusives disponibles en ligne</li>
+        <li style="color:var(--navy)">Note Google 4,8&thinsp;★ &mdash; bonne r&eacute;putation</li>
         <li style="color:var(--navy)">Ancrage local fort, relation client personnalis&eacute;e</li>
-        <li style="color:var(--navy)">Garantie SAV 3 mois</li>
+        <li style="color:var(--navy)">Garantie SAV 1 an</li>
       </ul>
     </div>
     <div class="sw cl-yellow">
@@ -291,7 +291,6 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
         <li style="color:var(--navy)">Visibilit&eacute; digitale &agrave; renforcer</li>
         <li style="color:var(--navy)">R&eacute;seaux sociaux insuffisamment exploit&eacute;s</li>
         <li style="color:var(--navy)">Pas d&rsquo;animation distinctive en boutique</li>
-        <li style="color:var(--navy)">Absence de programme de fid&eacute;lisation structur&eacute;</li>
       </ul>
     </div>
     <div class="sw cl-blue">
@@ -344,7 +343,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
         <li>Besoin : r&eacute;paration fiable avec garantie</li>
         <li>D&eacute;clencheur : enfant casse &eacute;cran, recommandation amie</li>
         <li>Digital : Facebook, Google Maps</li>
-        <li>Levier conversion : garantie 3 mois, avis Google</li>
+        <li>Levier conversion : garantie 1 an, avis Google</li>
         <li>Levier fid&eacute;lisation : SMS suivi, newsletter famille</li>
       </ul>
       <div class="plat">
@@ -446,7 +445,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 <!-- SLIDE 7 — DIFFERENCIATION (bg teal, light overlay) -->
 <div class="slide" id="s7">
   <div class="pabg" style="background-image:url('/popart-yellow.jpg')"></div>
-  <div class="stitle">Pourquoi Bumper ?</div>
+  <div class="stitle">Notre avantage concurrentiel</div>
   <div class="quote">&laquo; Votre t&eacute;l&eacute;phone r&eacute;par&eacute; en 30 min, avec une coque unique &mdash; ici, maintenant, par des experts. &raquo;</div>
   <div class="pills">
     <div class="pill ct-teal">
@@ -469,11 +468,11 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
   <table class="tbl">
     <thead><tr><th>Crit&egrave;re</th><th>Bumper</th><th>iSmash</th><th>FNAC / Darty</th></tr></thead>
     <tbody>
-      <tr><td>Note Google</td><td style="color:var(--teal);font-weight:700">4.6&thinsp;★</td><td>4.2&thinsp;★</td><td>3.8&thinsp;★</td></tr>
+      <tr><td>Note Google</td><td style="color:var(--teal);font-weight:700">4,8&thinsp;★</td><td>4.2&thinsp;★</td><td>3.8&thinsp;★</td></tr>
       <tr><td>D&eacute;lai</td><td style="color:var(--teal);font-weight:700">30 min</td><td>1&ndash;2h</td><td>3&ndash;7 jours</td></tr>
       <tr><td>Coques exclusives</td><td style="color:var(--teal);font-weight:700">✓</td><td>✗</td><td>✗</td></tr>
       <tr><td>Personnalisation</td><td style="color:var(--teal);font-weight:700">✓ Lab</td><td>✗</td><td>✗</td></tr>
-      <tr><td>Garantie SAV</td><td style="color:var(--teal);font-weight:700">✓ 3 mois</td><td>✓ 3 mois</td><td>Constructeur</td></tr>
+      <tr><td>Garantie SAV</td><td style="color:var(--teal);font-weight:700">✓ 1 an</td><td>✓ 1 an</td><td>Constructeur</td></tr>
     </tbody>
   </table>
 </div>
@@ -514,7 +513,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
       <img src="{IMG8}" alt="Post Instagram Bumper" style="max-height:55vh;object-fit:contain;border:3px solid var(--teal);border-radius:4px">
       <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:10px 16px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);width:100%;text-align:center">
         <p style="font-weight:700;margin-bottom:2px">&Eacute;cran cass&eacute; ? On s&rsquo;en occupe.</p>
-        <p style="font-size:.75rem;color:var(--navy)">30 min chrono &mdash; garanti 3 mois &mdash; Sans RDV</p>
+        <p style="font-size:.75rem;color:var(--navy)">30 min chrono &mdash; garanti 1 an &mdash; Sans RDV</p>
         <p style="color:var(--teal);font-size:.72rem">#BumperAv83 #R&eacute;parationT&eacute;l&eacute;phone #Var</p>
         <p style="font-size:.7rem;color:var(--yellow)">200 impressions &bull; 15 likes &bull; 5 enregistrements</p>
       </div>
@@ -566,7 +565,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 <!-- SLIDE 10 — MESSAGE ET STORY TELLING (bg teal, light overlay) -->
 <div class="slide" id="s10">
   <div class="pabg" style="background-image:url('/popart-yellow.jpg')"></div>
-  <div class="stitle">Message et story telling</div>
+  <div class="stitle">Notre histoire, votre histoire</div>
   <div class="arc">
     <div class="ab" style="border-color:var(--yellow)">
       <h4 style="color:var(--yellow)">LE PROBL&Egrave;ME</h4>
