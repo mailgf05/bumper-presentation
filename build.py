@@ -20,6 +20,7 @@ IMG5 = b64("img/plan_espace_new.jpg")
 IMG6 = b64("img/magazines_bumper.jpg")
 IMG7 = b64("img/bumper_lab_photo.jpg")
 IMG8 = b64("img/reseaux_sociaux_new.jpg")
+IMG9 = b64("img/boutique3.jpg")
 
 HTML = f"""<!DOCTYPE html>
 <html lang="fr">
@@ -526,19 +527,12 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 <div class="slide" id="s9">
   <div class="pabg" style="background-image:url('/popart-teal.jpg')"></div>
   <div class="stitle">Animation d&rsquo;une communaut&eacute;</div>
-  <div style="display:flex;gap:8px;flex-wrap:wrap;width:100%;max-width:1200px;justify-content:center;margin-bottom:18px">
-    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--teal)"><strong>JAN</strong><br><span style="font-size:.68rem;color:var(--teal)">Soldes -20%</span></div>
-    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--yellow)"><strong>F&Eacute;V</strong><br><span style="font-size:.68rem;color:var(--yellow)">St-Valentin duo</span></div>
-    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--teal)"><strong>MAR</strong><br><span style="font-size:.68rem;color:var(--teal)">Printemps nature</span></div>
-    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--yellow)"><strong>AVR</strong><br><span style="font-size:.68rem;color:var(--yellow)">P&acirc;ques surprise</span></div>
-    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--purple)"><strong>MAI</strong><br><span style="font-size:.68rem;color:var(--purple)">F&ecirc;te des M&egrave;res gravure</span></div>
-    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--blue)"><strong>JUIN</strong><br><span style="font-size:.68rem;color:var(--blue)">&Eacute;t&eacute; plage</span></div>
-    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--teal)"><strong>SEP</strong><br><span style="font-size:.68rem;color:var(--teal)">Rentr&eacute;e &eacute;tudiant</span></div>
-    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--yellow)"><strong>OCT</strong><br><span style="font-size:.68rem;color:var(--yellow)">Halloween limited</span></div>
-    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--blue)"><strong>NOV</strong><br><span style="font-size:.68rem;color:var(--blue)">Black Friday -30%</span></div>
-    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--purple)"><strong>D&Eacute;C</strong><br><span style="font-size:.68rem;color:var(--purple)">No&euml;l cadeaux</span></div>
+  <div style="display:flex;gap:16px;width:100%;max-width:1100px;margin-bottom:16px;justify-content:center">
+    <div style="flex:1;display:flex;justify-content:center"><img src="{IMG9}" alt="Boutique Bumper" style="max-height:25vh;object-fit:contain;border:3px solid var(--teal);border-radius:4px"></div>
+    <div style="flex:1;display:flex;justify-content:center"><img src="{IMG4}" alt="Mur coques Bumper" style="max-height:25vh;object-fit:contain;border:3px solid var(--navy);border-radius:4px"></div>
+    <div style="flex:1;display:flex;justify-content:center"><img src="{IMG6}" alt="Magazines Bumper" style="max-height:25vh;object-fit:contain;border:3px solid var(--purple);border-radius:4px"></div>
   </div>
-  <div style="display:flex;gap:14px;width:100%;max-width:1200px;margin-bottom:14px">
+  <div style="display:flex;gap:14px;width:100%;max-width:1200px;margin-bottom:16px">
     <div class="c ct-teal" style="flex:1;text-align:center">
       <h4 style="font-family:'Cherry Bomb One',cursive;font-size:1rem;color:var(--teal);margin-bottom:4px">Club VIP</h4>
       <p style="font-size:.8rem;color:var(--navy)">1&thinsp;&euro; = 1 point<br>Avantages exclusifs</p>
@@ -556,10 +550,24 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
       <p style="font-size:.8rem;color:var(--navy)">Session mensuelle<br>D&eacute;mo &amp; questions en direct</p>
     </div>
   </div>
-  <div style="text-align:center">
-    <img src="{IMG4}" alt="Mur coques Bumper" style="max-height:20vh;object-fit:contain;border:3px solid var(--navy);border-radius:4px">
+  <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;width:100%;max-width:1100px">
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--teal)"><strong>JAN</strong><br><span style="font-size:.68rem;color:var(--teal)">Soldes -20%</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--yellow)"><strong>F&Eacute;V</strong><br><span style="font-size:.68rem;color:var(--yellow)">St-Valentin duo</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--teal)"><strong>MAR</strong><br><span style="font-size:.68rem;color:var(--teal)">Printemps nature</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--yellow)"><strong>AVR</strong><br><span style="font-size:.68rem;color:var(--yellow)">P&acirc;ques surprise</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--purple)"><strong>MAI</strong><br><span style="font-size:.68rem;color:var(--purple)">F&ecirc;te des M&egrave;res gravure</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--blue)"><strong>JUIN</strong><br><span style="font-size:.68rem;color:var(--blue)">&Eacute;t&eacute; plage</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--yellow)"><strong>JUIL</strong><br><span style="font-size:.68rem;color:var(--yellow)">Soldes d&rsquo;&eacute;t&eacute;</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--blue)"><strong>AO&Ucirc;T</strong><br><span style="font-size:.68rem;color:var(--blue)">Back scolaire</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--teal)"><strong>SEP</strong><br><span style="font-size:.68rem;color:var(--teal)">Rentr&eacute;e &eacute;tudiant</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--yellow)"><strong>OCT</strong><br><span style="font-size:.68rem;color:var(--yellow)">Halloween limited</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--blue)"><strong>NOV</strong><br><span style="font-size:.68rem;color:var(--blue)">Black Friday -30%</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--purple)"><strong>D&Eacute;C</strong><br><span style="font-size:.68rem;color:var(--purple)">No&euml;l cadeaux</span></div>
   </div>
 </div>
+
+
+<!-- SLIDE 10</div>
 
 
 <!-- SLIDE 10 — MESSAGE ET STORY TELLING (bg teal, light overlay) -->
