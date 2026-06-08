@@ -1,0 +1,227 @@
+CRITICAL INSTRUCTIONS:
+- DO NOT use the Write tool for any file > 10KB. It will FAIL.
+- Use ONLY the Bash tool to create files. Use: python3 -c "open('filename','w').write(...)" or echo/cat heredoc.
+- Write build.py in MULTIPLE small bash calls if needed (e.g., one per slide section).
+- After writing build.py, run: python3 build.py
+- Then verify: ls -la bumper-presentation.html
+- Working directory: /tmp/bumper-slides/
+
+AVAILABLE IMAGES (use ONLY these 7, all in img/ folder):
+1. img/magasin_interieur.jpg (771x597, 147KB) - Wide shot: table centrale coques, mur "POPSOCKETS" vert, mur "SUPER REPARATION" bleu, mannequin Cremi → Use for: Cover or Contexte slide
+2. img/mannequin_smartphones.jpg (717x592, 88KB) - Mannequin en carton blonde + présentoir smartphones 20 modèles, fond rose/blanc → Use for: Espace scénarisé or Contexte
+3. img/magasin_rayons.jpg (757x562, 132KB) - Intérieur: rayons "TÉLÉPHONE", "MAROQUINERIE", "BATTERIE", "MAGSAFE", porte vitrine → Use for: Contexte or Couverture
+4. img/mur_coques.jpg (766x588, 150KB) - Mur coques colorées, promo "NOUVEAU", "2 COQUES ACHETEZ-EN 3" → Use for: Espace scénarisé or Produits
+5. img/plan_espace.jpg (930x575, 86KB) - Plan schématique zones: Vitrine, Accueil & Conseil, Bumper Lab, Produits → Use for: Espace scénarisé slide
+6. img/magazines_bumper.jpg (658x437, 79KB) - Magazines Bumper flottants sur fond flou magasin → Use for: Stratégie RS or Branding
+7. img/bumper_lab_photo.jpg (642x720, 111KB) - Bumper Lab: pour illustrer le corner personnalisation → Use for: Bumper Lab slide (SLIDE 6)
+
+IMAGE RULES:
+- IMPORTANT: Photos must NOT be cropped. Use object-fit: contain or object-fit: cover with correct aspect ratio containers.
+- Embed all images as base64 in the final HTML using Python's base64 module in build.py.
+- Max height for images: 40-50vh to leave room for text.
+- Use colored borders (2-3px solid teal #00C9AF or navy #232F3E) around images as frames.
+
+GENERAL:
+- 10-slide PC slideshow (NO mobile optimization)
+- Each slide = 100vw x 100vh, overflow hidden
+- Navigation: arrow keys, prev/next buttons, dot indicators, progress bar top
+- All text in FRENCH, ZERO spelling errors (especially: fidélisation with accent, coût, clientèle)
+- PC optimized: min-width 1024px, content max-width 1200px centered
+
+STYLE - POP ART (matching bumperstore.fr):
+FONTS (Google Fonts):
+- "Cherry Bomb One" for main titles ONLY (pop art display font)
+- "Poppins" for body text, subtitles, cards (weights 400, 600, 700, 800)
+
+COLOR PALETTE (from bumperstore.fr):
+- #232F3E — dark navy (backgrounds, headers)
+- #00C9AF — teal (primary accent, highlights, buttons)
+- #39B0FF — light blue (secondary accent)
+- #FAC900 — yellow/gold (badges, warnings, accents)
+- #9400C9 — purple (tertiary accent)
+- #000000 — black (text on light)
+- #FFFFFF — white (text on dark)
+- #F4F6F8 — light gray (alternate slide bg)
+
+DESIGN RULES:
+- BOLD and VIBRANT pop art — strong contrasts, saturated colors
+- Cards: dark navy with white text, or white with black text + colored borders
+- Titles in Cherry Bomb One (large, rounded, playful)
+- Colored accent borders on cards (teal, blue, yellow, purple)
+- KPI numbers: LARGE, bold, in teal or yellow
+- NO subtle shadows — solid borders or colored outlines
+- NO rounded soft cards — minimal radius (4px)
+- High contrast everywhere
+- Decorative colored geometric shapes (circles, squares) semi-transparent on select slides
+
+SLIDES:
+
+SLIDE 1 - COVER:
+- Dark navy #232F3E background
+- img/magasin_interieur.jpg as large background with dark overlay (rgba(35,47,62,0.85)) so it's visible but doesn't compete with text
+- "BUMPER" in Cherry Bomb One, white, very large (64px+)
+- "Avenue 83 — Var" in Poppins, teal #00C9AF
+- "Coques · Réparations · Accessoires" in white
+- Teal accent line separator
+- "Stratégie Commerciale & Animation du Point de Vente" in Poppins
+- Footer: "Bachelor RAC · Promotion 2025/2026" in gray
+- Decorative geometric shapes (teal, yellow, purple circles) in corners
+
+SLIDE 2 - CONTEXTE & CHIFFRES CLÉS:
+- Light gray #F4F6F8 background
+- Title "Contexte de l'enseigne" in Cherry Bomb One, navy
+- Left: img/magasin_rayons.jpg (object-fit contain, max-height 45vh, navy border) + text:
+  "Bumper est une enseigne indépendante spécialisée dans la réparation de smartphones, la vente de coques et d'accessoires téléphoniques, implantée au cœur de la zone commerciale Avenue 83, dans le Var."
+  "Face à l'essor des SAV en ligne et à la montée des grandes enseignes, Bumper doit renforcer son positionnement physique et numérique."
+- Right: 4 stat cards dark navy with white text, colored top border:
+  - Teal: "27€" + "Panier moyen"
+  - Blue: "150-300" + "Trafic quotidien"
+  - Yellow: "33%" + "Taux de transformation"
+  - Purple: "4.6★" + "Note Google"
+
+SLIDE 3 - ANALYSE SWOT:
+- White background
+- Title "Diagnostic SWOT" in Cherry Bomb One, navy
+- 4-quadrant grid, dark navy #232F3E bg each:
+  - FORCES (teal left border):
+    • Réparation express garantie 30 min
+    • Coques exclusives non disponibles en ligne
+    • Note Google 4.6★ — bonne réputation
+    • Ancrage local fort, relation client personnalisée
+    • Garantie SAV 3 mois
+  - FAIBLESSES (yellow left border):
+    • Visibilité digitale à renforcer
+    • Réseaux sociaux insuffisamment exploités
+    • Pas d'animation distinctive en boutique
+    • Absence de programme de fidélisation structuré
+  - OPPORTUNITÉS (blue left border):
+    • Zone Avenue 83 à fort trafic quotidien
+    • Tendance personnalisation et expérience client
+    • Potentiel contenu UGC
+  - MENACES (red/pink left border):
+    • Concurrence réparateurs en ligne et chaînes
+    • Pression prix grande distribution (FNAC, Darty)
+    • Baisse fréquentation périodes creuses
+
+SLIDE 4 - PERSONAS:
+- Light gray background
+- Title "Nos clients types" in Cherry Bomb One, navy
+- Two persona cards, white bg, colored top border:
+  - LUCAS — 22 ans, Étudiant (TEAL border):
+    • Budget 600-800€/mois
+    • Usage intensif : 6-8h/jour
+    • Besoin : réparation rapide, coque tendance unique
+    • Digital : Instagram, TikTok actifs
+    • Levier conversion : expérience Bumper Lab
+    • Levier fidélisation : #MaBumperCoque, parrainage -10%
+    Badges: "📸 Instagram" "🎵 TikTok"
+  - MARIE — 42 ans, Cadre 2 enfants (YELLOW border):
+    • Besoin : réparation fiable avec garantie
+    • Déclencheur : enfant casse écran, recommandation amie
+    • Digital : Facebook, Google Maps
+    • Levier conversion : garantie 3 mois, avis Google
+    • Levier fidélisation : SMS suivi, newsletter famille
+    Badges: "📍 Google Maps" "📘 Facebook"
+
+SLIDE 5 - ESPACE SCÉNARISÉ:
+- White background
+- Title "Espace de vente scénarisé" in Cherry Bomb One, navy
+- img/plan_espace.jpg centered (object-fit contain, max-height 35vh) — do NOT crop, show full plan
+- img/mannequin_smartphones.jpg beside it (object-fit contain, max-height 35vh) — shows the welcoming setup
+- Below images: 4 zone badges in row, dark navy, numbered teal circles:
+  ① VITRINE: "Coques tendance · QR Code Instagram · Rotation mensuelle"
+  ② ACCUEIL: "Démonstration live · Bornes diagnostic"
+  ③ BUMPER LAB: "Borne 24″ · Imprimante UV · Mur UGC"
+  ④ FIDÉLISATION: "Programme fidélité · Borne QR avis"
+- Bottom: "Flux : Vitrine → Accueil → Bumper Lab → Produits → Caisse"
+
+SLIDE 6 - BUMPER LAB (HERO SLIDE):
+- Dark gradient background (#232F3E to #1a2535)
+- Title "BUMPER LAB" in Cherry Bomb One, VERY large, white
+- Subtitle "Seule boutique du Var avec personnalisation en direct" in teal
+- img/bumper_lab_photo.jpg (object-fit contain, max-height 40vh, teal border frame) — MUST NOT CROP
+- 4 process steps as connected cards:
+  Step 1 (TEAL): "ARRIVÉE" — "Le client remarque le corner lumineux et la borne tactile"
+  Step 2 (BLUE): "CHOIX" — "Il sélectionne modèle, couleur, motif sur la borne interactive"
+  Step 3 (YELLOW): "CRÉATION" — "L'imprimante UV imprime la coque sous ses yeux en 15-30 min"
+  Step 4 (PURPLE): "PARTAGE" — "Il poste en story #BumperLab et reçoit -10%"
+- 4 KPI boxes: "+28%" teal (panier), "30%" blue (UGC), "20/sem" yellow (coques), "x5" purple (ROI)
+- "Investissement : 480€ → Marge 3 mois : 2 820€ → ROI x5"
+- Decorative colored dots in background
+
+SLIDE 7 - DIFFÉRENCIATION + STORY-TELLING:
+- Light gray background
+- Title "Pourquoi Bumper ?" in Cherry Bomb One, navy
+- Central quote: dark navy, teal border: "Votre téléphone réparé en 30 min, avec une coque unique — ici, maintenant, par des experts."
+- 4 pillar cards white bg, colored top:
+  - RAPIDITÉ (teal): "30 min chrono · Devis immédiat · Stock pièces disponible"
+  - EXCLUSIVITÉ (blue): "Coques non vendues en ligne · Personnalisation · Collections limitées"
+  - PROXIMITÉ (yellow): "Équipe locale · Relation personnalisée · Conseils honnêtes"
+  - CONFIANCE (purple): "Garantie 1 an · Pièces certifiées · Devis transparent"
+- Comparison table: dark header (#232F3E), alternating rows:
+  | Critère | Bumper | iSmash | FNAC/Darty |
+  | Note Google | 4.6★ | 4.2★ | 3.8★ |
+  | Délai | 30 min | 1-2h | 3-7 jours |
+  | Coques exclusives | ✓ | ✗ | ✗ |
+  | Personnalisation | ✓ Lab | ✗ | ✗ |
+  | Garantie SAV | ✓ 3 mois | ✓ 3 mois | Constructeur |
+
+SLIDE 8 - STRATÉGIE RÉSEAUX SOCIAUX:
+- White background
+- Title "Stratégie Réseaux Sociaux" in Cherry Bomb One, navy
+- img/magazines_bumper.jpg (object-fit contain, max-height 30vh) — shows Bumper brand presence
+- Badge: "80% utile & divertissant · 20% promotionnel"
+- 4 platform cards, dark navy, colored border:
+  - INSTAGRAM (teal): "5×/sem · Reels · Stories · UGC #BumperLab · Objectif 1 000 abos"
+  - TIKTOK (blue): "3×/sem · Avant/après 60s · POV boutique · #MaBumperCoque · 500 abos"
+  - FACEBOOK (yellow): "3×/sem · Promos locales · Événements · Avis Google · Rayon 15 km"
+  - GOOGLE (purple): "2×/sem · Posts offres · Photos HD · Réponse avis < 24h · Top 3 local"
+- Post phare section:
+  "Accroche: Écran cassé ? On s'en occupe."
+  "30 min chrono — garanti 3 mois — Sans RDV"
+  "#BumperAv83 #RéparationTéléphone #Var"
+  "200 impressions · 15 likes · 5 enregistrements"
+
+SLIDE 9 - STORY-TELLING + PLAN D'ANIMATION:
+- Light gray background
+- Title "Notre histoire" in Cherry Bomb One, navy
+- ARC NARRATIF — 4 story blocks connected:
+  LE PROBLÈME (dark bg, yellow): "Écran cassé, chargeur HS, coque rayée. Les SAV en ligne sont lents, les grandes enseignes impersonnelles. Tu cherches rapide, local, humain."
+  LE HÉROS: TOI (dark bg, teal): "Tu veux une solution rapide et humaine. Tu mérites un expert qui te comprend, sans jargon, sans attente."
+  LA SOLUTION: BUMPER (dark bg, blue): "En 30 minutes, ton téléphone est réparé. Une coque unique t'attend. Une équipe souriante t'accueille."
+  LA TRANSFORMATION (dark bg, purple): "Tu repars avec un téléphone neuf, une protection stylée, et l'adresse d'un commerce de confiance à partager."
+- Calendrier annuel compact row (colored badges):
+  JAN Soldes | FÉV St-Valentin | MAR Printemps | AVR Pâques | MAI Fête Mères | JUIN Été
+  SEP Rentrée | OCT Halloween | NOV Black Friday | DÉC Noël
+- img/mur_coques.jpg (object-fit contain, max-height 25vh) — shows product variety
+
+SLIDE 10 - BILAN & PERSPECTIVES:
+- White background
+- Title "Bilan & Perspectives" in Cherry Bomb One, navy
+- 5 KPI metric cards in row, dark navy, colored accent:
+  "≥ 4.7" teal — "Note Google"
+  "+15%" blue — "CA annuel"
+  "+20%/mois" yellow — "Abonnés RS"
+  "> 40%" purple — "Taux fidélisation"
+  "> 45€" teal — "Panier moyen"
+- Budget box: dark navy, colored border:
+  "Investissement Bumper Lab : 480€ (borne 300€ + coques 100€ + signalétique 80€)"
+  "Marge nette 3 mois : 2 820€ · ROI : x5"
+  "Imprimante UV à commission : 0€ charge fixe"
+- Risks table, dark header:
+  | Risque | Criticité | Action |
+  | Avis viral | ÉLEVÉE | Réponse < 2h + geste commercial |
+  | Panne fournisseur | MOYENNE | 2 backup + stock 15 jours |
+  | Faible trafic | ÉLEVÉE | Meta Ads local + offre -10% |
+  | Baisse CA creuse | CRITIQUE | Offres saisonnières anticipées |
+- Closing: "Bumper : l'expert local qui allie rapidité, créativité et proximité." in Cherry Bomb One, large
+- Footer: "Merci pour votre attention" gray
+
+NAVIGATION:
+- Fixed prev/next buttons bottom-right (dark navy, teal arrows)
+- Fixed dot indicators bottom-center (teal when active, gray when not)
+- Fixed progress bar top (4px, teal gradient)
+- Fixed slide counter top-right "X/10"
+- Arrow keys (left/right) + click on buttons
+
+NOW: Write build.py using ONLY the Bash tool (python3 -c or echo/cat heredoc). If build.py would be > 15KB in one write, split into multiple bash calls using >> to append. Then run python3 build.py. Verify the output.

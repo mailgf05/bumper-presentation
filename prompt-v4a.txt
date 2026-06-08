@@ -1,0 +1,22 @@
+IMPORTANT: Write a Python script called build.py that generates bumper-presentation.html using Python open()/write(). Run python3 build.py after. Verify with ls -la bumper-presentation.html.
+
+STYLE: POP ART matching bumperstore.fr. Bold vibrant colors, high contrast, NOT corporate/boring.
+FONTS: "Cherry Bomb One" for titles (Google Fonts), "Poppins" for body.
+COLORS: #232F3E dark navy, #00C9AF teal, #39B0FF light blue, #FAC900 yellow, #9400C9 purple, #000 black, #FFF white, #F4F6F8 light gray.
+DESIGN: Cards with colored borders/tops on dark navy. Sharp corners. Colored geometric decorations. Large bold KPI numbers. No soft shadows — solid borders.
+
+PC ONLY slideshow, 100vh slides, arrow keys + buttons + dots + progress bar. All French text.
+
+Phase 1: Write build.py with CSS+JS framework + slides 1-5.
+
+SLIDE 1 COVER: Dark navy bg #232F3E. Logo img/logo_bumper.png. Title BUMPER in Cherry Bomb One large white. Subtitle Avenue 83 Var in teal. Coques Reparations Accessoires in white. Colored geometric shapes teal yellow purple semi-transparent in corners. Footer Bachelor RAC 2025/2026 gray.
+
+SLIDE 2 CONTEXTE: Light gray bg. Title Contexte de l enseigne Cherry Bomb One navy. Text about Bumper smartphone repair cases accessories Avenue 83 Var. 4 stat cards dark navy with colored top borders teal blue yellow purple: 27euros panier moyen, 150-300 trafic quotidien, 33pct taux transformation, 4.6 etoiles Google. Bottom banner teal: Reparation express Coques exclusives Conseil personnalise. Image img/magasin.jpg.
+
+SLIDE 3 SWOT: White bg. Title Diagnostic SWOT Cherry Bomb One. 4 dark navy cards with colored left borders. FORCES teal border: reparation 30min coques exclusives Google 4.6 ancrage local garantie 3 mois. FAIBLESSES yellow border: SEO limite RS faible pas animation pas fidelisation. OPPORTUNITES blue border: Avenue 83 fort trafic tendance personnalisation potentiel UGC. MENACES red border: concurrence pression prix FNAC Darty baisse frequencation creuses.
+
+SLIDE 4 PERSONAS: Light gray bg. Title Nos clients types Cherry Bomb One. Two cards white bg with colored top borders. LUCAS 22ans teal border: Etudiant Toulon budget 600-800euros usage 6-8h smartphone besoin reparation rapide coque tendance Instagram TikTok actifs levier Bumper Lab fidelisation points UGC parrainage. MARIE 42ans yellow border: Cadre 2 enfants Var besoin reparation fiable garantie declencheur fils casse ecran recommandation Facebook Google Maps levier garantie transparence avis fidelisation SMS newsletter WhatsApp.
+
+SLIDE 5 ESPACE SCENARISE: White bg. Title Espace de vente scenariose Cherry Bomb One. 4 numbered boxes dark navy connected by teal arrows horizontal. 1 VITRINE: coques fond LED prix QR Instagram rotation mensuelle. 2 ACCUEIL: comptoir eppure demo live configurateur diagnostic. 3 BUMPER LAB: borne 24 pouces imprimante UV LED mur UGC. 4 FIDELISATION: rayonnage thematise best-sellers fidelite caisse QR avis. Badge yellow black text: Objectif +20pct temps boutique. Image img/boutique1.jpg. Flux note bottom.
+
+Write build.py now with these 5 slides + CSS + JS. Use base64 embedding for images. Run python3 build.py.

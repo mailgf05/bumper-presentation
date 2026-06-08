@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BUMPER — Bachelor RAC 2025/2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#232F3E;--teal:#00C9AF;--blue:#39B0FF;--yellow:#FAC900;
+  --purple:#9400C9;--black:#000;--white:#FFF;--gray:#F4F6F8;
+  --red:#E53935;
+}
+html,body{width:100%;height:100%;overflow:hidden;font-family:'Poppins',sans-serif;background:#111;min-width:1024px}
+
+.slide{color:#fff;text-shadow:1px 1px 3px rgba(0,0,0,.5)}
+.slide .stitle{}
+/* SLIDESHOW */
+.ss{position:relative;width:100%;height:100vh}
+.slide{position:absolute;top:0;left:0;width:100%;height:100vh;display:none;overflow-y:auto;flex-direction:column;justify-content:flex-start;align-items:center;padding:30px 40px;background:transparent}
+
+/* POP ART CARD SYSTEM */
+.pop-card{background:rgba(255,255,255,0.92)!important;border:4px solid #232F3E!important;border-radius:12px!important;padding:20px!important;position:relative;color:#232F3E!important}
+.pop-card::before{content:"";position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;border:2px dashed var(--teal);border-radius:14px;pointer-events:none;opacity:.4}
+.pop-dark{background:rgba(35,47,62,0.92)!important;border:4px solid var(--teal)!important;border-radius:12px!important;padding:20px!important;color:#fff!important;position:relative}
+.pop-dark::before{content:"";position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;border:2px dashed var(--yellow);border-radius:14px;pointer-events:none;opacity:.35}
+.pop-dark h4,.pop-dark p{color:#fff!important}
+.pop-dark .klbl{color:#ccc!important}
+.slide.active{display:flex}
+
+/* TYPOGRAPHY */
+.stitle{font-family:'Cherry Bomb One',cursive;font-size:2.6rem;margin-bottom:24px;text-align:center;line-height:1.2;color:#fff;text-shadow:1px 1px 4px rgba(0,0,0,.5)}
+body,p,li,span,td,th{font-family:'Poppins',sans-serif}
+.kpi{font-family:'Cherry Bomb One',cursive;font-size:2.6rem}
+.kpi-sm{font-family:'Cherry Bomb One',cursive;font-size:1.4rem}
+
+/* NAVIGATION */
+.nbtn{position:fixed;z-index:900;width:46px;height:46px;background:var(--navy);color:var(--teal);border:2px solid var(--teal);font-size:1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s}
+.nbtn:hover{background:var(--teal);color:var(--black)}
+.nprev{bottom:30px;right:72px}
+.nnext{bottom:30px;right:20px}
+.dots{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:900}
+.dot{width:12px;height:12px;background:var(--gray);border:2px solid var(--navy);cursor:pointer;transition:.15s;border-radius:50%}
+.dot.active{background:var(--teal);border-color:var(--teal)}
+.pbar{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--teal),var(--blue));z-index:900;transition:width .3s}
+.scount{position:fixed;top:12px;right:24px;color:var(--white);font-size:.8rem;z-index:900;background:rgba(0,0,0,.4);padding:4px 14px;border:1px solid var(--teal);border-radius:4px}
+
+/* CARDS */
+.c{background:rgba(35,47,62,0.92);border:4px solid var(--teal);padding:20px;position:relative;border-radius:12px;
+.ct-teal{border-top:5px solid var(--teal)}
+.ct-blue{border-top:5px solid var(--blue)}
+.ct-yellow{border-top:5px solid var(--yellow)}
+.ct-purple{border-top:5px solid var(--purple)}
+.cl-teal{border-left:5px solid var(--teal)}
+.cl-yellow{border-left:5px solid var(--yellow)}
+.cl-blue{border-left:5px solid var(--blue)}
+.cl-red{border-left:5px solid var(--red)}
+.cw{background:rgba(255,255,255,0.92);border:4px solid #232F3E;padding:20px;border-radius:12px;position:relative;color:#232F3E}
+
+/* BADGE */
+.badge{display:inline-block;background:var(--yellow);color:var(--black);font-weight:800;padding:5px 16px;font-size:.85rem;border:3px solid var(--black);border-radius:8px;
+.badge-teal{background:var(--teal);color:var(--black);border-color:var(--black)}
+.badge-blue{background:var(--blue);color:var(--black);border-color:var(--black)}
+.badge-purple{background:var(--purple);color:var(--white);border-color:var(--black)}
+
+/* GEO SHAPES */
+.geo{position:absolute;z-index:0;pointer-events:none}
+
+/* IMG FRAME */
+.imgframe{border:4px solid #232F3E;border-radius:12px;overflow:hidden;
+.imgframe-teal{border-color:var(--teal)}
+
+
+/* POP ART BG ON ALL SLIDES */
+.pabg{position:fixed;top:0;left:0;width:100vw;height:100vh;background-size:cover;background-position:center;z-index:0}
+.pabg-dark{filter:brightness(.3)}
+.slide>*{position:relative;z-index:1}
+
+/* ===== SLIDE 1 COVER ===== */
+#s1{background:transparent;text-align:center}
+#s1 .content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;gap:6px}
+#s1 .logo-txt{font-family:'Cherry Bomb One',cursive;font-size:4.5rem;color:#fff;letter-spacing:4px;text-shadow:2px 2px 6px rgba(0,0,0,.6)}
+#s1 .loc{font-size:1.5rem;color:#fff;margin-top:2px;text-shadow:1px 1px 4px rgba(0,0,0,.5)}
+#s1 .tagline{font-size:1.1rem;color:#fff;margin-top:10px;letter-spacing:1px;text-shadow:1px 1px 3px rgba(0,0,0,.5)}
+#s1 .sep{width:80px;height:4px;background:var(--teal);margin:18px auto}
+#s1 .sub2{font-size:1rem;color:#fff;text-shadow:1px 1px 3px rgba(0,0,0,.5)}
+#s1 .foot{position:absolute;bottom:20px;font-size:.8rem;color:#ccc;z-index:2;text-shadow:1px 1px 3px rgba(0,0,0,.5)}
+#s1 .g1{top:-40px;left:-40px;width:180px;height:180px;background:var(--teal);border-radius:50%;opacity:.12}
+#s1 .g2{bottom:-50px;right:-50px;width:200px;height:200px;background:var(--yellow);border-radius:50%;opacity:.10}
+#s1 .g3{top:20%;right:5%;width:100px;height:100px;background:var(--purple);border-radius:50%;opacity:.10}
+#s1 .g4{bottom:15%;left:8%;width:120px;height:120px;background:var(--blue);border-radius:50%;opacity:.08}
+
+/* ===== SLIDE 2 CONTEXTE ===== */
+#s2{background:transparent;color:#fff}
+#s2 .stitle{color:#fff}
+#s2 .grid{display:flex;gap:30px;width:100%;max-width:1200px;z-index:2}
+#s2 .left{flex:1;display:flex;flex-direction:column;gap:14px}
+#s2 .right{flex:1;display:flex;flex-direction:column;gap:14px}
+#s2 .txt{font-size:.88rem;line-height:1.6;color:#fff}
+#s2 .srow{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+#s2 .sc{flex:1;min-width:120px;text-align:center;padding:16px 10px;background:rgba(35,47,62,0.92);border:4px solid var(--teal);border-radius:12px;
+#s2 .sc .kpi{display:block;margin-bottom:4px}
+#s2 .sc .slbl{font-size:.7rem;color:var(--gray);font-weight:600}
+
+/* ===== SLIDE 3 SWOT ===== */
+#s3{background:transparent;color:#fff}
+#s3 .stitle{color:#fff}
+#s3 .swot{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;max-width:1100px;z-index:2}
+#s3 .sw{background:rgba(35,47,62,0.92);border:4px solid var(--teal);padding:22px;border-radius:12px;
+#s3 .sw h3{font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:8px}
+#s3 .sw ul{list-style:none;padding:0}
+#s3 .sw li{font-size:.82rem;padding:3px 0 3px 16px;position:relative;line-height:1.4;color:var(--white)}
+#s3 .sw li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%}
+
+/* ===== SLIDE 4 PERSONAS ===== */
+#s4{background:transparent;color:#fff}
+#s4 .stitle{color:#fff}
+#s4 .prow{display:flex;gap:24px;width:100%;max-width:1200px;z-index:2}
+#s4 .pc{flex:1;background:rgba(255,255,255,0.92);border:4px solid #232F3E;padding:24px;border-radius:12px;position:relative;color:#232F3E}
+#s4 .pc h3{font-family:'Cherry Bomb One',cursive;font-size:1.3rem;margin-bottom:4px}
+#s4 .pc .meta{font-size:.75rem;font-weight:600;color:#888;margin-bottom:10px}
+#s4 .pc ul{list-style:none;padding:0}
+#s4 .pc li{font-size:.8rem;padding:3px 0 3px 14px;position:relative;line-height:1.4;color:#fff}
+#s4 .pc li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%}
+#s4 .pc .lev{margin-top:10px;padding:8px 12px;font-size:.75rem;font-weight:700;border:3px solid;border-radius:8px;
+#s4 .pc .plat{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+#s4 .pc .ptag{font-size:.7rem;padding:3px 10px;border:2px solid var(--black);border-radius:20px;font-weight:600}
+
+/* ===== SLIDE 5 ESPACE ===== */
+#s5{background:transparent;color:#fff}
+#s5 .stitle{color:#fff}
+#s5 .imgs{display:flex;gap:20px;justify-content:center;width:100%;max-width:1200px;z-index:2;margin-bottom:18px}
+#s5 .imgs .imgframe{flex:1;max-height:35vh;display:flex;align-items:center;justify-content:center;background:var(--gray)}
+#s5 .imgs img{max-width:100%;max-height:35vh;object-fit:contain}
+#s5 .zones{display:flex;gap:12px;width:100%;max-width:1200px;z-index:2;justify-content:center}
+#s5 .zone{flex:1;background:rgba(35,47,62,0.92);color:var(--white);padding:14px;border:4px solid var(--teal);border-radius:12px;text-align:center}
+#s5 .zone .zn{display:inline-block;width:28px;height:28px;line-height:28px;background:var(--teal);color:var(--black);font-family:'Cherry Bomb One',cursive;font-size:.9rem;border-radius:50%;margin-bottom:4px}
+#s5 .zone h4{font-family:'Cherry Bomb One',cursive;font-size:.9rem;margin-bottom:2px}
+#s5 .zone p{font-size:.68rem;color:#ccc;line-height:1.3}
+#s5 .flux{font-size:.78rem;color:#fff;margin-top:14px;font-weight:600;z-index:2;text-align:center}
+
+/* ===== SLIDE 6 BUMPER LAB ===== */
+#s6{background:transparent;color:#fff;text-align:center}
+#s6 .stitle{font-size:2.4rem;color:#fff;margin-bottom:4px;}
+#s6 .sub6{color:#fff;font-size:1rem;margin-bottom:16px;}
+#s6 .labimg{margin:0 auto 18px;display:block;max-width:100%;max-height:40vh;object-fit:contain}
+#s6 .steps{display:flex;gap:12px;width:100%;max-width:1100px;z-index:2;justify-content:center;margin-bottom:14px}
+#s6 .stp{flex:1;background:rgba(35,47,62,0.92);border:4px solid var(--teal);padding:14px;border-radius:12px;text-align:center}
+#s6 .stp h4{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:4px}
+#s6 .stp p{font-size:.72rem;color:#ccc;line-height:1.3}
+#s6 .kpirow{display:flex;gap:12px;width:100%;max-width:1100px;z-index:2;justify-content:center;margin-bottom:10px}
+#s6 .kb{background:rgba(35,47,62,0.92);border:4px solid var(--teal);padding:12px 16px;border-radius:12px;text-align:center;flex:1}
+#s6 .kb .kpi{display:block;margin-bottom:2px}
+#s6 .kb .klbl{font-size:.7rem;color:#ccc}
+#s6 .invest{font-size:.82rem;color:#fff;margin-top:6px;z-index:2;}
+
+/* ===== SLIDE 7 DIFF ===== */
+#s7{background:transparent;color:#fff}
+#s7 .stitle{color:#fff}
+#s7 .quote{background:rgba(35,47,62,0.92);color:var(--white);border:4px solid var(--teal);border-left:8px solid var(--teal);padding:18px 24px;font-size:1.05rem;font-style:italic;border-radius:12px;max-width:1100px;width:100%;z-index:2;text-align:center;margin-bottom:18px;
+#s7 .pills{display:flex;gap:14px;width:100%;max-width:1100px;z-index:2;margin-bottom:18px}
+#s7 .pill{flex:1;background:rgba(255,255,255,0.92);padding:16px;border-radius:12px;text-align:center;border:4px solid #232F3E;
+#s7 .pill h4{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px}
+#s7 .pill p{font-size:.78rem;color:#555;line-height:1.35}
+#s7 .tbl{width:100%;max-width:1100px;z-index:2;border-collapse:collapse;font-size:.82rem}
+#s7 .tbl th{background:var(--navy);color:var(--white);padding:10px 14px;text-align:left;font-weight:700;border:2px solid var(--teal)}
+#s7 .tbl td{padding:8px 14px;border-bottom:2px solid #e0e0e0;background:rgba(255,255,255,0.9)}
+#s7 .tbl tr:nth-child(even) td{background:var(--gray)}
+
+/* ===== SLIDE 8 RS ===== */
+#s8{background:transparent;color:#fff}
+#s8 .stitle{color:#fff}
+#s8 .rsimg{max-height:30vh;object-fit:contain;display:block;margin:0 auto 14px}
+#s8 .rule80{text-align:center;margin-bottom:14px;z-index:2}
+#s8 .pcards{display:flex;gap:12px;width:100%;max-width:1200px;z-index:2;margin-bottom:16px}
+#s8 .pc2{flex:1;background:rgba(35,47,62,0.92);color:var(--white);padding:16px;border-radius:12px;border:4px solid;border-top:8px solid;
+#s8 .pc2 h4{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px}
+#s8 .pc2 p{font-size:.72rem;color:#ccc;line-height:1.35}
+#s8 .postbox{background:rgba(35,47,62,0.92);color:var(--white);padding:18px;border-radius:12px;border:4px solid var(--teal);max-width:1200px;width:100%;z-index:2;
+#s8 .postbox h4{font-family:'Cherry Bomb One',cursive;font-size:1.1rem;margin-bottom:8px}
+#s8 .postbox p{font-size:.82rem;margin-bottom:4px}
+#s8 .postbox .kpis{display:flex;gap:12px;margin-top:8px;flex-wrap:wrap}
+#s8 .postbox .kp{background:rgba(255,255,255,.12);padding:4px 12px;border-radius:20px;font-size:.75rem;font-weight:600}
+
+/* ===== SLIDE 9 COMMUNITY ===== */
+#s9{background:transparent;color:#fff}
+#s9 .stitle{color:#fff}
+
+/* ===== SLIDE 10 STORY ===== */
+#s10{background:transparent;color:#fff}
+#s10 .stitle{color:#fff}
+#s10 .arc{display:flex;gap:14px;width:100%;max-width:1200px;z-index:2;margin-bottom:16px}
+#s10 .ab{flex:1;background:rgba(35,47,62,0.92);color:var(--white);padding:18px;border-radius:12px;border:4px solid;border-left:8px solid;
+#s10 .ab h4{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:6px}
+#s10 .ab p{font-size:.78rem;color:#ccc;line-height:1.4}
+
+/* ===== SLIDE 11 BILAN ===== */
+#s11{background:transparent;color:#fff}
+#s11 .stitle{color:#fff}
+#s11 .krow{display:flex;gap:12px;width:100%;max-width:1200px;z-index:2;margin-bottom:16px}
+#s11 .kc{flex:1;background:rgba(35,47,62,0.92);color:var(--white);padding:16px;border-radius:12px;border:4px solid;border-top:8px solid;
+#s11 .kc .kpi{display:block;margin-bottom:2px}
+#s11 .kc .klbl{font-size:.7rem;color:#ccc}
+#s11 .brow{display:flex;gap:16px;width:100%;max-width:1200px;z-index:2;margin-bottom:14px}
+#s11 .brow .c{flex:1}
+#s11 .brow h4{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:8px;color:var(--teal)}
+#s11 .brow p{font-size:.8rem;margin-bottom:3px;color:var(--white)}
+#s11 .rtbl{width:100%;border-collapse:collapse;font-size:.8rem;z-index:2}
+#s11 .rtbl th{background:var(--navy);color:var(--white);padding:8px 12px;text-align:left;font-weight:700;border:2px solid var(--teal)}
+#s11 .rtbl td{padding:7px 12px;border-bottom:2px solid #e0e0e0;background:rgba(255,255,255,0.9)}
+#s11 .closing{font-family:'Cherry Bomb One',cursive;font-size:1.6rem;color:#fff;margin-top:14px;text-align:center;z-index:2}
+#s11 .foot10{font-size:.8rem;color:#999;margin-top:8px;z-index:2}
+</style>
+</head>
+<body>
+<div class="ss" id="ss">
+<div class="pbar" id="pbar"></div>
+<div class="scount" id="scount"></div>
+
+<!-- SLIDE 1 — COVER -->
+<div class="slide active" id="s1">
+  <div class="pabg" style="background-image:url('/popart-yellow.jpg')"></div>
+  <div class="geo g1" style="border-radius:50%"></div>
+  <div class="geo g2" style="border-radius:50%"></div>
+  <div class="geo g3" style="border-radius:50%"></div>
+  <div class="geo g4" style="border-radius:50%"></div>
+  <div class="content">
+    <div class="logo-txt">BUMPER</div>
+    <div class="loc">Avenue 83 &mdash; Var</div>
+    <div class="tagline">Coques &bull; R&eacute;parations &bull; Accessoires</div>
+    <div class="sep"></div>
+    <div class="sub2">Strat&eacute;gie Commerciale &amp; Animation du Point de Vente</div>
+  </div>
+  <div class="foot">Bachelor RAC &bull; Promotion 2025/2026</div>
+</div>
+
+<!-- SLIDE 2 — CONTEXTE -->
+<div class="slide" id="s2">
+  <div class="pabg" style="background-image:url('/popart-purple.jpg')"></div>
+  <div class="stitle">Contexte de l&rsquo;enseigne</div>
+  <div class="grid">
+    <div class="left">
+      <div class="imgframe" style="max-height:45vh;display:flex;align-items:center;justify-content:center;background:var(--gray)">
+        <img src="/img/magasin_rayons.jpg" alt="" style="max-width:100%;max-height:45vh;object-fit:contain;border:4px solid #232F3E;border-radius:12px;box-shadow:5px 5px 0 #232F3E">
+      </div>
+      <p class="txt" style="margin-top:12px">Bumper est une enseigne ind&eacute;pendante sp&eacute;cialis&eacute;e dans la <strong>r&eacute;paration de smartphones</strong>, la vente de <strong>coques</strong> et d&rsquo;<strong>accessoires t&eacute;l&eacute;phoniques</strong>, implant&eacute;e au c&oelig;ur de la zone commerciale Avenue 83, dans le Var.</p>
+      <p class="txt">Face &agrave; l&rsquo;essor des SAV en ligne et &agrave; la mont&eacute;e des grandes enseignes, Bumper doit renforcer son positionnement physique et num&eacute;rique.</p>
+    </div>
+    <div class="right">
+      <div class="srow">
+        <div class="sc ct-teal">
+          <span class="kpi" style="color:var(--teal)">27&thinsp;&euro;</span>
+          <div class="slbl">Panier moyen</div>
+        </div>
+        <div class="sc ct-blue">
+          <span class="kpi" style="color:var(--blue)">150&ndash;300</span>
+          <div class="slbl">Trafic quotidien</div>
+        </div>
+      </div>
+      <div class="srow">
+        <div class="sc ct-yellow">
+          <span class="kpi" style="color:var(--yellow)">33%</span>
+          <div class="slbl">Taux de transformation</div>
+        </div>
+        <div class="sc ct-purple">
+          <span class="kpi" style="color:var(--purple)">4.6&thinsp;★</span>
+          <div class="slbl">Note Google</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3 — SWOT -->
+<div class="slide" id="s3">
+  <div class="pabg" style="background-image:url('/popart-teal.jpg')"></div>
+  <div class="stitle">Diagnostic SWOT</div>
+  <div class="swot">
+    <div class="sw cl-teal">
+      <h3 style="color:var(--teal)">FORCES</h3>
+      <ul>
+        <li style="color:var(--white)">R&eacute;paration express garantie 30 min</li>
+        <li style="color:var(--white)">Coques exclusives non disponibles en ligne</li>
+        <li style="color:var(--white)">Note Google 4.6&thinsp;★ &mdash; bonne r&eacute;putation</li>
+        <li style="color:var(--white)">Ancrage local fort, relation client personnalis&eacute;e</li>
+        <li style="color:var(--white)">Garantie SAV 3 mois</li>
+      </ul>
+    </div>
+    <div class="sw cl-yellow">
+      <h3 style="color:var(--yellow)">FAIBLESSES</h3>
+      <ul>
+        <li style="color:var(--white)">Visibilit&eacute; digitale &agrave; renforcer</li>
+        <li style="color:var(--white)">R&eacute;seaux sociaux insuffisamment exploit&eacute;s</li>
+        <li style="color:var(--white)">Pas d&rsquo;animation distinctive en boutique</li>
+        <li style="color:var(--white)">Absence de programme de fid&eacute;lisation structur&eacute;</li>
+      </ul>
+    </div>
+    <div class="sw cl-blue">
+      <h3 style="color:var(--blue)">OPPORTUNIT&Eacute;S</h3>
+      <ul>
+        <li style="color:var(--white)">Zone Avenue 83 &agrave; fort trafic quotidien</li>
+        <li style="color:var(--white)">Tendance personnalisation et exp&eacute;rience client</li>
+        <li style="color:var(--white)">Potentiel contenu UGC</li>
+      </ul>
+    </div>
+    <div class="sw cl-red">
+      <h3 style="color:var(--red)">MENACES</h3>
+      <ul>
+        <li style="color:var(--white)">Concurrence r&eacute;parateurs en ligne et cha&icirc;nes</li>
+        <li style="color:var(--white)">Pression prix grande distribution (FNAC, Darty)</li>
+        <li style="color:var(--white)">Baisse fr&eacute;quentation p&eacute;riodes creuses</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4 — PERSONAS -->
+<div class="slide" id="s4">
+  <div class="pabg" style="background-image:url('/popart-yellow.jpg')"></div>
+  <div class="stitle">Nos clients types</div>
+  <div class="prow">
+    <div class="pc ct-teal">
+      <h3 style="color:var(--teal)">LUCAS &mdash; 22 ans</h3>
+      <div class="meta">&Eacute;tudiant &bull; Toulon &bull; Budget 600&ndash;800&thinsp;&euro;/mois</div>
+      <ul>
+        <li>Usage intensif : 6&ndash;8h/jour</li>
+        <li>Besoin : r&eacute;paration rapide, coque tendance unique</li>
+        <li>Digital : Instagram, TikTok actifs</li>
+        <li>Levier conversion : exp&eacute;rience Bumper Lab</li>
+        <li>Levier fid&eacute;lisation : #MaBumperCoque, parrainage -10%</li>
+      </ul>
+      <div class="plat">
+        <span class="ptag">📸 Instagram</span>
+        <span class="ptag">🎵 TikTok</span>
+      </div>
+      <div class="lev" style="border-color:var(--teal);background:rgba(0,201,175,.08)">
+        Leviers : Bumper Lab &bull; UGC &bull; Parrainage
+      </div>
+    </div>
+    <div class="pc ct-yellow">
+      <h3 style="color:var(--yellow)">MARIE &mdash; 42 ans</h3>
+      <div class="meta">Cadre &bull; 2 enfants &bull; Var</div>
+      <ul>
+        <li>Besoin : r&eacute;paration fiable avec garantie</li>
+        <li>D&eacute;clencheur : enfant casse &eacute;cran, recommandation amie</li>
+        <li>Digital : Facebook, Google Maps</li>
+        <li>Levier conversion : garantie 3 mois, avis Google</li>
+        <li>Levier fid&eacute;lisation : SMS suivi, newsletter famille</li>
+      </ul>
+      <div class="plat">
+        <span class="ptag">📍 Google Maps</span>
+        <span class="ptag">📘 Facebook</span>
+      </div>
+      <div class="lev" style="border-color:var(--yellow);background:rgba(250,201,0,.08)">
+        Leviers : Garantie &bull; Avis &bull; Newsletter famille
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5 — ESPACE SCENARISE -->
+<div class="slide" id="s5">
+  <div class="pabg" style="background-image:url('/popart-purple.jpg')"></div>
+  <div class="stitle">Espace de vente sc&eacute;naris&eacute;</div>
+  <div class="imgs">
+    <div class="imgframe">
+      <img src="/img/plan_espace.jpg" alt="" style="max-width:100%;max-height:45vh;object-fit:contain;border:4px solid #232F3E;border-radius:12px;box-shadow:5px 5px 0 #232F3E">
+      <img src="/img/mannequin_smartphones.jpg" alt="" style="max-width:100%;max-height:45vh;object-fit:contain;border:4px solid #232F3E;border-radius:12px;box-shadow:5px 5px 0 #232F3E">
+    </div>
+    <div class="zone">
+      <div class="zn">1</div>
+      <h4>VITRINE</h4>
+      <p>Coques tendance &bull; QR Code Instagram &bull; Rotation mensuelle</p>
+    </div>
+    <div class="zone">
+      <div class="zn">2</div>
+      <h4>ACCUEIL</h4>
+      <p>D&eacute;monstration live &bull; Bornes diagnostic</p>
+    </div>
+    <div class="zone">
+      <div class="zn">3</div>
+      <h4>BUMPER LAB</h4>
+      <p>Borne 24&Prime; &bull; Imprimante UV &bull; Mur UGC</p>
+    </div>
+    <div class="zone">
+      <div class="zn">4</div>
+      <h4>FID&Eacute;LISATION</h4>
+      <p>Programme fid&eacute;lit&eacute; &bull; Borne QR avis</p>
+    </div>
+  </div>
+  <div class="flux">Flux : Vitrine &rarr; Accueil &rarr; Bumper Lab &rarr; Produits &rarr; Caisse</div>
+</div>
+
+<!-- SLIDE 6 — BUMPER LAB -->
+<div class="slide" id="s6">
+  <div class="pabg" style="background-image:url('/popart-teal.jpg')"></div>
+  <div class="stitle">BUMPER LAB</div>
+  <div class="sub6">Seule boutique du Var avec personnalisation en direct</div>
+  <div style="text-align:center;z-index:2;margin-bottom:14px">
+    <img src="/img/bumper_lab_photo.jpg" alt="" style="max-width:100%;max-height:45vh;object-fit:contain;border:4px solid #232F3E;border-radius:12px;box-shadow:5px 5px 0 #232F3E">
+    <div class="stp" style="border-color:var(--teal)">
+      <h4 style="color:var(--teal)">ARRIV&Eacute;E</h4>
+      <p>Le client remarque le corner lumineux et la borne tactile</p>
+    </div>
+    <div class="stp" style="border-color:var(--blue)">
+      <h4 style="color:var(--blue)">CHOIX</h4>
+      <p>Il s&eacute;lectionne mod&egrave;le, couleur, motif sur la borne interactive</p>
+    </div>
+    <div class="stp" style="border-color:var(--yellow)">
+      <h4 style="color:var(--yellow)">CR&Eacute;ATION</h4>
+      <p>L&rsquo;imprimante UV imprime la coque sous ses yeux en 15&ndash;30 min</p>
+    </div>
+    <div class="stp" style="border-color:var(--purple)">
+      <h4 style="color:var(--purple)">PARTAGE</h4>
+      <p>Il poste en story #BumperLab et re&ccedil;oit -10%</p>
+    </div>
+  </div>
+  <div class="kpirow">
+    <div class="kb" style="border-color:var(--teal)">
+      <span class="kpi" style="color:var(--teal)">+28%</span>
+      <div class="klbl">Panier moyen</div>
+    </div>
+    <div class="kb" style="border-color:var(--blue)">
+      <span class="kpi" style="color:var(--blue)">30%</span>
+      <div class="klbl">UGC g&eacute;n&eacute;r&eacute;</div>
+    </div>
+    <div class="kb" style="border-color:var(--yellow)">
+      <span class="kpi" style="color:var(--yellow)">20/sem</span>
+      <div class="klbl">Coques personnalis&eacute;es</div>
+    </div>
+    <div class="kb" style="border-color:var(--purple)">
+      <span class="kpi" style="color:var(--purple)">x5</span>
+      <div class="klbl">ROI</div>
+    </div>
+  </div>
+  <div class="invest">Investissement : 480&thinsp;&euro; &rarr; Marge 3 mois : 2 820&thinsp;&euro; &rarr; ROI x5</div>
+</div>
+
+<!-- SLIDE 7 — DIFFERENCIATION -->
+<div class="slide" id="s7">
+  <div class="pabg" style="background-image:url('/popart-yellow.jpg')"></div>
+  <div class="stitle">Pourquoi Bumper ?</div>
+  <div class="quote">&laquo; Votre t&eacute;l&eacute;phone r&eacute;par&eacute; en 30 min, avec une coque unique &mdash; ici, maintenant, par des experts. &raquo;</div>
+  <div class="pills">
+    <div class="pill ct-teal">
+      <h4 style="color:var(--teal)">RAPIDIT&Eacute;</h4>
+      <p>30 min chrono &bull; Devis imm&eacute;diat &bull; Stock pi&egrave;ces disponible</p>
+    </div>
+    <div class="pill ct-blue">
+      <h4 style="color:var(--blue)">EXCLUSIVIT&Eacute;</h4>
+      <p>Coques non vendues en ligne &bull; Personnalisation &bull; Collections limit&eacute;es</p>
+    </div>
+    <div class="pill ct-yellow">
+      <h4 style="color:var(--yellow)">PROXIMIT&Eacute;</h4>
+      <p>&Eacute;quipe locale &bull; Relation personnalis&eacute;e &bull; Conseils honn&ecirc;tes</p>
+    </div>
+    <div class="pill ct-purple">
+      <h4 style="color:var(--purple)">CONFIANCE</h4>
+      <p>Garantie 1 an &bull; Pi&egrave;ces certifi&eacute;es &bull; Devis transparent</p>
+    </div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Crit&egrave;re</th><th>Bumper</th><th>iSmash</th><th>FNAC / Darty</th></tr></thead>
+    <tbody>
+      <tr><td>Note Google</td><td style="color:var(--teal);font-weight:700">4.6&thinsp;★</td><td>4.2&thinsp;★</td><td>3.8&thinsp;★</td></tr>
+      <tr><td>D&eacute;lai</td><td style="color:var(--teal);font-weight:700">30 min</td><td>1&ndash;2h</td><td>3&ndash;7 jours</td></tr>
+      <tr><td>Coques exclusives</td><td style="color:var(--teal);font-weight:700">✓</td><td>✗</td><td>✗</td></tr>
+      <tr><td>Personnalisation</td><td style="color:var(--teal);font-weight:700">✓ Lab</td><td>✗</td><td>✗</td></tr>
+      <tr><td>Garantie SAV</td><td style="color:var(--teal);font-weight:700">✓ 3 mois</td><td>✓ 3 mois</td><td>Constructeur</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SLIDE 8 — RESEAUX SOCIAUX -->
+<div class="slide" id="s8">
+  <div class="pabg" style="background-image:url('/popart-purple.jpg')"></div>
+  <div class="stitle">Strat&eacute;gie R&eacute;seaux Sociaux</div>
+  <div style="display:flex;gap:24px;width:100%;max-width:1200px;z-index:2;align-items:stretch">
+    <div style="flex:1;display:flex;flex-direction:column;gap:10px">
+      <div style="text-align:center">
+        <span class="badge">80% utile &amp; divertissant</span>
+        <span class="badge badge-teal" style="margin-left:6px">20% promotionnel</span>
+      </div>
+      <div style="display:flex;gap:10px">
+        <div class="pc2" style="border-color:var(--teal)">
+          <h4 style="color:var(--teal);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">INSTAGRAM</h4>
+          <p style="font-size:.72rem;color:#ccc;line-height:1.35">5&times;/sem &bull; Reels &bull; Stories &bull; UGC #BumperLab<br>Objectif 1 000 abos</p>
+        </div>
+        <div class="pc2" style="border-color:var(--blue)">
+          <h4 style="color:var(--blue);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">TIKTOK</h4>
+          <p style="font-size:.72rem;color:#ccc;line-height:1.35">3&times;/sem &bull; Avant/apr&egrave;s 60s &bull; POV boutique<br>#MaBumperCoque &bull; 500 abos</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px">
+        <div class="pc2" style="border-color:var(--yellow)">
+          <h4 style="color:var(--yellow);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">FACEBOOK</h4>
+          <p style="font-size:.72rem;color:#ccc;line-height:1.35">3&times;/sem &bull; Promos locales &bull; &Eacute;v&eacute;nements<br>Avis Google &bull; Rayon 15 km</p>
+        </div>
+        <div class="pc2" style="border-color:var(--purple)">
+          <h4 style="color:var(--purple);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">GOOGLE</h4>
+          <p style="font-size:.72rem;color:#ccc;line-height:1.35">2&times;/sem &bull; Posts offres &bull; Photos HD<br>R&eacute;ponse avis &lt; 24h &bull; Top 3 local</p>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <img src="/img/post_insta.jpg" alt="Post Instagram Bumper" style="max-height:55vh;object-fit:contain;border:4px solid #232F3E;border-radius:12px;box-shadow:5px 5px 0 #232F3E">
+      <div class="postbox">
+        <p style="font-weight:700;margin-bottom:2px">Ecran casse ? On s'en occupe.</p>
+        <p style="font-size:.75rem;color:#ccc">30 min chrono — garanti 3 mois — Sans RDV</p>
+        <p style="color:var(--teal);font-size:.72rem">#BumperAv83 #ReparationTelephone #Var</p>
+        <p style="font-size:.7rem;color:var(--yellow)">200 impressions - 15 likes - 5 enregistrements</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 9 - ANIMATION COMMUNAUTE -->
+<div class="slide" id="s9">
+  <div class="pabg" style="background-image:url('/popart-yellow.jpg')"></div>
+  <div class="stitle">Animation d'une communaute</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;width:100%;max-width:1200px;justify-content:center;margin-bottom:18px">
+    <div style="background:rgba(35,47,62,0.92);color:var(--white);padding:8px 14px;border-radius:12px;text-align:center;border:3px solid var(--teal);border-top:6px solid var(--teal)"><strong>JAN</strong><br><span style="font-size:.68rem;color:var(--teal)">Soldes -20%</span></div>
+    <div style="background:rgba(35,47,62,0.92);color:var(--white);padding:8px 14px;border-radius:12px;text-align:center;border:3px solid var(--yellow);border-top:6px solid var(--yellow)"><strong>FEV</strong><br><span style="font-size:.68rem;color:var(--yellow)">St-Valentin duo</span></div>
+    <div style="background:rgba(35,47,62,0.92);color:var(--white);padding:8px 14px;border-radius:12px;text-align:center;border:3px solid var(--teal);border-top:6px solid var(--teal)"><strong>MAR</strong><br><span style="font-size:.68rem;color:var(--teal)">Printemps nature</span></div>
+    <div style="background:rgba(35,47,62,0.92);color:var(--white);padding:8px 14px;border-radius:12px;text-align:center;border:3px solid var(--yellow);border-top:6px solid var(--yellow)"><strong>AVR</strong><br><span style="font-size:.68rem;color:var(--yellow)">Paques surprise</span></div>
+    <div style="background:rgba(35,47,62,0.92);color:var(--white);padding:8px 14px;border-radius:12px;text-align:center;border:3px solid var(--purple);border-top:6px solid var(--purple)"><strong>MAI</strong><br><span style="font-size:.68rem;color:var(--purple)">Fete des Meres</span></div>
+    <div style="background:rgba(35,47,62,0.92);color:var(--white);padding:8px 14px;border-radius:12px;text-align:center;border:3px solid var(--blue);border-top:6px solid var(--blue)"><strong>JUIN</strong><br><span style="font-size:.68rem;color:var(--blue)">Ete plage</span></div>
+    <div style="background:rgba(35,47,62,0.92);color:var(--white);padding:8px 14px;border-radius:12px;text-align:center;border:3px solid var(--teal);border-top:6px solid var(--teal)"><strong>SEP</strong><br><span style="font-size:.68rem;color:var(--teal)">Rentree etudiant</span></div>
+    <div style="background:rgba(35,47,62,0.92);color:var(--white);padding:8px 14px;border-radius:12px;text-align:center;border:3px solid var(--yellow);border-top:6px solid var(--yellow)"><strong>OCT</strong><br><span style="font-size:.68rem;color:var(--yellow)">Halloween limited</span></div>
+    <div style="background:rgba(35,47,62,0.92);color:var(--white);padding:8px 14px;border-radius:12px;text-align:center;border:3px solid var(--blue);border-top:6px solid var(--blue)"><strong>NOV</strong><br><span style="font-size:.68rem;color:var(--blue)">Black Friday -30%</span></div>
+    <div style="background:rgba(35,47,62,0.92);color:var(--white);padding:8px 14px;border-radius:12px;text-align:center;border:3px solid var(--purple);border-top:6px solid var(--purple)"><strong>DEC</strong><br><span style="font-size:.68rem;color:var(--purple)">Noel cadeaux</span></div>
+  </div>
+  <div style="display:flex;gap:14px;width:100%;max-width:1200px;margin-bottom:14px">
+    <div class="c ct-teal" style="flex:1;text-align:center">
+      <h4 style="font-family:'Cherry Bomb One',cursive;font-size:1rem;color:var(--teal);margin-bottom:4px">Club VIP</h4>
+      <p style="font-size:.8rem;color:var(--white)">1 EUR = 1 point<br>Avantages exclusifs</p>
+    </div>
+    <div class="c ct-blue" style="flex:1;text-align:center">
+      <h4 style="font-family:'Cherry Bomb One',cursive;font-size:1rem;color:var(--blue);margin-bottom:4px">UGC #MaBumperCoque</h4>
+      <p style="font-size:.8rem;color:var(--white)">-15% sur prochaine commande<br>Contenu client valorise</p>
+    </div>
+    <div class="c ct-yellow" style="flex:1;text-align:center">
+      <h4 style="font-family:'Cherry Bomb One',cursive;font-size:1rem;color:var(--yellow);margin-bottom:4px">Parrainage</h4>
+      <p style="font-size:.8rem;color:var(--white)">-10% pour le parrain<br>-10% pour le filleul</p>
+    </div>
+    <div class="c ct-purple" style="flex:1;text-align:center">
+      <h4 style="font-family:'Cherry Bomb One',cursive;font-size:1rem;color:var(--purple);margin-bottom:4px">Live Instagram</h4>
+      <p style="font-size:.8rem;color:var(--white)">Session mensuelle<br>Demo en direct</p>
+    </div>
+  </div>
+  <div style="text-align:center">
+    <img src="/img/mur_coques.jpg" alt="Mur coques Bumper" style="max-height:20vh;object-fit:contain;border:4px solid #232F3E;border-radius:12px;box-shadow:5px 5px 0 #232F3E">
+  </div>
+</div>
+
+<!-- SLIDE 10 - STORYTELLING -->
+<div class="slide" id="s10">
+  <div class="pabg" style="background-image:url('/popart-purple.jpg')"></div>
+  <div class="stitle">Notre Story Telling</div>
+  <div class="arc">
+    <div class="ab" style="border-color:var(--yellow)">
+      <h4 style="color:var(--yellow)">LE PROBLEME</h4>
+      <p>Ecran casse, chargeur HS, coque rayee. Les SAV en ligne sont lents, les grandes enseignes impersonnelles. Tu cherches rapide, local, humain.</p>
+    </div>
+    <div class="ab" style="border-color:var(--teal)">
+      <h4 style="color:var(--teal)">LE HEROS : TOI</h4>
+      <p>Tu veux une solution rapide et humaine. Tu merites un expert qui te comprend, sans jargon, sans attente.</p>
+    </div>
+    <div class="ab" style="border-color:var(--blue)">
+      <h4 style="color:var(--blue)">LA SOLUTION : BUMPER</h4>
+      <p>En 30 minutes, ton telephone est repare. Une coque unique t'attend. Une equipe souriante t'accueille.</p>
+    </div>
+    <div class="ab" style="border-color:var(--purple)">
+      <h4 style="color:var(--purple)">LA TRANSFORMATION</h4>
+      <p>Tu repars avec un telephone neuf, une protection stylee, et l'adresse d'un commerce de confiance a partager.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 11 - BILAN ET PERSPECTIVES -->
+<div class="slide" id="s11">
+  <div class="pabg" style="background-image:url('/popart-teal.jpg')"></div>
+  <div class="stitle">Bilan et Perspectives</div>
+  <div class="krow">
+    <div class="kc" style="border-color:var(--teal)">
+      <span class="kpi" style="color:var(--teal)">≥ 4.7</span>
+      <div class="klbl">Note Google</div>
+    </div>
+    <div class="kc" style="border-color:var(--blue)">
+      <span class="kpi" style="color:var(--blue)">+15%</span>
+      <div class="klbl">CA annuel</div>
+    </div>
+    <div class="kc" style="border-color:var(--yellow)">
+      <span class="kpi" style="color:var(--yellow)">+20%/mois</span>
+      <div class="klbl">Abonnes RS</div>
+    </div>
+    <div class="kc" style="border-color:var(--purple)">
+      <span class="kpi" style="color:var(--purple)">> 40%</span>
+      <div class="klbl">Taux fidelisation</div>
+    </div>
+    <div class="kc" style="border-color:var(--teal)">
+      <span class="kpi" style="color:var(--teal)">> 45 EUR</span>
+      <div class="klbl">Panier moyen</div>
+    </div>
+  </div>
+  <div class="brow">
+    <div class="c ct-teal">
+      <h4 style="font-family:'Cherry Bomb One',cursive;color:var(--teal)">Budget Bumper Lab</h4>
+      <p>Investissement : 480 EUR (borne 300 + coques 100 + signalisation 80)</p>
+      <p>Marge nette 3 mois : 2 820 EUR - ROI : x5</p>
+      <p>Imprimante UV a commission : 0 EUR charge fixe</p>
+    </div>
+    <div class="c ct-blue">
+      <table class="rtbl">
+        <thead><tr><th>Risque</th><th>Criticite</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Avis viral</td><td style="color:var(--red);font-weight:700">ELEVEE</td><td>Reponse < 2h + geste commercial</td></tr>
+          <tr><td>Panne fournisseur</td><td style="color:var(--yellow);font-weight:700">MOYENNE</td><td>2 backup + stock 15 jours</td></tr>
+          <tr><td>Faible trafic</td><td style="color:var(--red);font-weight:700">ELEVEE</td><td>Meta Ads local + offre -10%</td></tr>
+          <tr><td>Baisse CA creuse</td><td style="color:var(--purple);font-weight:700">CRITIQUE</td><td>Offres saisonnieres anticipees</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="closing">Bumper : l'expert local qui allie rapidite, creativite et proximite.</div>
+  <div class="foot10">Merci pour votre attention</div>
+</div>
+
+<!-- Navigation -->
+<button class="nbtn nprev" onclick="go(-1)">‹</button>
+<button class="nbtn nnext" onclick="go(1)">›</button>
+<div class="dots" id="dots"></div>
+
+</div><!-- /ss -->
+
+<script>
+(function(){
+  var S=document.querySelectorAll('.slide'),T=S.length,C=0;
+  var P=document.getElementById('pbar'),K=document.getElementById('scount'),D=document.getElementById('dots');
+  function show(n){
+    S[C].classList.remove('active');
+    C=(n+T)%T;
+    S[C].classList.add('active');
+    P.style.width=((C+1)/T*100)+'%';
+    K.textContent=(C+1)+' / '+T;
+    var dd=D.querySelectorAll('.dot');
+    for(var i=0;i<dd.length;i++) dd[i].classList.toggle('active',i===C);
+  }
+  for(var i=0;i<T;i++){
+    var d=document.createElement('div');
+    d.className='dot'+(i===0?' active':'');
+    d.setAttribute('data-i',i);
+    d.onclick=function(){ show(parseInt(this.getAttribute('data-i'))); };
+    D.appendChild(d);
+  }
+  window.go=function(dir){ show(C+dir); };
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key==='ArrowDown') go(1);
+    else if(e.key==='ArrowLeft'||e.key==='ArrowUp') go(-1);
+  });
+  P.style.width=(100/T)+'%';
+  K.textContent='1 / '+T;
+})();
+</script>
+</body>
+</html>

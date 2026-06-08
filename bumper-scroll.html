@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Book Mission — Bumper Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,300..1000;1,6..12,300..1000&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;color:#4D5B7C;line-height:1.7;background:#F8F9FA}
+
+.topbar{background:#4B0082;color:rgba(255,255,255,.7);font-size:.75rem;padding:6px 2rem;text-align:center}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#FAC900;padding:0 2rem;height:70px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+nav .lg{display:flex;align-items:center;gap:10px}
+nav .lg img{height:42px}
+nav .lg span{font-family:'Cherry Bomb One',cursive;font-size:1.5rem;color:#232F3E;text-shadow:2px 2px 0 rgba(0,0,0,.1)}
+nav ul{list-style:none;display:flex;gap:0}
+nav ul li a{color:#232F3E;text-decoration:none;font-weight:600;font-size:.85rem;padding:8px 14px;border-radius:4px;transition:.2s}
+nav ul li a:hover{background:rgba(35,47,62,.1)}
+
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 2rem 80px;background:linear-gradient(180deg,#232F3E 0%,#1a2535 100%);color:#fff;position:relative}
+.hero .overlay{position:absolute;inset:0;background:url(img/hero1.jpg) center/cover no-repeat;opacity:.15}
+.hero>*{position:relative;z-index:1}
+.hero .badge{display:inline-block;background:#00C9AF;color:#fff;font-family:'Caveat',cursive;font-size:1.1rem;font-weight:600;padding:6px 20px;border-radius:50px;margin-bottom:1.5rem}
+.hero h1{font-family:'Cherry Bomb One',cursive;font-size:clamp(2.5rem,6vw,5rem);color:#fff;text-shadow:3px 3px 0 rgba(0,0,0,.3);line-height:1.2;margin-bottom:1rem}
+.hero h1 .y{color:#FAC900;text-shadow:3px 3px 0 rgba(0,0,0,.3)}
+.hero .sub{font-size:1.1rem;opacity:.8;max-width:600px;margin:0 auto 2.5rem}
+.hero .cta{display:inline-block;background:#00C9AF;color:#fff;font-family:'Caveat',cursive;font-size:1.2rem;font-weight:700;padding:12px 36px;border-radius:50px;text-decoration:none;transition:.3s;box-shadow:0 4px 15px rgba(0,201,175,.4)}
+.hero .cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,201,175,.5)}
+.hero .scroll-hint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:2rem;opacity:.4;animation:bob 2s infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+.ctn{max-width:1100px;margin:0 auto;padding:0 2rem}
+section{padding:70px 0}
+.sh{text-align:center;margin-bottom:50px}
+.sh h2{font-family:'Cherry Bomb One',cursive;font-size:clamp(1.8rem,4vw,2.8rem);color:#232F3E;text-shadow:2px 2px 0 rgba(0,0,0,.08);margin-bottom:.5rem}
+.sh h2 .ac{color:#FAC900}
+.sh p{color:#6B7A99;font-size:1.05rem;max-width:600px;margin:0 auto}
+
+.light{background:#F8F9FA}
+.dark{background:#232F3E;color:#fff;padding:70px 0}
+.dark .sh h2{color:#fff;text-shadow:2px 2px 0 rgba(0,0,0,.3)}
+.dark .sh h2 .ac{color:#FAC900}
+.dark .sh p{color:rgba(255,255,255,.65)}
+.dark table thead{background:#1a2535}
+
+.card{background:#fff;border-radius:20px;padding:2rem;box-shadow:0 2px 10px rgba(0,0,0,.06);transition:.3s}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.1)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin:2.5rem 0}
+.sc{background:#fff;border-radius:16px;padding:1.5rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.06);border-bottom:4px solid #FAC900}
+.sc .sv{font-family:'Cherry Bomb One',cursive;font-size:2rem;color:#232F3E}
+.sc .sl{font-size:.8rem;color:#6B7A99;text-transform:uppercase;letter-spacing:1px;margin-top:.25rem}
+
+.swot{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.sq{border-radius:20px;padding:2rem;color:#fff;overflow:hidden}
+.sq h3{font-family:'Cherry Bomb One',cursive;font-size:1.3rem;margin-bottom:1rem}
+.sq ul{list-style:none;font-size:.9rem;opacity:.9}.sq li{padding:3px 0;padding-left:16px;position:relative}.sq li::before{content:'\2022';position:absolute;left:0}
+.sf{background:#00C9AF}.sw{background:#FF6B6B}.so{background:#4ECDC4}.sm{background:#7C5CFC}
+
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.pc{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.pc .ph{padding:2rem;text-align:center;color:#fff}
+.pc .ph.lc{background:linear-gradient(135deg,#667eea,#764ba2)}
+.pc .ph.mr{background:linear-gradient(135deg,#f093fb,#f5576c)}
+.pc .ph h3{font-family:'Cherry Bomb One',cursive;font-size:1.5rem}
+.pc .ph p{opacity:.8;font-size:.9rem;margin-top:.25rem}
+.pc .pb{padding:1.5rem 2rem}
+.pc .pb h4{font-family:'Caveat',cursive;font-size:1.05rem;color:#00C9AF;margin-bottom:.25rem;margin-top:1rem;font-weight:700}
+.pc .pb h4:first-child{margin-top:0}
+.pc .pb p{font-size:.9rem;color:#555}
+
+.tw{overflow-x:auto;margin:2rem 0;border-radius:16px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden}
+thead{background:#232F3E;color:#fff;font-weight:700}
+th,td{padding:14px 18px;text-align:left;font-size:.88rem}
+tbody tr{border-bottom:1px solid #eee;transition:.2s}tbody tr:hover{background:#FFF8E1}
+td strong{color:#00A892;font-weight:700}
+
+.brands{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin:2.5rem 0}
+.brands img{width:150px;height:150px;object-fit:cover;border-radius:20px;box-shadow:0 4px 15px rgba(0,0,0,.1);transition:.3s;border:3px solid #fff}
+.brands img:hover{transform:scale(1.05);box-shadow:0 8px 25px rgba(0,0,0,.15)}
+
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.spc{background:#fff;border-radius:20px;padding:1.5rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.spc .si{font-size:2.5rem;margin-bottom:.75rem}
+.spc h3{font-family:'Cherry Bomb One',cursive;font-size:1rem;color:#232F3E;margin-bottom:.5rem}
+.spc p{font-size:.82rem;color:#6B7A99}
+
+.jr{display:flex;justify-content:center;gap:0;margin:2.5rem 0;flex-wrap:wrap}
+.js{text-align:center;position:relative;padding:1.5rem}
+.js .jn{width:50px;height:50px;background:#FAC900;color:#232F3E;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin:0 auto .75rem;box-shadow:0 3px 10px rgba(250,201,0,.4)}
+.js h4{font-size:.95rem;color:#232F3E;font-weight:700}.js p{font-size:.8rem;color:#6B7A99}
+.js:not(:last-child)::after{content:'\2192';position:absolute;right:-4px;top:32px;color:#FAC900;font-size:1.3rem;font-weight:700}
+
+.lg2{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin:2rem 0}
+.ls{background:#fff;border-radius:20px;padding:1.5rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.ls .ln{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;background:#232F3E;color:#FAC900;border-radius:50%;font-family:'Cherry Bomb One',cursive;font-size:1.1rem;margin-bottom:.75rem}
+.ls h4{font-size:.95rem;color:#232F3E;font-weight:700}.ls p{font-size:.8rem;color:#6B7A99}
+
+.sog{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.soc{background:#fff;border-radius:20px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.06);border-top:4px solid}
+.soc.ig{border-color:#E1306C}.soc.tk{border-color:#000}.soc.fb{border-color:#1877F2}.soc.gg{border-color:#4285F4}
+.soc h3{font-family:'Cherry Bomb One',cursive;font-size:1.15rem;margin-bottom:.25rem}
+.soc .tg{font-size:.82rem;color:#6B7A99;margin-bottom:.75rem;font-family:'Caveat',cursive;font-weight:600}
+.soc ul{list-style:none;font-size:.88rem}.soc li{padding:3px 0;padding-left:18px;position:relative;color:#555}.soc li::before{content:'\2713';position:absolute;left:0;color:#00C9AF;font-weight:700}
+
+.pm{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2.5rem 0}
+.pmc{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.pmc .pmh{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid #eee}
+.pmc .pma{width:36px;height:36px;border-radius:50%}
+.pmc .pmn{font-weight:700;font-size:.85rem;color:#232F3E}
+.pmc .pmp{font-size:.72rem;color:#6B7A99}
+.pmc .pt{padding:12px 16px;font-size:.85rem;color:#333;line-height:1.5}
+.pmc .pt .hh{color:#00A892;font-weight:600}
+.pmc .pe{padding:8px 16px 14px;display:flex;gap:1.5rem;font-size:.8rem;color:#6B7A99}
+
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.cc{background:#fff;border-radius:20px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.cc h4{font-family:'Cherry Bomb One',cursive;font-size:1rem;color:#232F3E;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:3px solid #FAC900}
+.ci{display:flex;gap:10px;margin-bottom:.5rem;font-size:.85rem}.ci .ce{font-size:1.1rem}.ci .ct{color:#555}
+
+.smg{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.smc{background:#fff;border-radius:20px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.06);border-left:4px solid #FAC900}
+.smc .sml{font-family:'Caveat',cursive;font-size:1rem;color:#FAC900;font-weight:700;margin-bottom:.25rem}
+.smc h4{font-size:1rem;font-weight:700;color:#232F3E;margin-bottom:.5rem}
+.smc p{font-size:.88rem;color:#555}
+.smc .kpi{display:inline-block;background:#FFF8E1;color:#C5A028;padding:4px 14px;border-radius:50px;font-size:.78rem;font-weight:700;margin-top:.5rem}
+
+.fi{margin:2.5rem 0;text-align:center}.fi img{max-width:100%;border-radius:24px;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.ps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+.ps img{width:100%;height:220px;object-fit:cover;border-radius:20px;box-shadow:0 4px 15px rgba(0,0,0,.08);transition:.3s}
+.ps img:hover{transform:scale(1.03);box-shadow:0 8px 25px rgba(0,0,0,.12)}
+
+.ccl{background:linear-gradient(180deg,#232F3E,#1a2535);color:#fff;text-align:center;padding:80px 2rem;border-radius:30px 30px 0 0;margin-top:40px}
+.ccl h2{font-family:'Cherry Bomb One',cursive;font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:1rem;text-shadow:2px 2px 0 rgba(0,0,0,.3)}
+.ccl h2 span{color:#FAC900}
+.ccl p{max-width:650px;margin:0 auto 2rem;opacity:.8}
+
+footer{background:#4B0082;color:rgba(255,255,255,.7);text-align:center;padding:2rem;font-size:.82rem}
+
+.anim{opacity:0;transform:translateY(25px);transition:.7s cubic-bezier(.4,0,.2,1)}.anim.show{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+nav ul{display:none}
+.hero h1{font-size:2.5rem}
+.stats,.swot,.pgrid,.sog,.cg,.smg{grid-template-columns:1fr}
+.sg,.lg2,.pm{grid-template-columns:1fr 1fr}
+.brands img{width:100px;height:100px}
+.js:not(:last-child)::after{display:none}
+}
+</style></head>
+<body>
+<div class="topbar">📱 Book Mission — Bumper Store | Bachelor RAC 2025/2026 IFAG Toulon</div>
+
+<nav><div class="lg"><img src="img/logo_bumper.png" alt="Bumper"><span>BUMPER</span></div>
+<ul><li><a href="#hero">Accueil</a></li><li><a href="#ctx">Mission</a></li><li><a href="#ana">Analyse</a></li><li><a href="#per">Personas</a></li><li><a href="#str">Stratégie</a></li><li><a href="#obj">Objectifs</a></li></ul></nav>
+<section class="hero" id="hero">
+<div class="overlay"></div>
+<div>
+<div class="badge">📋 Book Mission 2025/2026</div>
+<img src="img/logo_big.png" alt="Bumper" style="width:140px;margin-bottom:1.5rem;filter:drop-shadow(0 5px 15px rgba(0,0,0,.3))">
+<h1>BOOK <span class="y">MISSION</span></h1>
+<p class="sub">Analyse stratégique de l'enseigne Bumper — Avenue 83, Var</p>
+<a href="#ctx" class="cta">Découvrir la mission →</a>
+<div class="scroll-hint">↓</div>
+</div>
+</section>
+<section id="ctx" class="light"><div class="ctn">
+<div class="sh anim"><h2>Mission & <span class="ac">Contexte</span></h2><p>Analyse stratégique complète de l'enseigne Bumper</p></div>
+<div class="fi anim"><img src="img/boutique1.jpg" alt="Boutique Bumper" loading="lazy"></div>
+<div class="card anim" style="max-width:700px;margin:0 auto 2rem">
+<h3 style="font-family:'Cherry Bomb One',cursive;font-size:1.3rem;color:#232F3E;margin-bottom:1rem">Bumper : Votre smartphone, notre expertise</h3>
+<p>Bumper est une enseigne spécialisée dans la <strong>réparation de smartphones</strong> et la <strong>vente de coques et accessoires</strong> mobiles. Située sur l'Avenue 83 dans le Var, le magasin se distingue par son offre unique combinant services techniques et personnalisation créative via le <strong style="color:#FAC900">Bumper Lab</strong>.</p>
+<p style="margin-top:1rem">Notre mission : analyser le positionnement actuel, identifier les opportunités de croissance et développer une stratégie digitale cohérente.</p></div>
+<div class="stats anim">
+<div class="sc"><div class="sv">27€</div><div class="sl">Panier moyen</div></div>
+<div class="sc"><div class="sv">150</div><div class="sl">Visiteurs/jour (sem)</div></div>
+<div class="sc"><div class="sv">300</div><div class="sl">Visiteurs/jour (we)</div></div>
+<div class="sc"><div class="sv">33%</div><div class="sl">Taux de conversion</div></div></div>
+</div></section>
+<section id="ana" class="dark"><div class="ctn">
+<div class="sh anim"><h2>Analyse <span class="ac">SWOT</span></h2><p>Diagnostic stratégique de l'enseigne</p></div>
+<div class="swot anim">
+<div class="sq sf"><h3>⭐ Forces</h3><ul><li>Localisation stratégique Avenue 83</li><li>Offre complète réparation + accessoires</li><li>Concept Bumper Lab unique</li><li>Équipe technique qualifiée</li><li>Partenariats avec marques premium</li></ul></div>
+<div class="sq sw"><h3>⚠️ Faiblesses</h3><ul><li>Visibilité digitale limitée</li><li>Stratégie RS peu développée</li><li>Fidélisation client à améliorer</li><li>Pas de e-commerce</li><li>Communication locale insuffisante</li></ul></div>
+<div class="sq so"><h3>🚀 Opportunités</h3><ul><li>Développement des réseaux sociaux</li><li>Expansion du Bumper Lab</li><li>Partenariats locaux</li><li>Service click & collect</li><li>Croissance du marché accessoires</li></ul></div>
+<div class="sq sm"><h3>🛡️ Menaces</h3><ul><li>Concurrence des chaînes nationales</li><li>Pression sur les prix</li><li>Évolution rapide des technologies</li><li>Saturation du marché</li><li>Augmentation des loyers commerciaux</li></ul></div></div>
+<div class="fi anim"><img src="img/repair_img.jpg" alt="Réparation smartphone" loading="lazy"></div>
+
+<div class="sh anim" style="margin-top:60px"><h2>Analyse <span class="ac">Concurrentielle</span></h2><p>Positionnement face aux concurrents</p></div>
+<div class="tw anim"><table><thead><tr><th>Critères</th><th>Bumper</th><th>iSmash</th><th>FNAC/Darty</th><th>Rép. Indép.</th></tr></thead><tbody>
+<tr><td>Qualité réparation</td><td><strong>Élevée</strong></td><td>Élevée</td><td>Moyenne</td><td>Variable</td></tr>
+<tr><td>Délai réparation</td><td><strong>30-60 min</strong></td><td>1-2h</td><td>2-5 jours</td><td>Variable</td></tr>
+<tr><td>Accessoires</td><td><strong>Très large choix</strong></td><td>Limité</td><td>Moyen</td><td>Faible</td></tr>
+<tr><td>Personnalisation</td><td><strong>Bumper Lab unique</strong></td><td>Non</td><td>Non</td><td>Non</td></tr>
+<tr><td>Prix</td><td><strong>Concurrentiel</strong></td><td>Élevé</td><td>Moyen</td><td>Faible</td></tr>
+<tr><td>Service client</td><td><strong>Personnalisé</strong></td><td>Standardisé</td><td>Standardisé</td><td>Variable</td></tr>
+</tbody></table></div>
+
+<h3 style="text-align:center;font-family:'Cherry Bomb One',cursive;font-size:1.5rem;margin:2.5rem 0 0" class="anim">Collaborations uniques</h3>
+<div class="brands anim">
+<img src="img/collab_lacoste.jpg" alt="Lacoste" loading="lazy">
+<img src="img/collab_guess.jpg" alt="Guess" loading="lazy">
+<img src="img/collab_karl.jpg" alt="Karl Lagerfeld" loading="lazy">
+<img src="img/collab_rhino.jpg" alt="Rhinoshield" loading="lazy">
+</div></div></section>
+<section id="per" class="light"><div class="ctn">
+<div class="sh anim"><h2><span class="ac">Personas</span> Cibles</h2><p>Deux profils de clientèle identifiés</p></div>
+<div class="pgrid anim">
+<div class="pc"><div class="ph lc"><h3>👦 Lucas, 22 ans</h3><p>Étudiant BTS Communication</p></div><div class="pb">
+<h4>Situation</h4><p>Grand utilisateur de smartphones, sensible aux tendances et à l'esthétique.</p>
+<h4>Usage</h4><p>Instagrammeur assidu, cherche des coques originales pour se démarquer.</p>
+<h4>Besoins</h4><p>Personnalisation créative, prix abordables, expérience Instagrammable.</p>
+<h4>Leviers</h4><p>Contenu visuel attractif, offres étudiants, partage RS.</p></div></div>
+<div class="pc"><div class="ph mr"><h3>👩 Marie, 42 ans</h3><p>Cadre PME, maman</p></div><div class="pb">
+<h4>Situation</h4><p>Mère de 2 enfants, téléphone pro et perso, peu de temps.</p>
+<h4>Usage</h4><p>Utilisation intensive travail et famille, besoin de fiabilité.</p>
+<h4>Besoins</h4><p>Service rapide, protection efficace, coques familiales coordonnées.</p>
+<h4>Leviers</h4><p>Garantie, rapidité, offres familles, qualité prouvée.</p></div></div></div></section>
+<section id="esp" class="light"><div class="ctn">
+<div class="sh anim"><h2>Espace de <span class="ac">Vente</span></h2><p>Scénarisation de l'espace commercial</p></div>
+<div class="ps anim">
+<img src="img/coques.jpg" alt="Espace coques" loading="lazy">
+<img src="img/access.jpg" alt="Accessoires" loading="lazy">
+<img src="img/services.png" alt="Univers Bumper" loading="lazy"></div>
+<div class="sg anim">
+<div class="spc"><div class="si">🛍️</div><h3>Accueil</h3><p>Bienveillance & diagnostic</p></div>
+<div class="spc"><div class="si">🔧</div><h3>Réparation</h3><p>Transparence & expertise</p></div>
+<div class="spc"><div class="si">📱</div><h3>Accessoires</h3><p>Découverte & inspiration</p></div>
+<div class="spc"><div class="si">🎨</div><h3>Bumper Lab</h3><p>Expérience unique</p></div></div>
+<div class="jr anim">
+<div class="js"><div class="jn">1</div><h4>Accueil</h4><p>Bienvenue</p></div>
+<div class="js"><div class="jn">2</div><h4>Consultation</h4><p>Devis</p></div>
+<div class="js"><div class="jn">3</div><h4>Expérience</h4><p>Découverte Lab</p></div>
+<div class="js"><div class="jn">4</div><h4>Fidélisation</h4><p>Retour</p></div></div></div></section>
+<section id="lab" class="dark"><div class="ctn">
+<div class="sh anim"><h2><span class="ac">Bumper Lab</span></h2><p>La personnalisation créative en 4 étapes</p></div>
+<div class="fi anim"><img src="img/personnalisation.jpg" alt="Bumper Lab" loading="lazy"></div>
+<div class="lg2 anim">
+<div class="ls"><div class="ln">1</div><h4>Choix du modèle</h4><p>50+ designs ou création perso</p></div>
+<div class="ls"><div class="ln">2</div><h4>Personnalisation</h4><p>Photos, textes, motifs</p></div>
+<div class="ls"><div class="ln">3</div><h4>Fabrication</h4><p>Impression 5 min</p></div>
+<div class="ls"><div class="ln">4</div><h4>Installation</h4><p>Pose immédiate</p></div></div>
+<div class="ps anim" style="margin-top:2rem">
+<img src="img/coques.jpg" alt="Coques personnalisées" loading="lazy">
+<img src="img/personnalisee.jpg" alt="Coque personnalisée" loading="lazy">
+<img src="img/boutique4.jpg" alt="Boutique" loading="lazy"></div>
+<div class="stats anim" style="grid-template-columns:repeat(3,1fr)">
+<div class="sc" style="border-color:#00C9AF"><div class="sv" style="color:#FAC900">50+</div><div class="sl">Designs disponibles</div></div>
+<div class="sc" style="border-color:#00C9AF"><div class="sv" style="color:#FAC900">5 min</div><div class="sl">Temps de fabrication</div></div>
+<div class="sc" style="border-color:#00C9AF"><div class="sv" style="color:#FAC900">UGC</div><div class="sl">Contenu client</div></div></div>
+</div></section>
+<section id="str" class="light"><div class="ctn">
+<div class="sh anim"><h2>Stratégie <span class="ac">Réseaux Sociaux</span></h2><p>80% contenu de valeur / 20% promotionnel</p></div>
+<div class="fi anim"><img src="img/boutique2.jpg" alt="Communauté Bumper" loading="lazy"></div>
+<div class="sog anim">
+<div class="soc ig"><h3>📸 Instagram</h3><div class="tg">→ Cible : 18-35 ans</div><ul><li>Reels tutoriels réparation</li><li>Avant/après Bumper Lab</li><li>Collaborations influenceurs locaux</li><li>Stories coulisses magasin</li></ul></div>
+<div class="soc tk"><h3>🎵 TikTok</h3><div class="tg">→ Cible : 16-25 ans</div><ul><li>POV diagnostics amusants</li><li>Tendances coques créatives</li><li>Challenges Bumper Lab</li><li>Humour situations smartphone</li></ul></div>
+<div class="soc fb"><h3>👥 Facebook</h3><div class="tg">→ Cible : 35-55 ans</div><ul><li>Posts conseils et astuces</li><li>Informations promotions</li><li>Groupes communauté locale</li><li>Avis clients témoignages</li></ul></div>
+<div class="soc gg"><h3>📍 Google Business</h3><div class="tg">→ Recherche locale</div><ul><li>Actualisation horaires</li><li>Réponse aux avis</li><li>Photos du magasin</li><li>Services et produits</li></ul></div></div>
+
+<div class="sh anim" style="margin-top:50px"><h2>Calendrier <span class="ac">Éditorial</span></h2></div>
+<div class="cg anim">
+<div class="cc"><h4>Semaine 1</h4><div class="ci"><span class="ce">📸</span><span class="ct">Reel : "Écran cassé en 3 sec ?"</span></div><div class="ci"><span class="ce">🎨</span><span class="ct">Post : Nouveautés Bumper Lab</span></div><div class="ci"><span class="ce">📱</span><span class="ct">Tuto : Protéger son écran</span></div><div class="ci"><span class="ce">💬</span><span class="ct">Story : Coulisses réparation</span></div></div>
+<div class="cc"><h4>Semaine 2</h4><div class="ci"><span class="ce">🎭</span><span class="ct">POV : Diagnostic amusant</span></div><div class="ci"><span class="ce">⭐</span><span class="ct">Post : Témoignage client</span></div><div class="ci"><span class="ce">🎯</span><span class="ct">Reel : Challenge coque perso</span></div><div class="ci"><span class="ce">📊</span><span class="ct">Post : 5 erreurs à éviter</span></div></div>
+<div class="cc"><h4>Semaine 3</h4><div class="ci"><span class="ce">🔥</span><span class="ct">Tendance : Coque du moment</span></div><div class="ci"><span class="ce">🛡️</span><span class="ct">Tuto : Changer soi-même</span></div><div class="ci"><span class="ce">🎨</span><span class="ct">Avant/Après Bumper Lab</span></div><div class="ci"><span class="ce">❤️</span><span class="ct">Post : Pourquoi on revient</span></div></div></div>
+
+<div class="sh anim" style="margin-top:50px"><h2>Publications <span class="ac">RS</span></h2></div>
+<div class="pm anim">
+<div class="pmc"><div class="pmh"><img src="img/logo_bumper.png" class="pma" alt="Bumper"><div><div class="pmn">bumperstore</div><div class="pmp">Instagram · Sponsorisé</div></div></div>
+<div><img src="img/coques.jpg" style="width:100%;display:block" loading="lazy"></div>
+<div class="pt">🎨 Ton téléphone, ton style ! <span class="hh">#BumperLab</span> <span class="hh">#Personnalisation</span><br>Viens créer ta coque unique en 5 min 🔥</div>
+<div class="pe"><span>❤️ 248</span><span>💬 32</span><span>🔄 56</span><span>📌 Enregistrer</span></div></div>
+<div class="pmc"><div class="pmh"><img src="img/logo_bumper.png" class="pma" alt="Bumper"><div><div class="pmn">@bumperstore</div><div class="pmp">TikTok</div></div></div>
+<div><img src="img/repair_img.jpg" style="width:100%;display:block" loading="lazy"></div>
+<div class="pt">POV : Quand ton client pense que son tel est mort 💀📱<br><span class="hh">#Bumper</span> <span class="hh">#Réparation</span> <span class="hh">#TechHumour</span></div>
+<div class="pe"><span>❤️ 1.2K</span><span>💬 89</span><span>🔄 234</span><span>⭐ 45</span></div></div>
+<div class="pmc"><div class="pmh"><img src="img/logo_bumper.png" class="pma" alt="Bumper"><div><div class="pmn">Bumper Store</div><div class="pmp">Facebook</div></div></div>
+<div><img src="img/boutique1.jpg" style="width:100%;display:block" loading="lazy"></div>
+<div class="pt">🛡️ PROTEGEZ VOTRE INVESTISSEMENT<br>Un écran coûte cher à remplacer. Protégez-le ! 💪<br><span class="hh">#Protection</span> <span class="hh">#Avenue83</span> <span class="hh">#BumperStore</span></div>
+<div class="pe"><span>👍 67</span><span>💬 12</span><span>🔄 8</span></div></div></div>
+</div></section>
+<section id="obj" class="light"><div class="ctn">
+<div class="sh anim"><h2>Objectifs <span class="ac">SMART</span></h2><p>Indicateurs clés de performance</p></div>
+<div class="smg anim">
+<div class="smc"><div class="sml">✏️ Spécifique</div><h4>Augmenter la visibilité digitale</h4><p>Renforcer la présence de Bumper sur les RS et Google Business.</p><span class="kpi">📊 4 plateformes RS actives</span></div>
+<div class="smc"><div class="sml">📏 Mesurable</div><h4>1 000 abonnés en 3 mois</h4><p>Croissance communautaire Instagram + TikTok combinés.</p><span class="kpi">📈 +300% en 90 jours</span></div>
+<div class="smc"><div class="sml">🎯 Atteignable</div><h4>Publier 4 contenus/semaine</h4><p>Calendrier éditorial : Reels, posts, stories.</p><span class="kpi">📅 16 publications/mois</span></div>
+<div class="smc"><div class="sml">✅ Réaliste</div><h4>20% de trafic magasin via RS</h4><p>Convertir abonnés en visiteurs grâce à des offres exclusives.</p><span class="kpi">🛍️ 30+ visites/mois via RS</span></div>
+<div class="smc"><div class="sml">⏰ Temporel</div><h4>Résultats visibles en 6 mois</h4><p>Premier bilan à 3 mois, objectif final à 6 mois.</p><span class="kpi">J90 = bilan intermédiaire</span></div>
+<div class="smc"><div class="sml">🎨 Bumper Lab</div><h4>50 personnalisations/mois</h4><p>Objectif volume pour le service phare de différenciation.</p><span class="kpi">+25% vs actuel</span></div></div>
+</div></section>
+
+<div class="ccl anim">
+<h2>Bumper : <span>L'avenir du mobile</span> commence ici</h2>
+<p>Grâce à une stratégie digitale structurée et un positionnement unique avec le Bumper Lab, Bumper est prêt à renforcer sa visibilité et fidéliser sa clientèle.</p>
+<p style="font-family:'Cherry Bomb One',cursive;font-size:1.5rem;color:#FAC900;text-shadow:2px 2px 0 rgba(0,0,0,.3)">Avenue 83, Var | bumperstore.fr</p>
+</div>
+
+<footer><p>Book Mission — Bumper Store | Bachelor RAC 2025/2026 IFAG Toulon</p></footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('show');obs.unobserve(x.target)}})},{threshold:0.1});
+document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
+</script></body></html>

@@ -1,0 +1,75 @@
+Write a Python script called build.py in the current directory that generates a file called bumper-presentation.html.
+
+WHY: The Write tool cannot handle large files. Use Python open()/write() instead.
+
+HOW:
+1. Write build.py (a normal Python file, not too large)
+2. Run it with: python3 build.py
+3. Verify with: ls -la bumper-presentation.html
+
+The build.py script should generate the complete HTML for a 10-slide responsive slideshow.
+
+SLIDESHOW SPECS:
+- Brand colors: navy #1B2A4A, orange #FF6B00, blue #00B4D8, white, light gray #F5F7FA
+- Font: Poppins from Google Fonts
+- Full-screen slides: each slide 100vw x 100vh, overflow hidden on body
+- Navigation: left/right arrow buttons + keyboard arrows + touch swipe
+- Dot indicators at bottom, progress bar at top, slide counter top-right
+- Mobile-first responsive (320px to 1920px), use clamp() for fonts
+- CSS Grid + Flexbox, no floats
+- Slide transition: translateX 0.4s ease-out
+- Elements fade in when slide becomes active (CSS only)
+- NO external dependencies except Google Fonts
+
+ALL TEXT IN FRENCH. Zero spelling errors. Clean professional design.
+
+IMAGES (relative path img/):
+- img/logo_bumper.png
+- img/post_insta.jpg (MUST be on slide 8, prominently)
+- img/boutique1.jpg, img/boutique2.jpg
+- img/repair1.jpg, img/repair2.jpg, img/repair3.jpg
+- img/coques.jpg, img/coque_mixte.jpg
+- img/personnalisation.jpg, img/personnalisee.jpg
+- img/magasin.jpg
+- img/services.jpg
+- img/hero1.jpg, img/hero2.jpg, img/hero3.jpg
+
+THE 10 SLIDES:
+
+1. COVER - Dark navy #1B2A4A background. Logo img/logo_bumper.png centered. Title "BUMPER — Avenue 83, Var". Subtitle "Coques · Réparations · Accessoires". Line "Stratégie Commerciale & Animation du Point de Vente". Footer "Bachelor Responsable d'Agence ou de Commerce · Promotion 2025/2026". Orange accent line separator.
+
+2. CONTEXTE & CHIFFRES CLÉS - White bg. Title "Contexte de l'enseigne". Left: "Bumper est une enseigne indépendante spécialisée dans la réparation de smartphones, la vente de coques et d'accessoires, implantée au cœur de la zone commerciale Avenue 83 dans le Var. Face à l'essor des SAV en ligne et à la montée des grandes enseignes, Bumper doit renforcer son positionnement physique et numérique." Right: 4 stat cards (2x2 grid): Panier moyen 27€, Trafic quotidien 150-300/j, Taux de transformation 33%, Note Google 4.6★. Bottom pill: "Réparation express · Coques exclusives · Conseil personnalisé". Use img/magasin.jpg as side image.
+
+3. SWOT - Light gray #F5F7FA bg. Title "Diagnostic SWOT". 4-quadrant grid. FORCES (green #10B981 border): Réparation express 30 min, Coques exclusives non disponibles en ligne, Note Google 4.6 étoiles, Ancrage local fort relation client personnalisée, Garantie SAV 3 mois. FAIBLESSES (orange #FF6B00 border): Visibilité digitale à renforcer SEO GMB, Présence RS insuffisamment exploitée, Pas encore d'animation boutique distinctive, Absence programme fidélisation structuré. OPPORTUNITÉS (blue #00B4D8 border): Zone Avenue 83 fort trafic quotidien, Tendance personnalisation et expérience client, Fort potentiel contenu UGC. MENACES (red #EF4444 border): Concurrence croissante réparateurs en ligne et chaînes, Pression prix grande distribution FNAC Darty, Baisse fréquentation périodes creuses.
+
+4. PERSONAS - White bg. Title "Nos clients types". Two cards side by side. Card 1 LUCAS (orange top border): 22 ans, Étudiant, Toulon. Budget limité 600-800€/mois. Usage smartphone 6-8h/jour. Besoin: réparation rapide pas chère, coque tendance unique. Digital: Instagram et TikTok actifs, partage coque en story. Levier conversion: Bumper Lab expérience unique. Card 2 MARIE (blue top border): 42 ans, Cadre, 2 enfants, Var. Besoin: réparation fiable avec garantie écrite, pas de mauvaise surprise. Digital: Facebook actif, Google Maps, avis. Levier conversion: garantie 3 mois, transparence devis, avis vérifiés.
+
+5. ESPACE SCÉNARISÉ - Light gray bg. Title "Espace de vente scénarisé". 4 boxes connected by arrows horizontally (vertical on mobile): ZONE VITRINE (coques tendance fond LED, prix clairs affichés, QR Code Instagram, rotation mensuelle) → ZONE ACCUEIL & CONSEIL (comptoir épuré, démonstration live réparations, écran tactile configurateur, bornes diagnostic) → BUMPER LAB (borne tactile 24 pouces, imprimante UV instantanée, éclairage LED rose blanc, mur UGC créations) → ZONE FIDÉLISATION (rayonnage thématisé par marque, coin best-sellers, programme fidélité en caisse, borne QR avis Google). Badge: "Objectif : +20% de temps passé en boutique". Use img/boutique1.jpg.
+
+6. BUMPER LAB - Dark navy bg (HERO SLIDE, visually impressive, orange accents everywhere). Title "Animation innovante : le Bumper Lab". Subtitle "Seule boutique du Var avec personnalisation de coque en direct". 4 step cards connected by arrows: 1. ARRIVÉE: Le client remarque le corner lumineux et la borne tactile. 2. CHOIX: Sélection modèle couleur motif sur borne interactive. 3. CRÉATION: Imprimante UV imprime la coque sous ses yeux 15-30 min. 4. PARTAGE: Photo en story avec #BumperLab et -10% prochaine visite. 4 KPI stat boxes: +28% panier moyen (45€ vs 35€), 30% taux UGC, 20 coques/semaine, ROI x5 (480€ vers 2 820€). Use img/personnalisation.jpg. This slide must be the visual highlight.
+
+7. DIFFÉRENCIATION - White bg. Title "Pourquoi Bumper ?". Central quote in large orange text: "Votre téléphone réparé en 30 min, avec une coque unique — ici, maintenant, par des experts." 4 pillar cards: RAPIDITÉ (Réparation 30 min chrono, Devis immédiat sur place, Stock pièces toujours disponible), EXCLUSIVITÉ (Coques non vendues en ligne, Personnalisation à la demande, Collections limitées saisonnières), PROXIMITÉ (Équipe locale et stable, Relation client personnalisée, Conseils honnêtes et objectifs), CONFIANCE (Garantie 1 an sur réparations, Pièces d'origine certifiées, Avis clients vérifiés 4.8 étoiles). Compact comparison table: Bumper vs iSmash vs FNAC/Darty vs Indépendants (rows: Délai réparation, Coques exclusives, Personnalisation, Garantie, Prix, Ancrage local). Use img/repair1.jpg.
+
+8. STRATÉGIE RS + POST INSTAGRAM - Light gray bg. Title "Stratégie Réseaux Sociaux". Top: 4 platform cards in grid. Instagram (18-35 ans, 5x/semaine: Reels Stories Carousels UGC Lives, Objectif 1000 abonnés). TikTok (15-28 ans, 3x/semaine: Avant/après POV Trends Duos, Objectif 500 abonnés). Facebook (35-55 ans, 3x/semaine: Promos locales Événements Avis Albums, Cible famille). Google My Business (2x/semaine: Posts Photos HD Réponse avis <24h, Top 3 local pack). Badge: "Règle 80/20 : 80% contenu utile · 20% promotionnel". Bottom section "Publication phare" with img/post_insta.jpg displayed large. Text below: Accroche "Écran cassé ? On s'en occupe." Corps "Résultat en 30 min chrono — garanti 3 mois." KPIs: 200 impressions, 15 likes, 5 enregistrements.
+
+9. ANIMATION & FIDÉLISATION - White bg. Title "Animation & Fidélisation communautaire". Top: compact monthly calendar row (Jan to Dec): Jan Soldes hiver -20%, Fév Saint-Valentin duo, Mar Printemps nature, Avr Pâques surprise-box, Mai Fêtes Mères gravure offerte, Juin Été plage, Sep Rentrée pack étudiant, Oct Halloween limited edition, Nov Black Friday -30%, Déc Noël cartes cadeaux. Bottom: 4 community cards. Club VIP Bumper: 1€=1 point vers récompenses exclusives. Challenge UGC #MaBumperCoque: Partage ta coque gagne -15% ou réparation offerte. Programme Parrainage: Parrain et filleul -10% chacun prochaine visite. Live Instagram mensuel: Q&A démo réparation en direct tirage au sort abonnés.
+
+10. BILAN & PERSPECTIVES - Light gray bg. Title "Bilan & Perspectives". Top: 5 KPI metric cards in row: Note Google 4.7 minimum, CA +15% par an, Abonnés réseaux sociaux +20% par mois, Taux de fidélisation supérieur à 40%, Panier moyen supérieur à 45€. Middle: Budget highlight bar. Investissement Bumper Lab: 480€ (borne 300€ + coques vierges 100€ + signalétique 80€). Marge nette à 3 mois: 2 820€. ROI: x5. Imprimante UV à commission: 0€ charge fixe. Compact risk table: Avis client viral (ÉLEVÉE réponse <2h + geste commercial), Fournisseur pièces KO (MOYENNE 2 backup + stock 15j), Faible trafic boutique (ÉLEVÉE Meta Ads + offre -10%), Baisse CA période creuse (CRITIQUE offres saisonnières + vente en ligne). Bottom large text: "Bumper : l'expert local accessible qui allie rapidité, créativité et proximité humaine." Small footer: "Merci pour votre attention."
+
+CSS DESIGN RULES:
+- Card style: white bg, border-radius 12px, box-shadow 0 2px 12px rgba(0,0,0,0.06), padding clamp(16px,2vw,24px)
+- H1 titles: font-size clamp(24px,4vw,42px), font-weight 700, color #1B2A4A
+- Subtitles: font-size clamp(16px,2.5vw,24px), font-weight 600, color #FF6B00
+- Body text: font-size clamp(13px,1.8vw,17px), font-weight 400, color #333333
+- Stat numbers: font-size clamp(28px,5vw,48px), font-weight 800, color #FF6B00
+- Labels: font-size clamp(11px,1.4vw,14px), color #666666
+- Slide inner content: max-width 1200px, margin auto, padding clamp(20px,3vw,60px)
+- Nav arrows: 44px min tap target, semi-transparent, bottom-right area
+- Dot indicators: bottom center, 12px dots, orange when active
+- Progress bar: top of page, 3px height, #FF6B00
+- Slide counter: top-right, small text
+- Dark slides (1 and 6): navy bg, white text, orange accents
+- On mobile: stack everything vertically, no horizontal scroll
+- Smooth transitions, subtle fade-in animations
+
+Now write build.py and run it. Do not skip any slide. Do not use any placeholder text — write every word of content.

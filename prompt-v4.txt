@@ -1,0 +1,225 @@
+IMPORTANT: Write a Python script called build.py that generates bumper-presentation.html. The script must use Python open()/write() because the HTML is too large for the Write tool. After writing build.py, run: python3 build.py
+
+Then verify: ls -la bumper-presentation.html
+
+GENERAL:
+- 10-slide PC slideshow (no mobile optimization needed)
+- Each slide = 100vw x 100vh, overflow hidden
+- Navigation: arrow keys, prev/next buttons, dot indicators, progress bar top
+- All text in FRENCH, zero spelling errors
+- Images from img/ folder (relative paths, base64 embedded in HTML)
+
+STYLE - POP ART (matching bumperstore.fr):
+THIS IS THE MOST IMPORTANT PART. The design must look like bumperstore.fr — bold, vibrant, pop art aesthetic. NOT a boring corporate template.
+
+FONTS (load from Google Fonts):
+- "Cherry Bomb One" — for main titles ONLY (display font, pop art feel)
+- "Poppins" — for body text, subtitles, cards
+
+COLOR PALETTE (from bumperstore.fr):
+- #232F3E — dark navy (backgrounds, headers)
+- #00C9AF — teal/cyan (primary accent, highlights, buttons)
+- #39B0FF — light blue (secondary accent)
+- #FA C900 — yellow/gold (badges, warnings, accents)
+- #9400C9 — purple/violet (tertiary accent)
+- #000000 — pure black (text on light backgrounds)
+- #FFFFFF — white (text on dark backgrounds)
+- #F4F6F8 — light gray (alternate slide backgrounds)
+
+DESIGN RULES:
+- BOLD and VIBRANT. Think pop art: strong contrasts, saturated colors, no pastels.
+- Cards: dark navy #232F3E with white text, OR white with black text + colored borders
+- Section titles in Cherry Bomb One (large, rounded, playful)
+- Use colored accent borders/tops on cards (teal, blue, yellow, purple)
+- Gradient backgrounds on key slides (dark navy to slightly lighter)
+- KPI numbers: LARGE, bold, in teal #00C9AF or yellow #FAC900
+- Bullet points: colored circles (teal dots)
+- Tables: dark header row (#232F3E, white text), alternating light/dark rows
+- Icons: use emoji as visual markers (not in titles, only in body/cards)
+- NO subtle shadows — use solid borders or colored outlines instead
+- NO rounded soft cards — use sharp corners or minimal radius (4px)
+- High contrast everywhere — this is pop art, not minimalist
+
+SLIDES CONTENT:
+
+1. COVER:
+- Full dark navy #232F3E background
+- Logo img/logo_bumper.png centered, large
+- Title "BUMPER" in Cherry Bomb One, white, very large
+- Subtitle "Avenue 83 — Var" in Poppins, teal #00C9AF
+- "Coques · Réparations · Accessoires" in white
+- Orange/teal accent line separator
+- "Stratégie Commerciale & Animation du Point de Vente" smaller
+- Footer: "Bachelor Responsable d'Agence ou de Commerce · Promotion 2025/2026" in gray
+- Decorative: colored geometric shapes (circles, squares) in corners — teal, yellow, purple — semi-transparent
+
+2. CONTEXTE & CHIFFRES CLÉS:
+- Light gray #F4F6F8 background
+- Title "Contexte de l'enseigne" in Cherry Bomb One, navy #232F3E
+- Left column text: "Bumper est une enseigne indépendante spécialisée dans la réparation de smartphones, la vente de coques et d'accessoires téléphoniques, implantée au cœur de la zone commerciale Avenue 83, dans le Var. Bénéficiant d'une localisation stratégique à fort flux, la boutique s'adresse à une clientèle locale variée : étudiants, familles, actifs et professionnels."
+- "Face à l'essor des SAV en ligne et à la montée des grandes enseignes spécialisées, Bumper doit renforcer son positionnement et son attractivité physique et numérique pour se différencier."
+- Right: 4 stat cards in dark navy #232F3E with white text, each with a colored top border:
+  - Teal border: "27€" big number + "Panier moyen" label
+  - Blue border: "150-300" big number + "Trafic quotidien" label
+  - Yellow border: "33%" big number + "Taux de transformation" label
+  - Purple border: "4.6★" big number + "Note Google" label
+- Bottom banner: "Réparation express · Coques exclusives · Conseil personnalisé" in teal
+- Side image: img/magasin.jpg with colored border frame
+
+3. ANALYSE SWOT:
+- White background
+- Title "Diagnostic SWOT" in Cherry Bomb One, navy
+- 4-quadrant grid, each with dark colored background:
+  - FORCES (bg #232F3E, white text, teal left border):
+    • Réparation express garantie en 30 minutes
+    • Coques exclusives, non disponibles en ligne
+    • Note Google 4.6★ — bonne réputation
+    • Ancrage local fort, relation client personnalisée
+    • Garantie SAV 3 mois sur toutes les réparations
+  - FAIBLESSES (bg #232F3E, white text, yellow left border):
+    • Visibilité digitale à renforcer (SEO local, GMB)
+    • Présence sur les réseaux sociaux insuffisamment exploitée
+    • Pas encore d'animation en boutique distinctive
+    • Absence de programme de fidélisation structuré
+  - OPPORTUNITÉS (bg #232F3E, white text, blue left border):
+    • Zone commerciale Avenue 83 à fort trafic quotidien
+    • Tendance à la personnalisation et à l'expérience client
+    • Fort potentiel de contenu UGC (User Generated Content)
+  - MENACES (bg #232F3E, white text, red/pink left border):
+    • Concurrence croissante des réparateurs en ligne et des chaînes
+    • Pression sur les prix exercée par la grande distribution (FNAC, Darty)
+    • Baisse de fréquentation en périodes creuses prévisible
+
+4. PERSONAS:
+- Light gray background
+- Title "Nos clients types" in Cherry Bomb One, navy
+- Two persona cards, white bg with colored top border:
+  - LUCAS — 22 ans (TEAL top border):
+    "Étudiant · Toulon"
+    • Budget limité (600-800€/mois)
+    • Usage intensif smartphone : 6-8h/jour (réseaux, streaming, gaming)
+    • Besoin : réparation rapide et peu chère, coque tendance unique
+    • Digital : Instagram et TikTok très actifs — partage sa coque customisée en story
+    • Levier de conversion : expérience Bumper Lab, possibilité de créer une coque unique
+    • Levier de fidélisation : programme de points, challenge UGC #MaBumperCoque, parrainage -10%
+    Platform badges: "📸 Instagram" "🎵 TikTok"
+
+  - MARIE — 42 ans (YELLOW top border):
+    "Cadre · 2 enfants · Var"
+    • Besoin : réparation fiable avec garantie écrite, pas de mauvaise surprise
+    • Déclencheur : son fils casse son écran — recommandation amie ou avis Google positif
+    • Digital : Facebook active, consulte Google Maps et les avis avant tout achat local
+    • Levier de conversion : garantie 3 mois, transparence du devis, crédibilité des avis Google
+    • Levier de fidélisation : SMS de suivi post-réparation, newsletter offres famille, WhatsApp Business
+    Platform badges: "📍 Google Maps" "📘 Facebook"
+
+5. ESPACE SCÉNARISÉ:
+- White background
+- Title "Espace de vente scénarisé" in Cherry Bomb One, navy
+- 4 zone boxes connected by colored arrow lines (teal), horizontal layout:
+  Each box: dark navy bg, white text, numbered circle in teal:
+  ① VITRINE: "Coques tendance en fond lumineux · Affichage prix clairs · QR Code Instagram visible · Rotation mensuelle des thèmes"
+  ② ACCUEIL & CONSEIL: "Comptoir épuré accessible · Démonstration live de réparations · Écran tactile configurateur coque · Bornes diagnostic smartphone"
+  ③ BUMPER LAB: "Borne tactile 24 pouces · Imprimante UV instantanée · Éclairage LED rose/blanc · Mur UGC créations clients"
+  ④ FIDÉLISATION: "Rayonnage thématisé par marque · Coin Best-sellers · Programme fidélité en caisse · Borne QR avis Google"
+- Badge: "Objectif : +20% de temps passé en boutique" in yellow #FAC900 bg, black text
+- Image: img/boutique1.jpg with colored frame
+- Bottom note: "Flux client : Vitrine → Accueil/Conseil → Bumper Lab → Produits/Fidélisation → Caisse → Sortie"
+
+6. BUMPER LAB (HERO SLIDE — most visually impressive):
+- Dark gradient background (#232F3E to slightly lighter)
+- Title "BUMPER LAB" in Cherry Bomb One, VERY large, white
+- Subtitle "Seule boutique du Var avec personnalisation de coque en direct" in teal #00C9AF
+- 4 process steps as colored connected cards:
+  Step 1 (TEAL): "🚀 ARRIVÉE" — "Le client remarque le corner lumineux et la borne tactile. La signalétique #BumperLab attire l'attention."
+  Step 2 (BLUE): "🎨 CHOIX" — "Il sélectionne son modèle, couleur, motif et personnalisation sur la borne interactive. Aperçu temps réel."
+  Step 3 (YELLOW): "✏️ CRÉATION" — "L'imprimante UV imprime la coque sous ses yeux. 15 à 30 minutes selon la complexité."
+  Step 4 (PURPLE): "📸 PARTAGE" — "Il poste sa création en story avec #BumperLab et reçoit -10% sur sa prochaine visite."
+- 4 KPI boxes in a row, dark bg, each with different accent color:
+  "+28%" teal — "Panier moyen (45€ vs 35€)"
+  "30%" blue — "Taux UGC clients"
+  "20/sem" yellow — "Coques personnalisées"
+  "x5" purple — "ROI (480€ → 2 820€)"
+- Equipment: "Borne 24″ · Imprimante UV · LED rose/blanc · 50 coques vierges"
+- Image: img/personnalisation.jpg with pop art colored frame
+- Decorative colored dots/circles in background
+
+7. DIFFÉRENCIATION:
+- Light gray background
+- Title "Pourquoi Bumper ?" in Cherry Bomb One, navy
+- Central quote box: dark navy bg, teal border, large white text:
+  « Votre téléphone réparé en 30 min, avec une coque unique — ici, maintenant, par des experts. »
+- 4 pillar cards, white bg with colored top:
+  - RAPIDITÉ (teal): "Réparation en 30 min chrono · File d'attente quasi nulle · Devis immédiat sur place · Stock de pièces toujours disponible"
+  - EXCLUSIVITÉ (blue): "Coques non vendues en ligne · Personnalisation à la demande · Collections limitées et saisonnières · Collaborations artistes locaux"
+  - PROXIMITÉ (yellow): "Équipe locale et stable · Relation client personnalisée · Mémoire des achats antérieurs · Conseils honnêtes et objectifs"
+  - CONFIANCE (purple): "Garantie 1 an sur réparations · Pièces d'origine certifiées · Devis transparent sans surprise · Avis clients vérifiés (4.8★)"
+- Comparison table: dark header (#232F3E), alternating rows:
+  | Critère | Bumper | iSmash | FNAC/Darty | Indépendants |
+  | Note Google | 4.6 | 4.2 | 3.8 | 4.4 |
+  | Délai réparation | ✓ 30 min | ◐ 1-2h | ✗ 3-7 jours | ◐ 1-2h |
+  | Coques exclusives | ✓ | ✗ | ✗ | ✗ |
+  | Personnalisation | ✓ Bumper Lab | ✗ | ✗ | ✗ |
+  | Garantie SAV | ✓ 3 mois | ◐ 3 mois | ◐ Constructeur | ✗ Variable |
+  | Ancrage local | ✓ Fort | ✗ Chaîne | ✗ Chaîne | ◐ Moyen |
+- Image: img/repair1.jpg
+
+8. STRATÉGIE RÉSEAUX SOCIAUX + POST INSTAGRAM:
+- White background
+- Title "Stratégie Réseaux Sociaux" in Cherry Bomb One, navy
+- Top: badge "Règle 80/20 : 80% contenu utile & divertissant · 20% promotionnel" in teal bg
+- 4 platform cards in grid, dark navy bg, colored left border:
+  - 📷 INSTAGRAM (18-35 ans) — TEAL border: "Fréquence 5×/semaine · Reels réparations accéléré · Stories offres flash 24h · Carousels conseils entretien · UGC reposts #BumperLab · Lives mensuels · Objectif : 1 000 abonnés en 6 mois"
+  - 🎮 TIKTOK (15-28 ans) — BLUE border: "Fréquence 3×/semaine · Vidéos avant/après 60 sec · POV visite boutique · Trends adaptés téléphone · Duos clients satisfaits · Challenge #MaBumperCoque · Objectif : 500 abonnés en 3 mois"
+  - 📘 FACEBOOK (35-55 ans) — YELLOW border: "Fréquence 3×/semaine · Annonces promos locales · Événements boutique · Partage avis Google · Albums nouveautés coques · Cible : famille, rayon 15 km"
+  - 📍 GOOGLE MY BUSINESS (tous) — PURPLE border: "Fréquence 2×/semaine · Posts offres & actualités · Photos HD actualisées · Réponse avis < 24h · Q&A optimisé SEO local · Objectif : Top 3 local pack"
+- Bottom section: "Publication phare — Instagram Post"
+- img/post_insta.jpg displayed prominently with colored frame
+- Text: Accroche: "Écran cassé ? On s'en occupe." · Corps: "Résultat en 30 min chrono — garanti 3 mois · Avenue 83, Var / Sans rendez-vous" · Hashtags: "#BumperAv83 #RéparationTéléphone #Var #Toulon #ÉcranCassé #SmartphoneRepair #ExpertLocal" · CTA: "Répondre en DM ou venir en boutique sans RDV"
+- KPI targets: "200 impressions · 15 likes · 5 enregistrements"
+
+9. STORY-TELLING + PLAN D'ANIMATION (THIS IS A NEW MERGED SLIDE):
+- Light gray background
+- Title "Notre histoire" in Cherry Bomb One, navy
+- Top half: ARC NARRATIF — 4 connected story blocks with colored backgrounds:
+  LE PROBLÈME (dark bg, yellow accent): "Ton écran est cassé, ton chargeur ne marche plus, ta coque est rayée. Les SAV en ligne sont lents, les grandes enseignes impersonnelles. Tu cherches une solution rapide, locale, humaine."
+  LE HÉROS: TOI (dark bg, teal accent): "Tu veux une solution rapide, locale, humaine. Tu mérites un expert qui te comprend, sans jargon, sans attente, sans mauvaise surprise."
+  LA SOLUTION: BUMPER (dark bg, blue accent): "En 30 minutes, ton téléphone est réparé. Une coque unique t'attend. Une équipe souriante t'accueille. C'est ça, Bumper."
+  LA TRANSFORMATION (dark bg, purple accent): "Tu repars avec un téléphone comme neuf, une protection stylée, et l'adresse d'un commerce de confiance à partager à tes proches."
+- Bottom half: CALENDRIER ANNUEL compact (single row, 12 months with colored badges):
+  JAN "Soldes -20%" | FÉV "St-Valentin duo" | MAR "Printemps nature" | AVR "Pâques surprise" | MAI "Fête des Mères gravure" | JUIN "Été plage"
+  SEP "Rentrée étudiant" | OCT "Halloween limited" | NOV "Black Friday -30%" | DÉC "Noël cadeaux"
+- 4 mini community cards in a row: Club VIP (1€=1pt) | UGC #MaBumperCoque (-15%) | Parrainage (-10% chacun) | Live Instagram mensuel
+
+10. BILAN & PERSPECTIVES:
+- White background
+- Title "Bilan & Perspectives" in Cherry Bomb One, navy
+- Top: 5 KPI metric cards in a row, each dark navy with different accent:
+  "≥ 4.7" teal — "Note Google"
+  "+15%" blue — "CA annuel"
+  "+20%/mois" yellow — "Abonnés RS"
+  "> 40%" purple — "Taux fidélisation"
+  "> 45€" teal — "Panier moyen"
+- Budget highlight: large dark navy box with colored border
+  "Investissement Bumper Lab : 480€" (borne 300€ + coques 100€ + signalétique 80€)
+  → "Marge nette à 3 mois : 2 820€"
+  → "ROI : x5"
+  "Imprimante UV à commission : 0€ de charge fixe — risque minimisé"
+- Risks table: dark header, colored severity badges:
+  | Risque | Criticité | Action corrective |
+  | Mauvais avis client viral | ■ ÉLEVÉE | Réponse publique < 2h + geste commercial offert |
+  | Panne fournisseur pièces | ■ MOYENNE | 2 fournisseurs backup + stock tampon 15 jours |
+  | Faible trafic boutique | ■ ÉLEVÉE | Activation Meta Ads local + offre relance -10% |
+  | Baisse CA période creuse | ■ CRITIQUE | Offres saisonnières anticipées + vente en ligne activée |
+- Large closing statement in Cherry Bomb One: "Bumper : l'expert local accessible qui allie rapidité, créativité et proximité humaine."
+- Small footer: "Merci pour votre attention" in gray
+
+CSS TECHNICAL:
+- PC optimized: min-width 1024px, content max-width 1200px centered
+- No mobile breakpoints needed
+- Font sizes: titles 36-48px Cherry Bomb One, subtitles 20-24px Poppins, body 16-18px, stats 40-56px bold Poppins 800
+- Slides: position absolute, 100vw x 100vh, transition transform 0.4s ease-out
+- Navigation: fixed buttons bottom-right, fixed dots bottom-center, fixed progress bar top 4px, fixed counter top-right
+- Dark geometric decorations: colored circles/squares semi-transparent in corners of select slides (especially cover and Bumper Lab)
+
+Execute now. Write build.py, run python3 build.py, verify with ls -la.
