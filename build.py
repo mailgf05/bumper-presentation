@@ -128,7 +128,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s4 .prow{{display:flex;gap:24px;width:100%;max-width:1200px}}
 #s4 .pc{{flex:1;padding:24px;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s4 .pc h3{{font-family:'Cherry Bomb One',cursive;font-size:1.3rem;margin-bottom:4px}}
-#s4 .pc .meta{{font-size:.75rem;font-weight:600;color:#888;margin-bottom:10px}}
+#s4 .pc .meta{{font-size:.75rem;font-weight:600;color:#555;margin-bottom:10px}}
 #s4 .pc ul{{list-style:none;padding:0}}
 #s4 .pc li{{font-size:.8rem;padding:3px 0 3px 14px;position:relative;line-height:1.4;color:var(--navy)}}
 #s4 .pc li::before{{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%}}
@@ -145,7 +145,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s5 .zone{{flex:1;padding:14px;text-align:center;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s5 .zone .zn{{display:inline-block;width:28px;height:28px;line-height:28px;background:var(--teal);color:var(--black);font-family:'Cherry Bomb One',cursive;font-size:.9rem;border-radius:50%;margin-bottom:4px}}
 #s5 .zone h4{{font-family:'Cherry Bomb One',cursive;font-size:.9rem;margin-bottom:2px}}
-#s5 .zone p{{font-size:.68rem;color:#ccc;line-height:1.3}}
+#s5 .zone p{{font-size:.68rem;color:var(--navy);line-height:1.3}}
 #s5 .flux{{font-size:.78rem;color:var(--navy);margin-top:14px;font-weight:600;text-align:center}}
 
 /* ===== SLIDE 6 BUMPER LAB ===== */
@@ -156,11 +156,11 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s6 .steps{{display:flex;gap:12px;width:100%;max-width:1100px;justify-content:center;margin-bottom:14px}}
 #s6 .stp{{flex:1;padding:14px;text-align:center;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
 #s6 .stp h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:4px}}
-#s6 .stp p{{font-size:.72rem;color:#ccc;line-height:1.3}}
+#s6 .stp p{{font-size:.72rem;color:var(--navy);line-height:1.3}}
 #s6 .kpirow{{display:flex;gap:12px;width:100%;max-width:1100px;justify-content:center;margin-bottom:10px}}
 #s6 .kb{{padding:12px 16px;text-align:center;flex:1;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
 #s6 .kb .kpi{{display:block;margin-bottom:2px}}
-#s6 .kb .klbl{{font-size:.7rem;color:#ccc}}
+#s6 .kb .klbl{{font-size:.7rem;color:var(--navy)}}
 #s6 .invest{{font-size:.82rem;color:var(--teal);margin-top:6px}}
 
 /* ===== SLIDE 7 DIFF ===== */
@@ -182,7 +182,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s8 .pcards{{display:flex;gap:12px;width:100%;max-width:1200px;margin-bottom:16px}}
 #s8 .pc2{{flex:1;color:var(--navy);padding:16px;border-top:4px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s8 .pc2 h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px}}
-#s8 .pc2 p{{font-size:.72rem;color:#ccc;line-height:1.35}}
+#s8 .pc2 p{{font-size:.72rem;color:var(--navy);line-height:1.35}}
 
 /* ===== SLIDE 9 COMMUNITY ===== */
 #s9 .stitle{{color:var(--navy)}}
@@ -192,14 +192,14 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s10 .arc{{display:flex;gap:14px;width:100%;max-width:1200px;margin-bottom:16px}}
 #s10 .ab{{flex:1;color:var(--navy);padding:18px;border-left:5px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s10 .ab h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:6px}}
-#s10 .ab p{{font-size:.78rem;color:#ccc;line-height:1.4}}
+#s10 .ab p{{font-size:.78rem;color:var(--navy);line-height:1.4}}
 
 /* ===== SLIDE 11 BILAN ===== */
 #s11 .stitle{{color:var(--navy)}}
 #s11 .krow{{display:flex;gap:12px;width:100%;max-width:1200px;margin-bottom:16px}}
 #s11 .kc{{flex:1;color:var(--navy);padding:16px;text-align:center;border-top:4px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s11 .kc .kpi{{display:block;margin-bottom:2px}}
-#s11 .kc .klbl{{font-size:.7rem;color:#ccc}}
+#s11 .kc .klbl{{font-size:.7rem;color:var(--navy)}}
 #s11 .brow{{display:flex;gap:16px;width:100%;max-width:1200px;margin-bottom:14px}}
 #s11 .brow .c{{flex:1}}
 #s11 .brow h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:8px;color:var(--teal)}}
@@ -208,7 +208,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s11 .rtbl th{{background:rgba(255,255,255,0.8);color:var(--navy);padding:8px 12px;text-align:left;font-weight:600;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s11 .rtbl td{{padding:7px 12px;border-bottom:1px solid rgba(0,0,0,0.06);background:rgba(255,255,255,0.7)}}
 #s11 .closing{{font-family:'Cherry Bomb One',cursive;font-size:1.6rem;color:var(--navy);margin-top:14px;text-align:center}}
-#s11 .foot10{{font-size:.8rem;color:#999;margin-top:8px}}
+#s11 .foot10{{font-size:.8rem;color:#555;margin-top:8px}}
 </style>
 </head>
 <body>
@@ -492,21 +492,21 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
       <div style="display:flex;gap:10px">
         <div class="pc2" style="border-color:var(--teal);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--teal)">
           <h4 style="color:var(--teal);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">INSTAGRAM</h4>
-          <p style="font-size:.72rem;color:#ccc;line-height:1.35">5&times;/sem &bull; Reels &bull; Stories &bull; UGC #BumperLab<br>Objectif 1 000 abos</p>
+          <p style="font-size:.72rem;color:var(--navy);line-height:1.35">5&times;/sem &bull; Reels &bull; Stories &bull; UGC #BumperLab<br>Objectif 1 000 abos</p>
         </div>
         <div class="pc2" style="border-color:var(--blue);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--blue)">
           <h4 style="color:var(--blue);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">TIKTOK</h4>
-          <p style="font-size:.72rem;color:#ccc;line-height:1.35">3&times;/sem &bull; Avant/apr&egrave;s 60s &bull; POV boutique<br>#MaBumperCoque &bull; 500 abos</p>
+          <p style="font-size:.72rem;color:var(--navy);line-height:1.35">3&times;/sem &bull; Avant/apr&egrave;s 60s &bull; POV boutique<br>#MaBumperCoque &bull; 500 abos</p>
         </div>
       </div>
       <div style="display:flex;gap:10px">
         <div class="pc2" style="border-color:var(--yellow);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--yellow)">
           <h4 style="color:var(--yellow);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">FACEBOOK</h4>
-          <p style="font-size:.72rem;color:#ccc;line-height:1.35">3&times;/sem &bull; Promos locales &bull; &Eacute;v&eacute;nements<br>Avis Google &bull; Rayon 15 km</p>
+          <p style="font-size:.72rem;color:var(--navy);line-height:1.35">3&times;/sem &bull; Promos locales &bull; &Eacute;v&eacute;nements<br>Avis Google &bull; Rayon 15 km</p>
         </div>
         <div class="pc2" style="border-color:var(--purple);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--purple)">
           <h4 style="color:var(--purple);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">GOOGLE</h4>
-          <p style="font-size:.72rem;color:#ccc;line-height:1.35">2&times;/sem &bull; Posts offres &bull; Photos HD<br>R&eacute;ponse avis &lt; 24h &bull; Top 3 local</p>
+          <p style="font-size:.72rem;color:var(--navy);line-height:1.35">2&times;/sem &bull; Posts offres &bull; Photos HD<br>R&eacute;ponse avis &lt; 24h &bull; Top 3 local</p>
         </div>
       </div>
     </div>
@@ -514,7 +514,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
       <img src="{IMG8}" alt="Post Instagram Bumper" style="max-height:55vh;object-fit:contain;border:3px solid var(--teal);border-radius:4px">
       <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:10px 16px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);width:100%;text-align:center">
         <p style="font-weight:700;margin-bottom:2px">&Eacute;cran cass&eacute; ? On s&rsquo;en occupe.</p>
-        <p style="font-size:.75rem;color:#ccc">30 min chrono &mdash; garanti 3 mois &mdash; Sans RDV</p>
+        <p style="font-size:.75rem;color:var(--navy)">30 min chrono &mdash; garanti 3 mois &mdash; Sans RDV</p>
         <p style="color:var(--teal);font-size:.72rem">#BumperAv83 #R&eacute;parationT&eacute;l&eacute;phone #Var</p>
         <p style="font-size:.7rem;color:var(--yellow)">200 impressions &bull; 15 likes &bull; 5 enregistrements</p>
       </div>
