@@ -120,7 +120,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s3 .sw{{background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5);padding:22px}}
 #s3 .sw h3{{font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:8px}}
 #s3 .sw ul{{list-style:none;padding:0}}
-#s3 .sw li{{font-size:.82rem;padding:3px 0 3px 16px;position:relative;line-height:1.4;color:var(--white)}}
+#s3 .sw li{{font-size:.82rem;padding:3px 0 3px 16px;position:relative;line-height:1.4;color:var(--navy)}}
 #s3 .sw li::before{{content:'';position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%}}
 
 /* ===== SLIDE 4 PERSONAS ===== */
@@ -142,7 +142,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s5 .imgs .imgframe{{flex:1;max-height:35vh;display:flex;align-items:center;justify-content:center;background:var(--gray)}}
 #s5 .imgs img{{max-width:100%;max-height:35vh;object-fit:contain}}
 #s5 .zones{{display:flex;gap:12px;width:100%;max-width:1200px;justify-content:center}}
-#s5 .zone{{flex:1;padding:14px;text-align:center;color:var(--white);background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.3)}}
+#s5 .zone{{flex:1;padding:14px;text-align:center;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s5 .zone .zn{{display:inline-block;width:28px;height:28px;line-height:28px;background:var(--teal);color:var(--black);font-family:'Cherry Bomb One',cursive;font-size:.9rem;border-radius:50%;margin-bottom:4px}}
 #s5 .zone h4{{font-family:'Cherry Bomb One',cursive;font-size:.9rem;margin-bottom:2px}}
 #s5 .zone p{{font-size:.68rem;color:#ccc;line-height:1.3}}
@@ -154,24 +154,24 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s6 .sub6{{color:var(--teal);font-size:1rem;margin-bottom:16px}}
 #s6 .labimg{{margin:0 auto 18px;display:block;max-width:100%;max-height:40vh;object-fit:contain}}
 #s6 .steps{{display:flex;gap:12px;width:100%;max-width:1100px;justify-content:center;margin-bottom:14px}}
-#s6 .stp{{flex:1;padding:14px;text-align:center;color:var(--white);background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
+#s6 .stp{{flex:1;padding:14px;text-align:center;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
 #s6 .stp h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:4px}}
 #s6 .stp p{{font-size:.72rem;color:#ccc;line-height:1.3}}
 #s6 .kpirow{{display:flex;gap:12px;width:100%;max-width:1100px;justify-content:center;margin-bottom:10px}}
-#s6 .kb{{padding:12px 16px;text-align:center;flex:1;color:var(--white);background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
+#s6 .kb{{padding:12px 16px;text-align:center;flex:1;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
 #s6 .kb .kpi{{display:block;margin-bottom:2px}}
 #s6 .kb .klbl{{font-size:.7rem;color:#ccc}}
 #s6 .invest{{font-size:.82rem;color:var(--teal);margin-top:6px}}
 
 /* ===== SLIDE 7 DIFF ===== */
 #s7 .stitle{{color:var(--navy)}}
-#s7 .quote{{color:var(--white);border-left:5px solid var(--teal);padding:18px 24px;font-size:1.05rem;font-style:italic;max-width:1100px;width:100%;text-align:center;margin-bottom:18px;background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
+#s7 .quote{{color:var(--navy);border-left:5px solid var(--teal);padding:18px 24px;font-size:1.05rem;font-style:italic;max-width:1100px;width:100%;text-align:center;margin-bottom:18px;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s7 .pills{{display:flex;gap:14px;width:100%;max-width:1100px;margin-bottom:18px}}
 #s7 .pill{{flex:1;padding:16px;text-align:center;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s7 .pill h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px}}
 #s7 .pill p{{font-size:.78rem;color:#555;line-height:1.35}}
 #s7 .tbl{{width:100%;max-width:1100px;border-collapse:collapse;font-size:.82rem}}
-#s7 .tbl th{{background:rgba(35,47,62,0.75);color:var(--white);padding:10px 14px;text-align:left;font-weight:600;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.3)}}
+#s7 .tbl th{{background:rgba(255,255,255,0.8);color:var(--navy);padding:10px 14px;text-align:left;font-weight:600;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s7 .tbl td{{padding:8px 14px;border-bottom:1px solid rgba(0,0,0,0.06);background:rgba(255,255,255,0.7)}}
 #s7 .tbl tr:nth-child(even) td{{background:var(--gray)}}
 
@@ -180,7 +180,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s8 .rsimg{{max-height:30vh;object-fit:contain;display:block;margin:0 auto 14px}}
 #s8 .rule80{{text-align:center;margin-bottom:14px}}
 #s8 .pcards{{display:flex;gap:12px;width:100%;max-width:1200px;margin-bottom:16px}}
-#s8 .pc2{{flex:1;color:var(--white);padding:16px;border-top:4px solid;background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.3)}}
+#s8 .pc2{{flex:1;color:var(--navy);padding:16px;border-top:4px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s8 .pc2 h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px}}
 #s8 .pc2 p{{font-size:.72rem;color:#ccc;line-height:1.35}}
 
@@ -190,22 +190,22 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 /* ===== SLIDE 10 STORY ===== */
 #s10 .stitle{{color:var(--navy)}}
 #s10 .arc{{display:flex;gap:14px;width:100%;max-width:1200px;margin-bottom:16px}}
-#s10 .ab{{flex:1;color:var(--white);padding:18px;border-left:5px solid;background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.3)}}
+#s10 .ab{{flex:1;color:var(--navy);padding:18px;border-left:5px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s10 .ab h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:6px}}
 #s10 .ab p{{font-size:.78rem;color:#ccc;line-height:1.4}}
 
 /* ===== SLIDE 11 BILAN ===== */
 #s11 .stitle{{color:var(--navy)}}
 #s11 .krow{{display:flex;gap:12px;width:100%;max-width:1200px;margin-bottom:16px}}
-#s11 .kc{{flex:1;color:var(--white);padding:16px;text-align:center;border-top:4px solid;background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.3)}}
+#s11 .kc{{flex:1;color:var(--navy);padding:16px;text-align:center;border-top:4px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s11 .kc .kpi{{display:block;margin-bottom:2px}}
 #s11 .kc .klbl{{font-size:.7rem;color:#ccc}}
 #s11 .brow{{display:flex;gap:16px;width:100%;max-width:1200px;margin-bottom:14px}}
 #s11 .brow .c{{flex:1}}
 #s11 .brow h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:8px;color:var(--teal)}}
-#s11 .brow p{{font-size:.8rem;margin-bottom:3px;color:var(--white)}}
+#s11 .brow p{{font-size:.8rem;margin-bottom:3px;color:var(--navy)}}
 #s11 .rtbl{{width:100%;border-collapse:collapse;font-size:.8rem}}
-#s11 .rtbl th{{background:rgba(35,47,62,0.75);color:var(--white);padding:8px 12px;text-align:left;font-weight:600;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.3)}}
+#s11 .rtbl th{{background:rgba(255,255,255,0.8);color:var(--navy);padding:8px 12px;text-align:left;font-weight:600;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s11 .rtbl td{{padding:7px 12px;border-bottom:1px solid rgba(0,0,0,0.06);background:rgba(255,255,255,0.7)}}
 #s11 .closing{{font-family:'Cherry Bomb One',cursive;font-size:1.6rem;color:var(--navy);margin-top:14px;text-align:center}}
 #s11 .foot10{{font-size:.8rem;color:#999;margin-top:8px}}
@@ -278,36 +278,36 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
     <div class="sw cl-teal">
       <h3 style="color:var(--teal)">FORCES</h3>
       <ul>
-        <li style="color:var(--white)">R&eacute;paration express garantie 30 min</li>
-        <li style="color:var(--white)">Coques exclusives non disponibles en ligne</li>
-        <li style="color:var(--white)">Note Google 4.6&thinsp;★ &mdash; bonne r&eacute;putation</li>
-        <li style="color:var(--white)">Ancrage local fort, relation client personnalis&eacute;e</li>
-        <li style="color:var(--white)">Garantie SAV 3 mois</li>
+        <li style="color:var(--navy)">R&eacute;paration express garantie 30 min</li>
+        <li style="color:var(--navy)">Coques exclusives non disponibles en ligne</li>
+        <li style="color:var(--navy)">Note Google 4.6&thinsp;★ &mdash; bonne r&eacute;putation</li>
+        <li style="color:var(--navy)">Ancrage local fort, relation client personnalis&eacute;e</li>
+        <li style="color:var(--navy)">Garantie SAV 3 mois</li>
       </ul>
     </div>
     <div class="sw cl-yellow">
       <h3 style="color:var(--yellow)">FAIBLESSES</h3>
       <ul>
-        <li style="color:var(--white)">Visibilit&eacute; digitale &agrave; renforcer</li>
-        <li style="color:var(--white)">R&eacute;seaux sociaux insuffisamment exploit&eacute;s</li>
-        <li style="color:var(--white)">Pas d&rsquo;animation distinctive en boutique</li>
-        <li style="color:var(--white)">Absence de programme de fid&eacute;lisation structur&eacute;</li>
+        <li style="color:var(--navy)">Visibilit&eacute; digitale &agrave; renforcer</li>
+        <li style="color:var(--navy)">R&eacute;seaux sociaux insuffisamment exploit&eacute;s</li>
+        <li style="color:var(--navy)">Pas d&rsquo;animation distinctive en boutique</li>
+        <li style="color:var(--navy)">Absence de programme de fid&eacute;lisation structur&eacute;</li>
       </ul>
     </div>
     <div class="sw cl-blue">
       <h3 style="color:var(--blue)">OPPORTUNIT&Eacute;S</h3>
       <ul>
-        <li style="color:var(--white)">Zone Avenue 83 &agrave; fort trafic quotidien</li>
-        <li style="color:var(--white)">Tendance personnalisation et exp&eacute;rience client</li>
-        <li style="color:var(--white)">Potentiel contenu UGC</li>
+        <li style="color:var(--navy)">Zone Avenue 83 &agrave; fort trafic quotidien</li>
+        <li style="color:var(--navy)">Tendance personnalisation et exp&eacute;rience client</li>
+        <li style="color:var(--navy)">Potentiel contenu UGC</li>
       </ul>
     </div>
     <div class="sw cl-red">
       <h3 style="color:var(--red)">MENACES</h3>
       <ul>
-        <li style="color:var(--white)">Concurrence r&eacute;parateurs en ligne et cha&icirc;nes</li>
-        <li style="color:var(--white)">Pression prix grande distribution (FNAC, Darty)</li>
-        <li style="color:var(--white)">Baisse fr&eacute;quentation p&eacute;riodes creuses</li>
+        <li style="color:var(--navy)">Concurrence r&eacute;parateurs en ligne et cha&icirc;nes</li>
+        <li style="color:var(--navy)">Pression prix grande distribution (FNAC, Darty)</li>
+        <li style="color:var(--navy)">Baisse fr&eacute;quentation p&eacute;riodes creuses</li>
       </ul>
     </div>
   </div>
@@ -490,21 +490,21 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
         <span class="badge badge-teal" style="margin-left:6px">20% promotionnel</span>
       </div>
       <div style="display:flex;gap:10px">
-        <div class="pc2" style="border-color:var(--teal);flex:1;background:var(--navy);color:var(--white);padding:14px;border-radius:4px;border-top:4px solid var(--teal)">
+        <div class="pc2" style="border-color:var(--teal);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--teal)">
           <h4 style="color:var(--teal);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">INSTAGRAM</h4>
           <p style="font-size:.72rem;color:#ccc;line-height:1.35">5&times;/sem &bull; Reels &bull; Stories &bull; UGC #BumperLab<br>Objectif 1 000 abos</p>
         </div>
-        <div class="pc2" style="border-color:var(--blue);flex:1;background:var(--navy);color:var(--white);padding:14px;border-radius:4px;border-top:4px solid var(--blue)">
+        <div class="pc2" style="border-color:var(--blue);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--blue)">
           <h4 style="color:var(--blue);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">TIKTOK</h4>
           <p style="font-size:.72rem;color:#ccc;line-height:1.35">3&times;/sem &bull; Avant/apr&egrave;s 60s &bull; POV boutique<br>#MaBumperCoque &bull; 500 abos</p>
         </div>
       </div>
       <div style="display:flex;gap:10px">
-        <div class="pc2" style="border-color:var(--yellow);flex:1;background:var(--navy);color:var(--white);padding:14px;border-radius:4px;border-top:4px solid var(--yellow)">
+        <div class="pc2" style="border-color:var(--yellow);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--yellow)">
           <h4 style="color:var(--yellow);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">FACEBOOK</h4>
           <p style="font-size:.72rem;color:#ccc;line-height:1.35">3&times;/sem &bull; Promos locales &bull; &Eacute;v&eacute;nements<br>Avis Google &bull; Rayon 15 km</p>
         </div>
-        <div class="pc2" style="border-color:var(--purple);flex:1;background:var(--navy);color:var(--white);padding:14px;border-radius:4px;border-top:4px solid var(--purple)">
+        <div class="pc2" style="border-color:var(--purple);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--purple)">
           <h4 style="color:var(--purple);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">GOOGLE</h4>
           <p style="font-size:.72rem;color:#ccc;line-height:1.35">2&times;/sem &bull; Posts offres &bull; Photos HD<br>R&eacute;ponse avis &lt; 24h &bull; Top 3 local</p>
         </div>
@@ -512,7 +512,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
     </div>
     <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:10px">
       <img src="{IMG8}" alt="Post Instagram Bumper" style="max-height:55vh;object-fit:contain;border:3px solid var(--teal);border-radius:4px">
-      <div style="background:var(--navy);color:var(--white);padding:10px 16px;border-radius:4px;width:100%;text-align:center">
+      <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:10px 16px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);width:100%;text-align:center">
         <p style="font-weight:700;margin-bottom:2px">&Eacute;cran cass&eacute; ? On s&rsquo;en occupe.</p>
         <p style="font-size:.75rem;color:#ccc">30 min chrono &mdash; garanti 3 mois &mdash; Sans RDV</p>
         <p style="color:var(--teal);font-size:.72rem">#BumperAv83 #R&eacute;parationT&eacute;l&eacute;phone #Var</p>
@@ -528,33 +528,33 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
   <div class="pabg" style="background-image:url('/popart-teal.jpg')"></div>
   <div class="stitle">Animation d&rsquo;une communaut&eacute;</div>
   <div style="display:flex;gap:8px;flex-wrap:wrap;width:100%;max-width:1200px;justify-content:center;margin-bottom:18px">
-    <div style="background:var(--navy);color:var(--white);padding:8px 14px;border-radius:4px;text-align:center;border-top:3px solid var(--teal)"><strong>JAN</strong><br><span style="font-size:.68rem;color:var(--teal)">Soldes -20%</span></div>
-    <div style="background:var(--navy);color:var(--white);padding:8px 14px;border-radius:4px;text-align:center;border-top:3px solid var(--yellow)"><strong>F&Eacute;V</strong><br><span style="font-size:.68rem;color:var(--yellow)">St-Valentin duo</span></div>
-    <div style="background:var(--navy);color:var(--white);padding:8px 14px;border-radius:4px;text-align:center;border-top:3px solid var(--teal)"><strong>MAR</strong><br><span style="font-size:.68rem;color:var(--teal)">Printemps nature</span></div>
-    <div style="background:var(--navy);color:var(--white);padding:8px 14px;border-radius:4px;text-align:center;border-top:3px solid var(--yellow)"><strong>AVR</strong><br><span style="font-size:.68rem;color:var(--yellow)">P&acirc;ques surprise</span></div>
-    <div style="background:var(--navy);color:var(--white);padding:8px 14px;border-radius:4px;text-align:center;border-top:3px solid var(--purple)"><strong>MAI</strong><br><span style="font-size:.68rem;color:var(--purple)">F&ecirc;te des M&egrave;res gravure</span></div>
-    <div style="background:var(--navy);color:var(--white);padding:8px 14px;border-radius:4px;text-align:center;border-top:3px solid var(--blue)"><strong>JUIN</strong><br><span style="font-size:.68rem;color:var(--blue)">&Eacute;t&eacute; plage</span></div>
-    <div style="background:var(--navy);color:var(--white);padding:8px 14px;border-radius:4px;text-align:center;border-top:3px solid var(--teal)"><strong>SEP</strong><br><span style="font-size:.68rem;color:var(--teal)">Rentr&eacute;e &eacute;tudiant</span></div>
-    <div style="background:var(--navy);color:var(--white);padding:8px 14px;border-radius:4px;text-align:center;border-top:3px solid var(--yellow)"><strong>OCT</strong><br><span style="font-size:.68rem;color:var(--yellow)">Halloween limited</span></div>
-    <div style="background:var(--navy);color:var(--white);padding:8px 14px;border-radius:4px;text-align:center;border-top:3px solid var(--blue)"><strong>NOV</strong><br><span style="font-size:.68rem;color:var(--blue)">Black Friday -30%</span></div>
-    <div style="background:var(--navy);color:var(--white);padding:8px 14px;border-radius:4px;text-align:center;border-top:3px solid var(--purple)"><strong>D&Eacute;C</strong><br><span style="font-size:.68rem;color:var(--purple)">No&euml;l cadeaux</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--teal)"><strong>JAN</strong><br><span style="font-size:.68rem;color:var(--teal)">Soldes -20%</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--yellow)"><strong>F&Eacute;V</strong><br><span style="font-size:.68rem;color:var(--yellow)">St-Valentin duo</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--teal)"><strong>MAR</strong><br><span style="font-size:.68rem;color:var(--teal)">Printemps nature</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--yellow)"><strong>AVR</strong><br><span style="font-size:.68rem;color:var(--yellow)">P&acirc;ques surprise</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--purple)"><strong>MAI</strong><br><span style="font-size:.68rem;color:var(--purple)">F&ecirc;te des M&egrave;res gravure</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--blue)"><strong>JUIN</strong><br><span style="font-size:.68rem;color:var(--blue)">&Eacute;t&eacute; plage</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--teal)"><strong>SEP</strong><br><span style="font-size:.68rem;color:var(--teal)">Rentr&eacute;e &eacute;tudiant</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--yellow)"><strong>OCT</strong><br><span style="font-size:.68rem;color:var(--yellow)">Halloween limited</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--blue)"><strong>NOV</strong><br><span style="font-size:.68rem;color:var(--blue)">Black Friday -30%</span></div>
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:8px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);text-align:center;border-top:3px solid var(--purple)"><strong>D&Eacute;C</strong><br><span style="font-size:.68rem;color:var(--purple)">No&euml;l cadeaux</span></div>
   </div>
   <div style="display:flex;gap:14px;width:100%;max-width:1200px;margin-bottom:14px">
     <div class="c ct-teal" style="flex:1;text-align:center">
       <h4 style="font-family:'Cherry Bomb One',cursive;font-size:1rem;color:var(--teal);margin-bottom:4px">Club VIP</h4>
-      <p style="font-size:.8rem;color:var(--white)">1&thinsp;&euro; = 1 point<br>Avantages exclusifs</p>
+      <p style="font-size:.8rem;color:var(--navy)">1&thinsp;&euro; = 1 point<br>Avantages exclusifs</p>
     </div>
     <div class="c ct-blue" style="flex:1;text-align:center">
       <h4 style="font-family:'Cherry Bomb One',cursive;font-size:1rem;color:var(--blue);margin-bottom:4px">UGC #MaBumperCoque</h4>
-      <p style="font-size:.8rem;color:var(--white)">-15% sur prochaine commande<br>Contenu client valoris&eacute;</p>
+      <p style="font-size:.8rem;color:var(--navy)">-15% sur prochaine commande<br>Contenu client valoris&eacute;</p>
     </div>
     <div class="c ct-yellow" style="flex:1;text-align:center">
       <h4 style="font-family:'Cherry Bomb One',cursive;font-size:1rem;color:var(--yellow);margin-bottom:4px">Parrainage</h4>
-      <p style="font-size:.8rem;color:var(--white)">-10% pour le parrain<br>-10% pour le filleul</p>
+      <p style="font-size:.8rem;color:var(--navy)">-10% pour le parrain<br>-10% pour le filleul</p>
     </div>
     <div class="c ct-purple" style="flex:1;text-align:center">
       <h4 style="font-family:'Cherry Bomb One',cursive;font-size:1rem;color:var(--purple);margin-bottom:4px">Live Instagram</h4>
-      <p style="font-size:.8rem;color:var(--white)">Session mensuelle<br>D&eacute;mo &amp; questions en direct</p>
+      <p style="font-size:.8rem;color:var(--navy)">Session mensuelle<br>D&eacute;mo &amp; questions en direct</p>
     </div>
   </div>
   <div style="text-align:center">
