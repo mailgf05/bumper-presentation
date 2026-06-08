@@ -61,7 +61,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 .scount{{position:fixed;top:12px;right:24px;color:var(--white);font-size:.8rem;z-index:900;background:rgba(0,0,0,.4);padding:4px 14px;border:1px solid var(--teal);border-radius:4px}}
 
 /* CARDS */
-.c{{background:var(--navy);border:3px solid var(--teal);padding:20px;position:relative;border-radius:4px}}
+.c{{background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5);padding:20px;position:relative}}
 .ct-teal{{border-top:5px solid var(--teal)}}
 .ct-blue{{border-top:5px solid var(--blue)}}
 .ct-yellow{{border-top:5px solid var(--yellow)}}
@@ -70,7 +70,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 .cl-yellow{{border-left:5px solid var(--yellow)}}
 .cl-blue{{border-left:5px solid var(--blue)}}
 .cl-red{{border-left:5px solid var(--red)}}
-.cw{{background:var(--white);border:3px solid var(--navy);padding:20px;border-radius:4px}}
+.cw{{background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5);padding:20px}}
 
 /* BADGE */
 .badge{{display:inline-block;background:var(--yellow);color:var(--black);font-weight:800;padding:5px 16px;font-size:.85rem;border:2px solid var(--black);border-radius:4px}}
@@ -110,14 +110,14 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s2 .right{{flex:1;display:flex;flex-direction:column;gap:14px}}
 #s2 .txt{{font-size:.88rem;line-height:1.6;color:var(--navy)}}
 #s2 .srow{{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}}
-#s2 .sc{{flex:1;min-width:120px;text-align:center;padding:16px 10px;background:var(--navy);border-radius:4px}}
+#s2 .sc{{flex:1;min-width:120px;text-align:center;padding:20px 14px;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s2 .sc .kpi{{display:block;margin-bottom:4px}}
-#s2 .sc .slbl{{font-size:.7rem;color:var(--gray);font-weight:600}}
+#s2 .sc .slbl{{font-size:.72rem;color:var(--navy);font-weight:600}}
 
 /* ===== SLIDE 3 SWOT ===== */
 #s3 .stitle{{color:var(--navy)}}
 #s3 .swot{{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;max-width:1100px}}
-#s3 .sw{{background:var(--navy);padding:22px;border-radius:4px}}
+#s3 .sw{{background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5);padding:22px}}
 #s3 .sw h3{{font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:8px}}
 #s3 .sw ul{{list-style:none;padding:0}}
 #s3 .sw li{{font-size:.82rem;padding:3px 0 3px 16px;position:relative;line-height:1.4;color:var(--white)}}
@@ -126,7 +126,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 /* ===== SLIDE 4 PERSONAS ===== */
 #s4 .stitle{{color:var(--navy)}}
 #s4 .prow{{display:flex;gap:24px;width:100%;max-width:1200px}}
-#s4 .pc{{flex:1;background:var(--white);padding:24px;border-radius:4px}}
+#s4 .pc{{flex:1;padding:24px;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s4 .pc h3{{font-family:'Cherry Bomb One',cursive;font-size:1.3rem;margin-bottom:4px}}
 #s4 .pc .meta{{font-size:.75rem;font-weight:600;color:#888;margin-bottom:10px}}
 #s4 .pc ul{{list-style:none;padding:0}}
@@ -142,7 +142,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s5 .imgs .imgframe{{flex:1;max-height:35vh;display:flex;align-items:center;justify-content:center;background:var(--gray)}}
 #s5 .imgs img{{max-width:100%;max-height:35vh;object-fit:contain}}
 #s5 .zones{{display:flex;gap:12px;width:100%;max-width:1200px;justify-content:center}}
-#s5 .zone{{flex:1;background:var(--navy);color:var(--white);padding:14px;border-radius:4px;text-align:center}}
+#s5 .zone{{flex:1;padding:14px;text-align:center;color:var(--white);background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.3)}}
 #s5 .zone .zn{{display:inline-block;width:28px;height:28px;line-height:28px;background:var(--teal);color:var(--black);font-family:'Cherry Bomb One',cursive;font-size:.9rem;border-radius:50%;margin-bottom:4px}}
 #s5 .zone h4{{font-family:'Cherry Bomb One',cursive;font-size:.9rem;margin-bottom:2px}}
 #s5 .zone p{{font-size:.68rem;color:#ccc;line-height:1.3}}
@@ -154,25 +154,25 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s6 .sub6{{color:var(--teal);font-size:1rem;margin-bottom:16px}}
 #s6 .labimg{{margin:0 auto 18px;display:block;max-width:100%;max-height:40vh;object-fit:contain}}
 #s6 .steps{{display:flex;gap:12px;width:100%;max-width:1100px;justify-content:center;margin-bottom:14px}}
-#s6 .stp{{flex:1;background:var(--navy);border:3px solid;padding:14px;border-radius:4px;text-align:center}}
+#s6 .stp{{flex:1;padding:14px;text-align:center;color:var(--white);background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
 #s6 .stp h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:4px}}
 #s6 .stp p{{font-size:.72rem;color:#ccc;line-height:1.3}}
 #s6 .kpirow{{display:flex;gap:12px;width:100%;max-width:1100px;justify-content:center;margin-bottom:10px}}
-#s6 .kb{{background:var(--navy);border:3px solid;padding:12px 16px;border-radius:4px;text-align:center;flex:1}}
+#s6 .kb{{padding:12px 16px;text-align:center;flex:1;color:var(--white);background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
 #s6 .kb .kpi{{display:block;margin-bottom:2px}}
 #s6 .kb .klbl{{font-size:.7rem;color:#ccc}}
 #s6 .invest{{font-size:.82rem;color:var(--teal);margin-top:6px}}
 
 /* ===== SLIDE 7 DIFF ===== */
 #s7 .stitle{{color:var(--navy)}}
-#s7 .quote{{background:var(--navy);color:var(--white);border-left:5px solid var(--teal);padding:18px 24px;font-size:1.05rem;font-style:italic;border-radius:4px;max-width:1100px;width:100%;text-align:center;margin-bottom:18px}}
+#s7 .quote{{color:var(--white);border-left:5px solid var(--teal);padding:18px 24px;font-size:1.05rem;font-style:italic;max-width:1100px;width:100%;text-align:center;margin-bottom:18px;background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s7 .pills{{display:flex;gap:14px;width:100%;max-width:1100px;margin-bottom:18px}}
-#s7 .pill{{flex:1;background:var(--white);padding:16px;border-radius:4px;text-align:center;border:2px solid #e0e0e0}}
+#s7 .pill{{flex:1;padding:16px;text-align:center;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
 #s7 .pill h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px}}
 #s7 .pill p{{font-size:.78rem;color:#555;line-height:1.35}}
 #s7 .tbl{{width:100%;max-width:1100px;border-collapse:collapse;font-size:.82rem}}
-#s7 .tbl th{{background:var(--navy);color:var(--white);padding:10px 14px;text-align:left;font-weight:600}}
-#s7 .tbl td{{padding:8px 14px;border-bottom:1px solid #e0e0e0;background:var(--white)}}
+#s7 .tbl th{{background:rgba(35,47,62,0.75);color:var(--white);padding:10px 14px;text-align:left;font-weight:600;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.3)}}
+#s7 .tbl td{{padding:8px 14px;border-bottom:1px solid rgba(0,0,0,0.06);background:rgba(255,255,255,0.7)}}
 #s7 .tbl tr:nth-child(even) td{{background:var(--gray)}}
 
 /* ===== SLIDE 8 RS ===== */
@@ -180,7 +180,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s8 .rsimg{{max-height:30vh;object-fit:contain;display:block;margin:0 auto 14px}}
 #s8 .rule80{{text-align:center;margin-bottom:14px}}
 #s8 .pcards{{display:flex;gap:12px;width:100%;max-width:1200px;margin-bottom:16px}}
-#s8 .pc2{{flex:1;background:var(--navy);color:var(--white);padding:16px;border-radius:4px;border-top:4px solid}}
+#s8 .pc2{{flex:1;color:var(--white);padding:16px;border-top:4px solid;background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.3)}}
 #s8 .pc2 h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px}}
 #s8 .pc2 p{{font-size:.72rem;color:#ccc;line-height:1.35}}
 
@@ -190,14 +190,14 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 /* ===== SLIDE 10 STORY ===== */
 #s10 .stitle{{color:var(--navy)}}
 #s10 .arc{{display:flex;gap:14px;width:100%;max-width:1200px;margin-bottom:16px}}
-#s10 .ab{{flex:1;background:var(--navy);color:var(--white);padding:18px;border-radius:4px;border-left:5px solid}}
+#s10 .ab{{flex:1;color:var(--white);padding:18px;border-left:5px solid;background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.3)}}
 #s10 .ab h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:6px}}
 #s10 .ab p{{font-size:.78rem;color:#ccc;line-height:1.4}}
 
 /* ===== SLIDE 11 BILAN ===== */
 #s11 .stitle{{color:var(--navy)}}
 #s11 .krow{{display:flex;gap:12px;width:100%;max-width:1200px;margin-bottom:16px}}
-#s11 .kc{{flex:1;background:var(--navy);color:var(--white);padding:16px;border-radius:4px;text-align:center;border-top:4px solid}}
+#s11 .kc{{flex:1;color:var(--white);padding:16px;text-align:center;border-top:4px solid;background:rgba(35,47,62,0.75);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.3)}}
 #s11 .kc .kpi{{display:block;margin-bottom:2px}}
 #s11 .kc .klbl{{font-size:.7rem;color:#ccc}}
 #s11 .brow{{display:flex;gap:16px;width:100%;max-width:1200px;margin-bottom:14px}}
@@ -205,8 +205,8 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s11 .brow h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:8px;color:var(--teal)}}
 #s11 .brow p{{font-size:.8rem;margin-bottom:3px;color:var(--white)}}
 #s11 .rtbl{{width:100%;border-collapse:collapse;font-size:.8rem}}
-#s11 .rtbl th{{background:var(--navy);color:var(--white);padding:8px 12px;text-align:left;font-weight:600}}
-#s11 .rtbl td{{padding:7px 12px;border-bottom:1px solid #e0e0e0;background:var(--white)}}
+#s11 .rtbl th{{background:rgba(35,47,62,0.75);color:var(--white);padding:8px 12px;text-align:left;font-weight:600;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.3)}}
+#s11 .rtbl td{{padding:7px 12px;border-bottom:1px solid rgba(0,0,0,0.06);background:rgba(255,255,255,0.7)}}
 #s11 .closing{{font-family:'Cherry Bomb One',cursive;font-size:1.6rem;color:var(--navy);margin-top:14px;text-align:center}}
 #s11 .foot10{{font-size:.8rem;color:#999;margin-top:8px}}
 </style>
