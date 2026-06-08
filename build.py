@@ -40,7 +40,7 @@ html,body{{width:100%;height:100%;overflow:hidden;font-family:'Poppins',sans-ser
 
 /* SLIDESHOW */
 .ss{{position:relative;width:100%;height:100vh}}
-.slide{{position:absolute;inset:0;display:none;overflow:hidden;flex-direction:column;justify-content:center;align-items:center;padding:40px 60px}}
+.slide{{position:absolute;inset:0;width:100%;height:100vh;display:none;overflow:hidden;flex-direction:column;justify-content:center;align-items:center;padding:40px 60px}}
 .slide.active{{display:flex}}
 
 /* TYPOGRAPHY */
@@ -86,12 +86,12 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 .imgframe-teal{{border-color:var(--teal)}}
 
 /* POP ART BG ON ALL SLIDES */
-.pabg{{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}}
-.slide>*:not(.pabg){{position:relative;z-index:2}}
+.pabg{{position:absolute;inset:0;width:100%;height:100%;background-size:cover;background-position:center;z-index:0}}
+.slide>*:not(.pabg):not(.geo):not(.foot){{position:relative;z-index:2}}
 
 /* ===== SLIDE 1 COVER ===== */
 #s1{{color:var(--white);text-align:center;position:relative;overflow:hidden}}
-#s1 .content{{position:relative;z-index:2}}
+#s1 .content{{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center}}
 #s1 .logo-txt{{font-family:'Cherry Bomb One',cursive;font-size:5.5rem;color:var(--white);letter-spacing:6px}}
 #s1 .loc{{font-size:1.5rem;color:var(--teal);margin-top:2px}}
 #s1 .tagline{{font-size:1.1rem;color:var(--white);margin-top:10px;letter-spacing:1px}}
