@@ -19,7 +19,7 @@ IMG4 = b64("img/mur_coques.jpg")
 IMG5 = b64("img/plan_espace_new.jpg")
 IMG6 = b64("img/magazines_bumper.jpg")
 IMG7 = b64("img/bumper_lab_photo.jpg")
-IMG8 = b64("img/post_insta.jpg")
+IMG8 = b64("img/reseaux_sociaux_new.jpg")
 
 HTML = f"""<!DOCTYPE html>
 <html lang="fr">
