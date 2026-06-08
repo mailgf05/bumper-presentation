@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build bumper-presentation.html — 11-slide Pop Art slideshow."""
+"""Build bumper-presentation.html — 12-slide Pop Art slideshow."""
 
 import base64, os
 
@@ -124,92 +124,101 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s3 .sw li{{font-size:.82rem;padding:3px 0 3px 16px;position:relative;line-height:1.4;color:var(--navy)}}
 #s3 .sw li::before{{content:'';position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%}}
 
-/* ===== SLIDE 4 PERSONAS ===== */
+
+/* ===== SLIDE 4 OBJECTIFS SMART ===== */
 #s4 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s4 .prow{{display:flex;gap:24px;width:100%;max-width:1200px}}
-#s4 .pc{{flex:1;padding:24px;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s4 .pc h3{{font-family:'Cherry Bomb One',cursive;font-size:1.3rem;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s4 .pc .meta{{font-size:.75rem;font-weight:600;color:#555;margin-bottom:10px}}
-#s4 .pc ul{{list-style:none;padding:0}}
-#s4 .pc li{{font-size:.8rem;padding:3px 0 3px 14px;position:relative;line-height:1.4;color:var(--navy)}}
-#s4 .pc li::before{{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%}}
-#s4 .pc .lev{{margin-top:10px;padding:8px 12px;font-size:.75rem;font-weight:700;border:2px solid;border-radius:4px}}
-#s4 .pc .plat{{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}}
-#s4 .pc .ptag{{font-size:.7rem;padding:3px 10px;border:2px solid var(--black);border-radius:20px;font-weight:600}}
+#s4 .smart-grid{{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;max-width:1100px}}
+#s4 .smart{{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5);border-left:5px solid}}
+#s4 .smart .num{{font-family:'Cherry Bomb One',cursive;font-size:2rem;min-width:40px;text-align:center;line-height:1}}
+#s4 .smart h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:4px;color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s4 .smart p{{font-size:.78rem;color:var(--navy);line-height:1.4}}
 
-/* ===== SLIDE 5 ESPACE ===== */
+/* ===== SLIDE 5 PERSONAS ===== */
 #s5 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s5 .imgs{{display:flex;gap:20px;justify-content:center;width:100%;max-width:1200px;margin-bottom:18px}}
-#s5 .imgs .imgframe{{flex:1;max-height:35vh;display:flex;align-items:center;justify-content:center;background:var(--gray)}}
-#s5 .imgs img{{max-width:100%;max-height:35vh;object-fit:contain}}
-#s5 .zones{{display:flex;gap:12px;width:100%;max-width:1200px;justify-content:center}}
-#s5 .zone{{flex:1;padding:14px;text-align:center;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s5 .zone .zn{{display:inline-block;width:28px;height:28px;line-height:28px;background:var(--teal);color:var(--black);font-family:'Cherry Bomb One',cursive;font-size:.9rem;border-radius:50%;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s5 .zone h4{{font-family:'Cherry Bomb One',cursive;font-size:.9rem;margin-bottom:2px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s5 .zone p{{font-size:.68rem;color:var(--navy);line-height:1.3}}
-#s5 .flux{{font-size:.78rem;color:var(--navy);margin-top:14px;font-weight:600;text-align:center}}
+#s5 .prow{{display:flex;gap:24px;width:100%;max-width:1200px}}
+#s5 .pc{{flex:1;padding:24px;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
+#s5 .pc h3{{font-family:'Cherry Bomb One',cursive;font-size:1.3rem;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s5 .pc .meta{{font-size:.75rem;font-weight:600;color:#555;margin-bottom:10px}}
+#s5 .pc ul{{list-style:none;padding:0}}
+#s5 .pc li{{font-size:.8rem;padding:3px 0 3px 14px;position:relative;line-height:1.4;color:var(--navy)}}
+#s5 .pc li::before{{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%}}
+#s5 .pc .lev{{margin-top:10px;padding:8px 12px;font-size:.75rem;font-weight:700;border:2px solid;border-radius:4px}}
+#s5 .pc .plat{{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}}
+#s5 .pc .ptag{{font-size:.7rem;padding:3px 10px;border:2px solid var(--black);border-radius:20px;font-weight:600}}
 
-/* ===== SLIDE 6 BUMPER LAB ===== */
-#s6{{color:var(--white);text-align:center}}
-#s6 .stitle{{font-size:3.2rem;color:var(--white);margin-bottom:4px;text-shadow:2px 2px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000}}
-#s6 .sub6{{color:var(--teal);font-size:1rem;margin-bottom:16px;text-shadow:2px 2px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000}}
-#s6 .labimg{{margin:0 auto 18px;display:block;max-width:100%;max-height:40vh;object-fit:contain}}
-#s6 .steps{{display:flex;gap:12px;width:100%;max-width:1100px;justify-content:center;margin-bottom:14px}}
-#s6 .stp{{flex:1;padding:14px;text-align:center;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
-#s6 .stp h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s6 .stp p{{font-size:.72rem;color:var(--navy);line-height:1.3}}
-#s6 .kpirow{{display:flex;gap:12px;width:100%;max-width:1100px;justify-content:center;margin-bottom:10px}}
-#s6 .kb{{padding:12px 16px;text-align:center;flex:1;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
-#s6 .kb .kpi{{display:block;margin-bottom:2px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s6 .kb .klbl{{font-size:.7rem;color:var(--navy)}}
-#s6 .invest{{font-size:.82rem;color:var(--teal);margin-top:6px}}
+/* ===== SLIDE 6 ESPACE ===== */
+#s6 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s6 .imgs{{display:flex;gap:20px;justify-content:center;width:100%;max-width:1200px;margin-bottom:18px}}
+#s6 .imgs .imgframe{{flex:1;max-height:35vh;display:flex;align-items:center;justify-content:center;background:var(--gray)}}
+#s6 .imgs img{{max-width:100%;max-height:35vh;object-fit:contain}}
+#s6 .zones{{display:flex;gap:12px;width:100%;max-width:1200px;justify-content:center}}
+#s6 .zone{{flex:1;padding:14px;text-align:center;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
+#s6 .zone .zn{{display:inline-block;width:28px;height:28px;line-height:28px;background:var(--teal);color:var(--black);font-family:'Cherry Bomb One',cursive;font-size:.9rem;border-radius:50%;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s6 .zone h4{{font-family:'Cherry Bomb One',cursive;font-size:.9rem;margin-bottom:2px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s6 .zone p{{font-size:.68rem;color:var(--navy);line-height:1.3}}
+#s6 .flux{{font-size:.78rem;color:var(--navy);margin-top:14px;font-weight:600;text-align:center}}
 
-/* ===== SLIDE 7 DIFF ===== */
-#s7 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s7 .quote{{color:var(--navy);border-left:5px solid var(--teal);padding:18px 24px;font-size:1.05rem;font-style:italic;max-width:1100px;width:100%;text-align:center;margin-bottom:18px;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s7 .pills{{display:flex;gap:14px;width:100%;max-width:1100px;margin-bottom:18px}}
-#s7 .pill{{flex:1;padding:16px;text-align:center;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s7 .pill h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s7 .pill p{{font-size:.78rem;color:#555;line-height:1.35}}
-#s7 .tbl{{width:100%;max-width:1100px;border-collapse:collapse;font-size:.82rem}}
-#s7 .tbl th{{background:rgba(255,255,255,0.8);color:var(--navy);padding:10px 14px;text-align:left;font-weight:600;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s7 .tbl td{{padding:8px 14px;border-bottom:1px solid rgba(0,0,0,0.06);background:rgba(255,255,255,0.7)}}
-#s7 .tbl tr:nth-child(even) td{{background:var(--gray)}}
+/* ===== SLIDE 7 BUMPER LAB ===== */
+#s7{{color:var(--white);text-align:center}}
+#s7 .stitle{{font-size:3.2rem;color:var(--white);margin-bottom:4px;text-shadow:2px 2px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000}}
+#s7 .sub6{{color:var(--teal);font-size:1rem;margin-bottom:16px;text-shadow:2px 2px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000}}
+#s7 .labimg{{margin:0 auto 18px;display:block;max-width:100%;max-height:40vh;object-fit:contain}}
+#s7 .steps{{display:flex;gap:12px;width:100%;max-width:1100px;justify-content:center;margin-bottom:14px}}
+#s7 .stp{{flex:1;padding:14px;text-align:center;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
+#s7 .stp h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s7 .stp p{{font-size:.72rem;color:var(--navy);line-height:1.3}}
+#s7 .kpirow{{display:flex;gap:12px;width:100%;max-width:1100px;justify-content:center;margin-bottom:10px}}
+#s7 .kb{{padding:12px 16px;text-align:center;flex:1;color:var(--navy);background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:3px solid}}
+#s7 .kb .kpi{{display:block;margin-bottom:2px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s7 .kb .klbl{{font-size:.7rem;color:var(--navy)}}
+#s7 .invest{{font-size:.82rem;color:var(--teal);margin-top:6px}}
 
-/* ===== SLIDE 8 RS ===== */
+/* ===== SLIDE 8 DIFF ===== */
 #s8 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s8 .rsimg{{max-height:30vh;object-fit:contain;display:block;margin:0 auto 14px}}
-#s8 .rule80{{text-align:center;margin-bottom:14px}}
-#s8 .pcards{{display:flex;gap:12px;width:100%;max-width:1200px;margin-bottom:16px}}
-#s8 .pc2{{flex:1;color:var(--navy);padding:16px;border-top:4px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s8 .pc2 h4{{font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:6px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s8 .pc2 p{{font-size:.82rem;color:var(--navy);line-height:1.4}}
+#s8 .quote{{color:var(--navy);border-left:5px solid var(--teal);padding:18px 24px;font-size:1.05rem;font-style:italic;max-width:1100px;width:100%;text-align:center;margin-bottom:18px;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
+#s8 .pills{{display:flex;gap:14px;width:100%;max-width:1100px;margin-bottom:18px}}
+#s8 .pill{{flex:1;padding:16px;text-align:center;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
+#s8 .pill h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s8 .pill p{{font-size:.78rem;color:#555;line-height:1.35}}
+#s8 .tbl{{width:100%;max-width:1100px;border-collapse:collapse;font-size:.82rem}}
+#s8 .tbl th{{background:rgba(255,255,255,0.8);color:var(--navy);padding:10px 14px;text-align:left;font-weight:600;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
+#s8 .tbl td{{padding:8px 14px;border-bottom:1px solid rgba(0,0,0,0.06);background:rgba(255,255,255,0.7)}}
+#s8 .tbl tr:nth-child(even) td{{background:var(--gray)}}
 
-/* ===== SLIDE 9 COMMUNITY ===== */
+/* ===== SLIDE 9 RS ===== */
 #s9 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s9 .rsimg{{max-height:30vh;object-fit:contain;display:block;margin:0 auto 14px}}
+#s9 .rule80{{text-align:center;margin-bottom:14px}}
+#s9 .pcards{{display:flex;gap:12px;width:100%;max-width:1200px;margin-bottom:16px}}
+#s9 .pc2{{flex:1;color:var(--navy);padding:16px;border-top:4px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
+#s9 .pc2 h4{{font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:6px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s9 .pc2 p{{font-size:.82rem;color:var(--navy);line-height:1.4}}
 
-/* ===== SLIDE 10 STORY ===== */
-#s10 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff;margin-bottom:12px}}
-#s10 .arc{{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:660px;margin-bottom:16px}}
-#s10 .ab{{display:flex;flex-direction:column;justify-content:center;color:var(--navy);padding:16px;border-left:5px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s10 .ab h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:6px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s10 .ab p{{font-size:.78rem;color:var(--navy);line-height:1.4}}
+/* ===== SLIDE 10 COMMUNITY ===== */
+#s10 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
 
-/* ===== SLIDE 11 BILAN ===== */
-#s11 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s11 .krow{{display:flex;gap:12px;width:100%;max-width:1200px;margin-bottom:16px}}
-#s11 .kc{{flex:1;color:var(--navy);padding:16px;text-align:center;border-top:4px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s11 .kc .kpi{{display:block;margin-bottom:2px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s11 .kc .klbl{{font-size:.7rem;color:var(--navy)}}
-#s11 .brow{{display:flex;gap:16px;width:100%;max-width:1200px;margin-bottom:14px}}
-#s11 .brow .c{{flex:1}}
-#s11 .brow h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:8px;color:var(--teal);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s11 .brow p{{font-size:.8rem;margin-bottom:3px;color:var(--navy)}}
-#s11 .rtbl{{width:100%;border-collapse:collapse;font-size:.8rem}}
-#s11 .rtbl th{{background:rgba(255,255,255,0.8);color:var(--navy);padding:8px 12px;text-align:left;font-weight:600;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s11 .rtbl td{{padding:7px 12px;border-bottom:1px solid rgba(0,0,0,0.06);background:rgba(255,255,255,0.7)}}
-#s11 .closing{{font-family:'Cherry Bomb One',cursive;font-size:1.6rem;color:var(--navy);margin-top:14px;text-align:center;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s11 .foot10{{font-size:.8rem;color:#555;margin-top:8px}}
+/* ===== SLIDE 11 STORY ===== */
+#s11 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff;margin-bottom:12px}}
+#s11 .arc{{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:660px;margin-bottom:16px}}
+#s11 .ab{{display:flex;flex-direction:column;justify-content:center;color:var(--navy);padding:16px;border-left:5px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
+#s11 .ab h4{{font-family:'Cherry Bomb One',cursive;font-size:.95rem;margin-bottom:6px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s11 .ab p{{font-size:.78rem;color:var(--navy);line-height:1.4}}
+
+/* ===== SLIDE 12 BILAN ===== */
+#s12 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s12 .krow{{display:flex;gap:12px;width:100%;max-width:1200px;margin-bottom:16px}}
+#s12 .kc{{flex:1;color:var(--navy);padding:16px;text-align:center;border-top:4px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
+#s12 .kc .kpi{{display:block;margin-bottom:2px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s12 .kc .klbl{{font-size:.7rem;color:var(--navy)}}
+#s12 .brow{{display:flex;gap:16px;width:100%;max-width:1200px;margin-bottom:14px}}
+#s12 .brow .c{{flex:1}}
+#s12 .brow h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:8px;color:var(--teal);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s12 .brow p{{font-size:.8rem;margin-bottom:3px;color:var(--navy)}}
+#s12 .rtbl{{width:100%;border-collapse:collapse;font-size:.8rem}}
+#s12 .rtbl th{{background:rgba(255,255,255,0.8);color:var(--navy);padding:8px 12px;text-align:left;font-weight:600;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
+#s12 .rtbl td{{padding:7px 12px;border-bottom:1px solid rgba(0,0,0,0.06);background:rgba(255,255,255,0.7)}}
+#s12 .closing{{font-family:'Cherry Bomb One',cursive;font-size:1.6rem;color:var(--navy);margin-top:14px;text-align:center;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s12 .foot10{{font-size:.8rem;color:#555;margin-top:8px}}
 </style>
 </head>
 <body>
@@ -314,8 +323,52 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 </div>
 
 
-<!-- SLIDE 4 — PERSONAS (bg teal, light overlay) -->
+
+<!-- SLIDE 4 — OBJECTIFS SMART (bg teal, light overlay) -->
 <div class="slide" id="s4">
+  <div class="pabg" style="background-image:url('/popart-teal.jpg')"></div>
+  <div class="stitle">Nos objectifs SMART</div>
+  <div class="smart-grid">
+    <div class="smart" style="border-color:var(--teal)">
+      <div class="num" style="color:var(--teal)">1</div>
+      <div>
+        <h4>Temps de visite +20%</h4>
+        <p>En 3 mois gr&acirc;ce &agrave; l&rsquo;espace sc&eacute;naris&eacute; et au Bumper Lab (borne interactive, personnalisation coques).</p>
+      </div>
+    </div>
+    <div class="smart" style="border-color:var(--blue)">
+      <div class="num" style="color:var(--blue)">2</div>
+      <div>
+        <h4>CA annuel +15%</h4>
+        <p>Hausse du panier moyen &agrave; 45&thinsp;&euro; via upsell coques personnalis&eacute;es et cross-sell accessoires.</p>
+      </div>
+    </div>
+    <div class="smart" style="border-color:var(--yellow)">
+      <div class="num" style="color:var(--yellow)">3</div>
+      <div>
+        <h4>1 000 abonn&eacute;s Instagram</h4>
+        <p>En 6 mois via Reels, UGC, #BumperLab et collaborations micro-influenceurs locaux.</p>
+      </div>
+    </div>
+    <div class="smart" style="border-color:var(--purple)">
+      <div class="num" style="color:var(--purple)">4</div>
+      <div>
+        <h4>Note Google &ge; 4,8</h4>
+        <p>Via QR codes en caisse, incentive -5% pour avis post-achat, r&eacute;ponse sous 24h.</p>
+      </div>
+    </div>
+    <div class="smart" style="border-color:var(--teal)">
+      <div class="num" style="color:var(--teal)">5</div>
+      <div>
+        <h4>Taux fid&eacute;lisation &gt; 40%</h4>
+        <p>Via programme de points (1&thinsp;&euro; = 1 point), parrainage -10% et suivi WhatsApp personnalis&eacute;.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5 — PERSONAS (bg teal, light overlay) -->
+<div class="slide" id="s5">
   <div class="pabg" style="background-image:url('/popart-yellow.jpg')"></div>
   <div class="stitle">Nos clients types</div>
   <div class="prow">
@@ -358,8 +411,8 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
   </div>
 </div>
 
-<!-- SLIDE 5 — ESPACE SCENARISE (bg sepia, light overlay) -->
-<div class="slide" id="s5">
+<!-- SLIDE 6 — ESPACE SCENARISE (bg sepia, light overlay) -->
+<div class="slide" id="s6">
   <div class="pabg" style="background-image:url('/popart-purple.jpg')"></div>
   <div class="stitle">Espace de vente sc&eacute;naris&eacute;</div>
   <div class="imgs">
@@ -396,8 +449,8 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 </div>
 
 
-<!-- SLIDE 6 — BUMPER LAB (bg purple, dark overlay) -->
-<div class="slide" id="s6">
+<!-- SLIDE 7 — BUMPER LAB (bg purple, dark overlay) -->
+<div class="slide" id="s7">
   <div class="pabg" style="background-image:url('/popart-teal.jpg')"></div>
   <div class="stitle">BUMPER LAB</div>
   <div class="sub6">Seule boutique du Var avec personnalisation en direct</div>
@@ -443,8 +496,8 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
   <div class="invest">Investissement : 480&thinsp;&euro; &rarr; Marge 3 mois : 2 820&thinsp;&euro; &rarr; ROI x5</div>
 </div>
 
-<!-- SLIDE 7 — DIFFERENCIATION (bg teal, light overlay) -->
-<div class="slide" id="s7">
+<!-- SLIDE 8 — DIFFERENCIATION (bg teal, light overlay) -->
+<div class="slide" id="s8">
   <div class="pabg" style="background-image:url('/popart-yellow.jpg')"></div>
   <div class="stitle">Notre avantage concurrentiel</div>
   <div class="quote">&laquo; Votre t&eacute;l&eacute;phone r&eacute;par&eacute; en 30 min, avec une coque unique &mdash; ici, maintenant, par des experts. &raquo;</div>
@@ -455,7 +508,7 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
     </div>
     <div class="pill ct-blue">
       <h4 style="color:var(--blue)">EXCLUSIVIT&Eacute;</h4>
-      <p>Coques non vendues en ligne &bull; Personnalisation &bull; Collections limit&eacute;es</p>
+      <p>Personnalisation &bull; Collections limit&eacute;es</p>
     </div>
     <div class="pill ct-yellow">
       <h4 style="color:var(--yellow)">PROXIMIT&Eacute;</h4>
@@ -479,8 +532,8 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 </div>
 
 
-<!-- SLIDE 8 — RESEAUX SOCIAUX (bg sepia, light overlay) -->
-<div class="slide" id="s8">
+<!-- SLIDE 9 — RESEAUX SOCIAUX (bg sepia, light overlay) -->
+<div class="slide" id="s9">
   <div class="pabg" style="background-image:url('/popart-purple.jpg')"></div>
   <div class="stitle">Strat&eacute;gie R&eacute;seaux Sociaux</div>
   <div style="display:flex;gap:24px;width:100%;max-width:1200px;align-items:stretch">
@@ -490,28 +543,28 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
         <span class="badge badge-teal" style="margin-left:6px">20% promotionnel</span>
       </div>
       <div style="display:flex;gap:10px">
-        <div class="pc2" style="border-color:var(--teal);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:22px 18px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--teal)">
-          <h4 style="color:var(--teal);font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:6px">INSTAGRAM</h4>
-          <p style="font-size:.82rem;color:var(--navy);line-height:1.4">5&times;/sem &bull; Reels &bull; Stories &bull; UGC #BumperLab<br>Objectif 1 000 abos</p>
+        <div class="pc2" style="border-color:var(--teal);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:12px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--teal)">
+          <h4 style="color:var(--teal);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">INSTAGRAM</h4>
+          <p style="font-size:.72rem;color:var(--navy);line-height:1.35">5&times;/sem &bull; Reels &bull; Stories &bull; UGC #BumperLab<br>Objectif 1 000 abos</p>
         </div>
-        <div class="pc2" style="border-color:var(--blue);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:22px 18px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--blue)">
-          <h4 style="color:var(--blue);font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:6px">TIKTOK</h4>
-          <p style="font-size:.82rem;color:var(--navy);line-height:1.4">3&times;/sem &bull; Avant/apr&egrave;s 60s &bull; POV boutique<br>#MaBumperCoque &bull; 500 abos</p>
+        <div class="pc2" style="border-color:var(--blue);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:12px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--blue)">
+          <h4 style="color:var(--blue);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">TIKTOK</h4>
+          <p style="font-size:.72rem;color:var(--navy);line-height:1.35">3&times;/sem &bull; Avant/apr&egrave;s 60s &bull; POV boutique<br>#MaBumperCoque &bull; 500 abos</p>
         </div>
       </div>
       <div style="display:flex;gap:10px">
-        <div class="pc2" style="border-color:var(--yellow);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:22px 18px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--yellow)">
-          <h4 style="color:var(--yellow);font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:6px">FACEBOOK</h4>
-          <p style="font-size:.82rem;color:var(--navy);line-height:1.4">3&times;/sem &bull; Promos locales &bull; &Eacute;v&eacute;nements<br>Avis Google &bull; Rayon 15 km</p>
+        <div class="pc2" style="border-color:var(--yellow);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:12px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--yellow)">
+          <h4 style="color:var(--yellow);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">FACEBOOK</h4>
+          <p style="font-size:.72rem;color:var(--navy);line-height:1.35">3&times;/sem &bull; Promos locales &bull; &Eacute;v&eacute;nements<br>Avis Google &bull; Rayon 15 km</p>
         </div>
-        <div class="pc2" style="border-color:var(--purple);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:22px 18px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--purple)">
+        <div class="pc2" style="border-color:var(--purple);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:12px 14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--purple)">
           <h4 style="color:var(--purple);font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:6px">GOOGLE</h4>
           <p style="font-size:.72rem;color:var(--navy);line-height:1.35">2&times;/sem &bull; Posts offres &bull; Photos HD<br>R&eacute;ponse avis &lt; 24h &bull; Top 3 local</p>
         </div>
       </div>
     </div>
     <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;justify-content:center">
-      <img src="{IMG8}" alt="Post Instagram Bumper" style="max-height:55vh;object-fit:contain;border:3px solid var(--teal);border-radius:4px">
+      <img src="{IMG8}" alt="Post Instagram Bumper" style="max-height:35vh;object-fit:contain;border:3px solid var(--teal);border-radius:4px">
       <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:10px 16px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);width:100%;text-align:center">
         <p style="font-weight:700;margin-bottom:2px">&Eacute;cran cass&eacute; ? On s&rsquo;en occupe.</p>
         <p style="font-size:.75rem;color:var(--navy)">30 min chrono &mdash; garanti 1 an &mdash; Sans RDV</p>
@@ -520,11 +573,38 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
       </div>
     </div>
   </div>
+
+  <div style="width:100%;max-width:1200px;margin-top:8px">
+    <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);padding:10px 14px;overflow:hidden">
+      <table style="width:100%;border-collapse:collapse;font-size:.62rem;color:var(--navy)">
+        <thead><tr style="font-family:'Cherry Bomb One',cursive;font-size:.7rem">
+          <th style="padding:4px 6px;text-align:left;border-bottom:2px solid var(--teal);color:var(--teal)">LUN</th>
+          <th style="padding:4px 6px;text-align:left;border-bottom:2px solid var(--blue);color:var(--blue)">MAR</th>
+          <th style="padding:4px 6px;text-align:left;border-bottom:2px solid var(--yellow);color:var(--yellow)">MER</th>
+          <th style="padding:4px 6px;text-align:left;border-bottom:2px solid var(--purple);color:var(--purple)">JEU</th>
+          <th style="padding:4px 6px;text-align:left;border-bottom:2px solid var(--teal);color:var(--teal)">VEN</th>
+          <th style="padding:4px 6px;text-align:left;border-bottom:2px solid var(--blue);color:var(--blue)">SAM</th>
+          <th style="padding:4px 6px;text-align:left;border-bottom:2px solid var(--yellow);color:var(--yellow)">DIM</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td style="padding:3px 6px;vertical-align:top"><b style="color:var(--teal)">10h</b> Reel r&eacute;paration IG<br><b style="color:var(--purple)">18h</b> Post boutique GMB</td>
+            <td style="padding:3px 6px;vertical-align:top"><b style="color:var(--blue)">12h</b> Vid&eacute;o POV TikTok<br><b style="color:var(--yellow)">19h</b> Post promo FB</td>
+            <td style="padding:3px 6px;vertical-align:top"><b style="color:var(--teal)">10h</b> Carousel conseils IG<br><b style="color:var(--blue)">16h</b> Trend #BumperLab TikTok</td>
+            <td style="padding:3px 6px;vertical-align:top"><b style="color:var(--purple)">11h</b> Post nouveaut&eacute; GMB<br><b style="color:var(--teal)">18h</b> Story offre flash IG</td>
+            <td style="padding:3px 6px;vertical-align:top"><b style="color:var(--teal)">9h</b> UGC repost IG<br><b style="color:var(--blue)">17h</b> Duo client TikTok<br><b style="color:var(--yellow)">19h</b> Avis positif FB</td>
+            <td style="padding:3px 6px;vertical-align:top"><b style="color:var(--teal)">10h</b> Reel perso coque IG<br><b style="color:var(--yellow)">14h</b> Album coques FB<br><b style="color:var(--purple)">17h</b> R&eacute;ponse avis GMB</td>
+            <td style="padding:3px 6px;vertical-align:top"><b style="color:var(--teal)">12h</b> Story coulisses &eacute;quipe IG</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
 
-<!-- SLIDE 9 — ANIMATION COMMUNAUTÉ (bg purple, light overlay) -->
-<div class="slide" id="s9">
+<!-- SLIDE 10 — ANIMATION COMMUNAUTÉ (bg purple, light overlay) -->
+<div class="slide" id="s10">
   <div class="pabg" style="background-image:url('/popart-teal.jpg')"></div>
   <div class="stitle">Animation d&rsquo;une communaut&eacute;</div>
   <div style="display:flex;gap:16px;width:100%;max-width:1100px;margin-bottom:16px;justify-content:center">
@@ -567,11 +647,11 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 </div>
 
 
-<!-- SLIDE 10</div>
+<!-- SLIDE 11</div>
 
 
-<!-- SLIDE 10 — MESSAGE ET STORY TELLING (bg teal, light overlay) -->
-<div class="slide" id="s10">
+<!-- SLIDE 11 — MESSAGE ET STORY TELLING (bg teal, light overlay) -->
+<div class="slide" id="s11">
   <div class="pabg" style="background-image:url('/popart-yellow.jpg')"></div>
   <div class="stitle">Notre histoire, votre histoire</div>
   <div class="arc">
@@ -594,8 +674,8 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
   </div>
 </div>
 
-<!-- SLIDE 11 — BILAN & PERSPECTIVES (bg sepia, light overlay) -->
-<div class="slide" id="s11">
+<!-- SLIDE 12 — BILAN & PERSPECTIVES (bg sepia, light overlay) -->
+<div class="slide" id="s12">
   <div class="pabg" style="background-image:url('/popart-purple.jpg')"></div>
   <div class="stitle">Bilan &amp; Perspectives</div>
   <div class="krow">
