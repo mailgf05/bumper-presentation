@@ -181,8 +181,8 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
 #s8 .rule80{{text-align:center;margin-bottom:14px}}
 #s8 .pcards{{display:flex;gap:12px;width:100%;max-width:1200px;margin-bottom:16px}}
 #s8 .pc2{{flex:1;color:var(--navy);padding:16px;border-top:4px solid;background:rgba(255,255,255,0.8);border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.5)}}
-#s8 .pc2 h4{{font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
-#s8 .pc2 p{{font-size:.72rem;color:var(--navy);line-height:1.35}}
+#s8 .pc2 h4{{font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:6px;text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
+#s8 .pc2 p{{font-size:.82rem;color:var(--navy);line-height:1.4}}
 
 /* ===== SLIDE 9 COMMUNITY ===== */
 #s9 .stitle{{color:var(--navy);text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff}}
@@ -483,33 +483,33 @@ body,p,li,span,td,th{{font-family:'Poppins',sans-serif}}
   <div class="pabg" style="background-image:url('/popart-purple.jpg')"></div>
   <div class="stitle">Strat&eacute;gie R&eacute;seaux Sociaux</div>
   <div style="display:flex;gap:24px;width:100%;max-width:1200px;align-items:stretch">
-    <div style="flex:1;display:flex;flex-direction:column;gap:10px">
+    <div style="flex:1;display:flex;flex-direction:column;gap:14px;justify-content:flex-start;padding-top:2vh">
       <div style="text-align:center">
         <span class="badge">80% utile &amp; divertissant</span>
         <span class="badge badge-teal" style="margin-left:6px">20% promotionnel</span>
       </div>
       <div style="display:flex;gap:10px">
-        <div class="pc2" style="border-color:var(--teal);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--teal)">
-          <h4 style="color:var(--teal);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">INSTAGRAM</h4>
-          <p style="font-size:.72rem;color:var(--navy);line-height:1.35">5&times;/sem &bull; Reels &bull; Stories &bull; UGC #BumperLab<br>Objectif 1 000 abos</p>
+        <div class="pc2" style="border-color:var(--teal);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:22px 18px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--teal)">
+          <h4 style="color:var(--teal);font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:6px">INSTAGRAM</h4>
+          <p style="font-size:.82rem;color:var(--navy);line-height:1.4">5&times;/sem &bull; Reels &bull; Stories &bull; UGC #BumperLab<br>Objectif 1 000 abos</p>
         </div>
-        <div class="pc2" style="border-color:var(--blue);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--blue)">
-          <h4 style="color:var(--blue);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">TIKTOK</h4>
-          <p style="font-size:.72rem;color:var(--navy);line-height:1.35">3&times;/sem &bull; Avant/apr&egrave;s 60s &bull; POV boutique<br>#MaBumperCoque &bull; 500 abos</p>
+        <div class="pc2" style="border-color:var(--blue);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:22px 18px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--blue)">
+          <h4 style="color:var(--blue);font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:6px">TIKTOK</h4>
+          <p style="font-size:.82rem;color:var(--navy);line-height:1.4">3&times;/sem &bull; Avant/apr&egrave;s 60s &bull; POV boutique<br>#MaBumperCoque &bull; 500 abos</p>
         </div>
       </div>
       <div style="display:flex;gap:10px">
-        <div class="pc2" style="border-color:var(--yellow);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--yellow)">
-          <h4 style="color:var(--yellow);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">FACEBOOK</h4>
-          <p style="font-size:.72rem;color:var(--navy);line-height:1.35">3&times;/sem &bull; Promos locales &bull; &Eacute;v&eacute;nements<br>Avis Google &bull; Rayon 15 km</p>
+        <div class="pc2" style="border-color:var(--yellow);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:22px 18px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--yellow)">
+          <h4 style="color:var(--yellow);font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:6px">FACEBOOK</h4>
+          <p style="font-size:.82rem;color:var(--navy);line-height:1.4">3&times;/sem &bull; Promos locales &bull; &Eacute;v&eacute;nements<br>Avis Google &bull; Rayon 15 km</p>
         </div>
-        <div class="pc2" style="border-color:var(--purple);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:14px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--purple)">
-          <h4 style="color:var(--purple);font-family:'Cherry Bomb One',cursive;font-size:1rem;margin-bottom:4px">GOOGLE</h4>
+        <div class="pc2" style="border-color:var(--purple);flex:1;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:22px 18px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);border-top:4px solid var(--purple)">
+          <h4 style="color:var(--purple);font-family:'Cherry Bomb One',cursive;font-size:1.2rem;margin-bottom:6px">GOOGLE</h4>
           <p style="font-size:.72rem;color:var(--navy);line-height:1.35">2&times;/sem &bull; Posts offres &bull; Photos HD<br>R&eacute;ponse avis &lt; 24h &bull; Top 3 local</p>
         </div>
       </div>
     </div>
-    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:10px">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;justify-content:center">
       <img src="{IMG8}" alt="Post Instagram Bumper" style="max-height:55vh;object-fit:contain;border:3px solid var(--teal);border-radius:4px">
       <div style="background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);color:var(--navy);padding:10px 16px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid rgba(255,255,255,0.5);width:100%;text-align:center">
         <p style="font-weight:700;margin-bottom:2px">&Eacute;cran cass&eacute; ? On s&rsquo;en occupe.</p>
